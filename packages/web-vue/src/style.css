@@ -1,0 +1,17 @@
+/* Evita que reglas globales (ej. img { max-width:100% }) deformen los tiles */
+.leaflet-container img,
+.leaflet-pane img {
+  max-width: none !important;
+}
+
+/* Asegura tamaños y overflow correctos */
+html, body, #app {
+  height: 100%;
+  margin: 0;
+}
+
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}

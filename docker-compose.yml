@@ -1,0 +1,96 @@
+version: "2.2"
+
+services:
+
+  admin-front-end:
+    container_name: unimap-admin
+    build:
+      context: .
+      dockerfile: Dockerfile.admin
+    ports:
+      - "8080:80"
+    environment:
+      - VITE_API_BASE_URL_REST=http://localhost:3000/api/v1
+      - VITE_API_BASE_URL_TRPC=http://localhost:3000/api/v1/trpc
+      - VITE_API_URL=http://localhost:3000
+      - VITE_DOMINIO=unimap.com
+      - VITE_CENTRO_DEFAULT_MAPA="24.790277777778,-107.38777777778"
+    depends_on:
+      - back-end
+    networks:
+      - default
+
+  client-front-end:
+    container_name: unimap-client
+    build:
+      context: .
+      dockerfile: Dockerfile.client
+    ports:
+      - "8081:80"
+    environment:
+      - VITE_API_BASE_URL_REST=http://localhost:3000/api/v1
+      - VITE_API_BASE_URL_TRPC=http://localhost:3000/api/v1/trpc
+      - VITE_API_URL=http://localhost:3000
+      - VITE_DOMINIO=unimap.com
+      - VITE_CENTRO_DEFAULT_MAPA="24.790277777778,-107.38777777778"
+    depends_on:
+      - back-end
+    networks:
+      - default
+
+  back-end:
+    container_name: unimap-back-end
+    build:
+      context: .
+      dockerfile: Dockerfile.server
+    ports:
+      - "3000:3000"
+    depends_on:
+      - database
+    volumes:
+      - ./public:/app/public
+      - ./logs:/app/logs
+    environment:
+      - NODE_ENV=development
+      - PORT=3000
+      - MONGO_CNN=mongodb://unimap:unimap@database/unimap
+      - JWT_SECRET=secret
+      - JWT_CLIENT_SECRET=client_secret
+      - URL=http://localhost:3000
+      - DEV_SUB_DOMAIN=itc
+
+  database:
+    container_name: unimap-db
+    build:
+      context: ./packages/databases/unimap
+      dockerfile: Dockerfile
+    ports:
+      - "4500:27017"
+    volumes:
+      - ./packages/databases/unimap/data:/data/db
+
+  web-vue:
+    container_name: unimap-web-vue
+    build:
+      context: ./packages/web-vue
+      dockerfile: Dockerfile
+      args:
+        VITE_TRPC_BASE_URL: "http://back-end:3000/api/v1"
+        VITE_TILES_URL: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        VITE_CENTRO_DEFAULT_MAPA: "24.788020,-107.396755"
+        VITE_GEOJSON_PATH: "/data/Tec_Contorno.geojson"
+    ports:
+      - "8082:80"
+    environment:
+      - VITE_TRPC_BASE_URL=http://localhost:3000/api/v1
+      - VITE_TILES_URL=https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png
+      - VITE_CENTRO_DEFAULT_MAPA=24.788020,-107.396755
+      - VITE_GEOJSON_PATH=/data/Tec_Contorno.geojson
+    depends_on:
+      - back-end
+
+      
+
+networks:
+  default:
+    driver: bridge

@@ -1,0 +1,41 @@
+clave,nombre,descripcion,campus
+1,Programación,Introducción a la Programación en Python,ITC
+2,Bases de Datos,Fundamentos de Bases de Datos SQL,ITC
+3,Desarrollo Web,Creación de Sitios Web con HTML y CSS,ITC
+4,Redes de Computadoras,Configuración y Administración de Redes,ITC
+5,Seguridad Informática,Principios de Seguridad en Sistemas Informáticos,ITC
+6,Inteligencia Artificial,Introducción a la Inteligencia Artificial,ITC
+7,Análisis de Datos,Análisis de Datos con Python y Pandas,ITC
+8,Diseño de Interfaces,Diseño de Interfaces de Usuario,ITC
+9,Ciberseguridad,Técnicas Avanzadas de Protección contra Amenazas,ITC
+10,Desarrollo de Aplicaciones Móviles,Creación de Aplicaciones Móviles para Android,ITC
+11,Cloud Computing,Conceptos Básicos de Computación en la Nube,ITC
+12,Blockchain,Principios de Tecnología Blockchain,ITC
+13,Machine Learning,Introducción al Aprendizaje Automático,ITC
+14,Ciberforense,Investigación Forense Digital,ITC
+15,Realidad Virtual y Aumentada,Desarrollo de Aplicaciones con Realidad Virtual y Aumentada,ITC
+16,Desarrollo de Videojuegos,Diseño y Programación de Videojuegos,ITC
+17,Ingeniería de Software,Principios de Ingeniería de Software,ITC
+18,Big Data,Introducción al Manejo de Grandes Volúmenes de Datos,ITC
+19,Computación Cuántica,Fundamentos de Computación Cuántica,ITC
+20,IoT (Internet de las Cosas),Conceptos Básicos de IoT,ITC
+21,Realidad Aumentada,Desarrollo de Aplicaciones con Realidad Aumentada,ITC
+22,Python Avanzado,Programación Avanzada en Python,ITC
+23,Java para Desarrolladores,Desarrollo de Aplicaciones Java,ITC
+24,JavaScript Avanzado,Programación Avanzada en JavaScript,ITC
+25,SQL Avanzado,Programación Avanzada en SQL,ITC
+26,Seguridad en Redes,Avanzada en Seguridad Informática,ITC
+27,Análisis de Datos Avanzado,Análisis de Datos Avanzado con Python,ITC
+28,Machine Learning Avanzado,Machine Learning Avanzado con Python,ITC
+29,Desarrollo Web Avanzado,Desarrollo Web Avanzado con HTML CSS y JavaScript,ITC
+30,Cloud Computing Avanzado,Conceptos Avanzados de Computación en la Nube,ITC
+31,Ciberseguridad Avanzada,Técnicas Avanzadas de Protección contra Amenazas Informáticas,ITC
+32,Blockchain Avanzado,Aplicaciones Avanzadas de Tecnología Blockchain,ITC
+33,Realidad Virtual Avanzada,Desarrollo Avanzado de Aplicaciones con Realidad Virtual,ITC
+34,Internet de las Cosas Avanzado,Conceptos Avanzados de IoT,ITC
+35,Desarrollo Móvil Avanzado,Desarrollo Avanzado de Aplicaciones Móviles,ITC
+36,Ingeniería de Software Avanzada,Principios Avanzados de Ingeniería de Software,ITC
+37,Big Data Avanzado,Manejo Avanzado de Grandes Volúmenes de Datos,ITC
+38,Computación Cuántica Avanzada,Conceptos Avanzados de Computación Cuántica,ITC
+39,Seguridad en Redes Avanzada,Seguridad Informática Avanzada en Redes,ITC
+40,Análisis de Datos Cuantitativo,Análisis Cuantitativo de Datos con Python,ITC

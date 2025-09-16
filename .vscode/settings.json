@@ -1,0 +1,68 @@
+{
+  // Limita memoria del TS Server (MB)
+  "typescript.tsserver.maxTsServerMemory": 3072,
+
+  // Desactiva habilitación automática de formateadores múltiples
+  "editor.formatOnSave": true,
+  "editor.formatOnType": false,
+
+  // Reduce validaciones redundantes en tiempo real
+  "typescript.suggest.autoImports": true,
+  "javascript.suggest.autoImports": false,
+
+  // Evita que VSCode abra múltiples proyectos TS "implícitos"
+  "typescript.disableAutomaticTypeAcquisition": true,
+
+  // ESLint: usar caché para no recalcular todo
+  "eslint.useFlatConfig": false,
+  "eslint.experimental.useFlatConfig": false,
+  "eslint.alwaysShowStatus": true,
+  "eslint.format.enable": true,
+  "eslint.codeActionsOnSave.rules": null,
+  "eslint.workingDirectories": [{ "pattern": "packages/*" }],
+  "eslint.cache": true,
+  "eslint.options": {
+    "cache": true,
+    "cacheLocation": ".eslintcache"
+  },
+
+  // Archivos que no queremos que el indexador vigile
+  "files.watcherExclude": {
+    "**/node_modules/**": true,
+    "**/dist/**": true,
+    "**/.git/**": true,
+    "**/.turbo/**": true,
+    "**/.pnpm-store/**": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/.pnpm-store": true
+  },
+
+  // Menos telemetría
+  "telemetry.telemetryLevel": "off",
+
+  // Vue / Volar: sólo modo Take Over para que no corra TS duplicado
+  "vue.volar.takeOverMode.enabled": true,
+
+  // Desactiva validación interna JS/TS si ESLint ya lo hace (opcional)
+  "javascript.validate.enable": false,
+  "typescript.validate.enable": true,
+
+  // Minimiza decoraciones innecesarias
+  "editor.codeLens": false,
+  "editor.inlineSuggest.enabled": false,
+
+  // Acelera apertura de archivos grandes
+  "editor.largeFileOptimizations": true,
+
+  // Control watchers (si se usa plugin fsWatcher override)
+  // "files.maxMemoryForLargeFilesMB": 4096,
+
+  // Color de bracket pair desactivado puede ahorrar algo de CPU
+  "editor.bracketPairColorization.enabled": false,
+
+  // Minimizar previsualizaciones
+  "workbench.editor.enablePreview": true
+}

@@ -1,0 +1,1 @@
+export const REGEX_BASE_64 = /data:image\/(\w+);base64[A-Za-z0-9+/]+={0,2}$/;

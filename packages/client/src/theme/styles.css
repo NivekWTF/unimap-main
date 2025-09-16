@@ -1,0 +1,99 @@
+@font-face {
+  font-family: 'Avenir';
+  font-weight: 300;
+  src: url('/assets/fonts/Avenir/Avenir\ Light.ttf');
+}
+
+@font-face {
+  font-family: 'Avenir';
+  font-weight: 400;
+  src: url('/assets/fonts/Avenir/Avenir\ Book.ttf');
+}
+
+@font-face {
+  font-family: 'Avenir';
+  font-weight: 500;
+  src: url('/assets/fonts/Avenir/Avenir\ Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Avenir';
+  font-weight: 600;
+  src: url('/assets/fonts/Avenir/Avenir\ Black.ttf');
+}
+
+@font-face {
+  font-family: 'Avenir';
+  font-weight: 700;
+  src: url('/assets/fonts/Avenir/Avenir\ Heavy.ttf');
+}
+
+html,
+body {
+  margin: 0;
+}
+
+.leaflet-div-icon {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+@keyframes slideLeft {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+ 
+@keyframes flipInX {
+  0% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+  100% {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+}

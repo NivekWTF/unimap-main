@@ -1,0 +1,6 @@
+packages:
+  - packages/*
+
+# Optional: exclude build outputs
+exclude:
+  - '**/dist'

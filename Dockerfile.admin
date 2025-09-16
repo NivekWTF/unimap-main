@@ -1,0 +1,25 @@
+FROM node:18 AS build
+
+WORKDIR /app
+
+COPY packages/admin/package.json packages/admin/pnpm-lock.yaml ./admin/
+
+RUN npm i -g pnpm
+
+RUN cd admin/ && pnpm i
+
+COPY packages/admin/ admin/
+
+COPY packages/server/ server/
+
+RUN cd server/ && pnpm i
+
+RUN cd admin/ && npm run build
+
+FROM nginx:alpine
+
+COPY --from=build /app/admin/dist /usr/share/nginx/html
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
