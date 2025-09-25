@@ -9,7 +9,10 @@ import { aStar } from '@/lib/routing/graph';
 const rawCenter = import.meta.env.VITE_CENTRO_DEFAULT_MAPA ?? '24.790277777778,-107.38777777778';
 const centroDefault = rawCenter.split(',').map(Number) as [number, number];
 const GEOJSON_CONTORNO = import.meta.env.VITE_GEOJSON_PATH ?? '/data/Tec_Contorno.geojson';
-const GEOJSON_PASILLOS  = import.meta.env.VITE_GEOJSON_PASILLOS ?? '/data/pasillos-tec.geojson';
+// Soporte para extras separados por coma: 
+// VITE_GEOJSON_EXTRA="/data/Biblioteca.geojson,/data/Otro.geojson"
+const GEOJSON_EXTRA = (import.meta.env.VITE_GEOJSON_EXTRA as string | undefined)?.split(',').map(s => s.trim()).filter(Boolean) ?? [];
+const GEOJSON_PASILLOS = import.meta.env.VITE_GEOJSON_PASILLOS ?? '/data/pasillos-tec.geojson';
 
 const TILE_MIN_ZOOM = Number(import.meta.env.VITE_TILE_MIN_ZOOM ?? 16);
 const TILE_MAX_ZOOM = Number(import.meta.env.VITE_TILE_MAX_ZOOM ?? 21);
@@ -17,26 +20,27 @@ const TILE_MAX_NATIVE = Number(import.meta.env.VITE_TILE_MAX_NATIVE_ZOOM ?? 20);
 
 // ===== estado =====
 const center = ref<[number, number]>(centroDefault);
-const contorno = ref<any|null>(null);
-const pasillos = ref<any|null>(null);
-const routeFeature = ref<any|null>(null);
-const merged = computed(() => mergeMany([contorno.value, pasillos.value, routeFc.value]));
+const contorno = ref<any | null>(null);
+const pasillos = ref<any | null>(null);
+const routeFeature = ref<any | null>(null);
+const extras = ref<any[]>([]);
+const merged = computed(() => mergeMany([contorno.value, pasillos.value, routeFc.value, ...extras.value]));
 
 const routeFc = computed(() => routeFeature.value
-  ? { type:'FeatureCollection', features:[routeFeature.value] }
+  ? { type: 'FeatureCollection', features: [routeFeature.value] }
   : null
 );
-const markers = ref<{lat:number; lng:number; etiqueta?: string}[]>([]);
+const markers = ref<{ lat: number; lng: number; etiqueta?: string }[]>([]);
 const constrainToCenterBounds = ref(true);
 const loading = ref(false);
 const errorMsg = ref('');
 let graph: ReturnType<typeof buildGraphFromPasillos> | null = null;
 
-function mergeMany(items:any[]) {
+function mergeMany(items: any[]) {
   const features = items
     .filter(Boolean)
     .flatMap(fc => fc.type === 'FeatureCollection' ? fc.features : [fc]);
-  return features.length ? { type:'FeatureCollection', features } : null;
+  return features.length ? { type: 'FeatureCollection', features } : null;
 }
 
 const styleFn: StyleFunction = (feature) => {
@@ -51,32 +55,66 @@ const styleFn: StyleFunction = (feature) => {
   return { color, weight: 2, fillColor: color, fillOpacity: 0.35 };
 };
 
-function computeCenter(g:any): [number, number] {
-  const coords:number[][] = [];
-  function push(a:any){ if (typeof a?.[0]==='number'){ const [lng,lat]=a; coords.push([lng,lat]); } else if (Array.isArray(a)) a.forEach(push); }
-  function walk(n:any){ if(!n)return; if(n.type==='FeatureCollection') n.features.forEach(walk);
-    else if(n.type==='Feature') walk(n.geometry); else if(n.coordinates) push(n.coordinates); }
+function computeCenter(g: any): [number, number] {
+  const coords: number[][] = [];
+  function push(a: any) { if (typeof a?.[0] === 'number') { const [lng, lat] = a; coords.push([lng, lat]); } else if (Array.isArray(a)) a.forEach(push); }
+  function walk(n: any) {
+    if (!n) return; if (n.type === 'FeatureCollection') n.features.forEach(walk);
+    else if (n.type === 'Feature') walk(n.geometry); else if (n.coordinates) push(n.coordinates);
+  }
   walk(g);
   if (!coords.length) return center.value;
-  let minLng=Infinity,minLat=Infinity,maxLng=-Infinity,maxLat=-Infinity;
-  for (const [lng,lat] of coords){ if(lng<minLng)minLng=lng; if(lat<minLat)minLat=lat; if(lng>maxLng)maxLng=lng; if(lat>maxLat)maxLat=lat; }
-  return [(minLat+maxLat)/2,(minLng+maxLng)/2];
+  let minLng = Infinity, minLat = Infinity, maxLng = -Infinity, maxLat = -Infinity;
+  for (const [lng, lat] of coords) { if (lng < minLng) minLng = lng; if (lat < minLat) minLat = lat; if (lng > maxLng) maxLng = lng; if (lat > maxLat) maxLat = lat; }
+  return [(minLat + maxLat) / 2, (minLng + maxLng) / 2];
 }
 
 onMounted(async () => {
   loading.value = true;
   try {
-    const [a,b] = await Promise.all([
-      fetch(GEOJSON_CONTORNO),
-      fetch(GEOJSON_PASILLOS),
-    ]);
-    if (a.ok) contorno.value = await a.json();
+    // 1) Cargar contorno con fallback al nombre con guion bajo
+    let contornoResp = await fetch(GEOJSON_CONTORNO);
+    if (!contornoResp.ok) {
+      // fallback común cuando el archivo real es Tec_Contorno_.geojson
+      const fallbackPath = '/data/Tec_Contorno_.geojson';
+      const fb = await fetch(fallbackPath);
+      if (fb.ok) {
+        contornoResp = fb;
+        console.warn(`Usando fallback de contorno: ${fallbackPath}`);
+      }
+    }
+    if (contornoResp.ok) {
+      contorno.value = await contornoResp.json();
+    } else {
+      console.warn(`No se pudo cargar contorno desde ${GEOJSON_CONTORNO}`);
+    }
+
+    // 2) Cargar pasillos (obligatorio para routing)
+    const b = await fetch(GEOJSON_PASILLOS);
     if (!b.ok) throw new Error(`No se pudo cargar ${GEOJSON_PASILLOS} (${b.status})`);
     pasillos.value = await b.json();
 
+    // 3) Cargar extras (ej. Biblioteca)
+    if (GEOJSON_EXTRA.length) {
+      const loaded = await Promise.all(
+        GEOJSON_EXTRA.map(async (url) => {
+          try {
+            const r = await fetch(url);
+            if (r.ok) return await r.json();
+            console.warn(`No se pudo cargar extra ${url} (${r.status})`);
+            return null;
+          } catch (e) {
+            console.warn(`Error cargando extra ${url}`, e);
+            return null;
+          }
+        })
+      );
+      extras.value = loaded.filter(Boolean);
+    }
+
     center.value = computeCenter(pasillos.value || contorno.value);
     graph = buildGraphFromPasillos(pasillos.value);
-  } catch (e:any) {
+  } catch (e: any) {
     console.error(e);
     errorMsg.value = e?.message ?? 'Error cargando datos';
   } finally {
@@ -85,21 +123,21 @@ onMounted(async () => {
 });
 
 // ===== selección de origen/destino con clicks =====
-const start = ref<[number,number] | null>(null);
-const end   = ref<[number,number] | null>(null);
+const start = ref<[number, number] | null>(null);
+const end = ref<[number, number] | null>(null);
 
-async function handleMapClick(latlng:[number,number]) {
+async function handleMapClick(latlng: [number, number]) {
   if (!start.value) {
     start.value = latlng;
-    markers.value = [{ lat:latlng[0], lng:latlng[1], etiqueta:'Inicio' }];
+    markers.value = [{ lat: latlng[0], lng: latlng[1], etiqueta: 'Inicio' }];
     routeFeature.value = null;
     return;
   }
   if (!end.value) {
     end.value = latlng;
     markers.value = [
-      { lat:start.value[0], lng:start.value[1], etiqueta:'Inicio' },
-      { lat:latlng[0], lng:latlng[1], etiqueta:'Destino' }
+      { lat: start.value[0], lng: start.value[1], etiqueta: 'Inicio' },
+      { lat: latlng[0], lng: latlng[1], etiqueta: 'Destino' }
     ];
     await computeRoute();
     return;
@@ -108,13 +146,13 @@ async function handleMapClick(latlng:[number,number]) {
   start.value = latlng;
   end.value = null;
   routeFeature.value = null;
-  markers.value = [{ lat:latlng[0], lng:latlng[1], etiqueta:'Inicio' }];
+  markers.value = [{ lat: latlng[0], lng: latlng[1], etiqueta: 'Inicio' }];
 }
 
 async function computeRoute() {
   if (!graph || !start.value || !end.value) return;
   const s = nearestNodeId(graph, start.value[0], start.value[1]);
-  const t = nearestNodeId(graph, end.value[0],   end.value[1]);
+  const t = nearestNodeId(graph, end.value[0], end.value[1]);
   const nodePath = aStar(graph, s, t);
   if (!nodePath) {
     errorMsg.value = 'No se encontró ruta (revisa conexiones/topología)';
@@ -135,18 +173,9 @@ async function computeRoute() {
     </div>
 
     <div style="height:100%; width:100%;">
-      <UnimapMap
-        :center="center"
-        :geojson="merged"
-        :markers="markers"
-        :styleFunction="styleFn"
-        :constrainToCenterBounds="true"
-        :zoom="18"
-        :minZoom="TILE_MIN_ZOOM"
-        :maxZoom="TILE_MAX_ZOOM"
-        :tileMaxNativeZoom="TILE_MAX_NATIVE"
-        @map-click="handleMapClick"
-      />
+      <UnimapMap :center="center" :geojson="merged" :markers="markers" :styleFunction="styleFn"
+        :constrainToCenterBounds="true" :zoom="18" :minZoom="TILE_MIN_ZOOM" :maxZoom="TILE_MAX_ZOOM"
+        :tileMaxNativeZoom="TILE_MAX_NATIVE" @map-click="handleMapClick" />
     </div>
   </div>
 </template>

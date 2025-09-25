@@ -1,0 +1,4052 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "nombre": "Centro de computo",
+        "qgisId": "ECC",
+        "categoria": "edificios",
+        "pertenece": "",
+        "nombreCorto": "",
+        "pisos": "2",
+        "pertenecePiso": ""
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.3987997437522,
+                24.788895900555076
+              ],
+              [
+                -107.39880079985609,
+                24.78889484445118
+              ],
+              [
+                -107.39876348418504,
+                24.789108177438504
+              ],
+              [
+                -107.39873461734517,
+                24.78912296289307
+              ],
+              [
+                -107.39850509076474,
+                24.78908705536055
+              ],
+              [
+                -107.39849030531018,
+                24.789065933282597
+              ],
+              [
+                -107.39853184539685,
+                24.78884802384505
+              ],
+              [
+                -107.39855719189039,
+                24.78883394245975
+              ],
+              [
+                -107.398784606263,
+                24.788873722373225
+              ],
+              [
+                -107.3987997437522,
+                24.788895900555076
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 2,
+        "nombre": "Aula de Bases de datos",
+        "qgisId": "ACCBD",
+        "categoria": "aulas",
+        "pertenece": "ECC",
+        "nombreCorto": "Aula BD",
+        "pisos": "",
+        "pertenecePiso": "1"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.3987714929729,
+                24.78903411815267
+              ],
+              [
+                -107.39871692760487,
+                24.789023557113694
+              ],
+              [
+                -107.39873171305943,
+                24.78895209408329
+              ],
+              [
+                -107.3987845182543,
+                24.788961951053
+              ],
+              [
+                -107.3987714929729,
+                24.78903411815267
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 3,
+        "nombre": "Baño Centro de computo - planta baja",
+        "qgisId": "SCCB",
+        "categoria": "sanitarios",
+        "pertenece": "ECC",
+        "nombreCorto": "Baño CC",
+        "pisos": "",
+        "pertenecePiso": "1"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39876586041878,
+                24.789065449234965
+              ],
+              [
+                -107.3987683246612,
+                24.789064393131067
+              ],
+              [
+                -107.39876128396855,
+                24.78910734135624
+              ],
+              [
+                -107.39873276916333,
+                24.789121774776174
+              ],
+              [
+                -107.39869862180397,
+                24.789114734083523
+              ],
+              [
+                -107.39871270318928,
+                24.789055592265253
+              ],
+              [
+                -107.39876586041878,
+                24.789065449234965
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 4,
+        "nombre": "Baño Centro de computo - planta Alta",
+        "qgisId": "SCCA",
+        "categoria": "sanitarios",
+        "pertenece": "ECC",
+        "nombreCorto": "Baño CC",
+        "pisos": "",
+        "pertenecePiso": "2"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39876709254003,
+                24.789064921183023
+              ],
+              [
+                -107.39876286812444,
+                24.789107517373562
+              ],
+              [
+                -107.39873400128458,
+                24.789121950793493
+              ],
+              [
+                -107.39869879782133,
+                24.789115262135475
+              ],
+              [
+                -107.39871358327589,
+                24.78905612031721
+              ],
+              [
+                -107.39876709254003,
+                24.789064921183023
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 5,
+        "nombre": "Computadoras del centro de computo",
+        "qgisId": "ACCC",
+        "categoria": "aulas",
+        "pertenece": "ECC",
+        "nombreCorto": "Computadoras CC",
+        "pisos": "",
+        "pertenecePiso": "1"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39863569561341,
+                24.788933216226127
+              ],
+              [
+                -107.3986529453104,
+                24.788852952329908
+              ],
+              [
+                -107.39878108591665,
+                24.788876186615656
+              ],
+              [
+                -107.39879622340585,
+                24.78889906886677
+              ],
+              [
+                -107.39878284608982,
+                24.788961731031364
+              ],
+              [
+                -107.39863569561341,
+                24.788933216226127
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 6,
+        "nombre": "Aula de Desarrollo de Software",
+        "qgisId": "ACCDS",
+        "categoria": "aulas",
+        "pertenece": "ECC",
+        "nombreCorto": "Aula DS",
+        "pisos": "",
+        "pertenecePiso": "1"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39861879795106,
+                24.789011719949187
+              ],
+              [
+                -107.3984969939682,
+                24.788986373455643
+              ],
+              [
+                -107.3985121314574,
+                24.788910686009643
+              ],
+              [
+                -107.39863569561342,
+                24.788935328433922
+              ],
+              [
+                -107.39861738981253,
+                24.78901066384529
+              ],
+              [
+                -107.39861879795106,
+                24.789011719949187
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 7,
+        "nombre": "Oficina del Jefe del Centro de Computo",
+        "qgisId": "OCCJC",
+        "categoria": "administracion",
+        "pertenece": "ECC",
+        "nombreCorto": "Oficina Jefe CC",
+        "pisos": "",
+        "pertenecePiso": "2"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39863754379527,
+                24.78893290819582
+              ],
+              [
+                -107.39865197721521,
+                24.788851940230337
+              ],
+              [
+                -107.39878187799461,
+                24.788875878585348
+              ],
+              [
+                -107.39879842362234,
+                24.788901577113524
+              ],
+              [
+                -107.39878434223704,
+                24.788961070966423
+              ],
+              [
+                -107.39863754379527,
+                24.78893290819582
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 8,
+        "nombre": "Laboratorio de Redes",
+        "qgisId": "LCCLB",
+        "categoria": "laboratorios",
+        "pertenece": "ECC",
+        "nombreCorto": "Lab Redes",
+        "pisos": "",
+        "pertenecePiso": "2"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39852436466089,
+                24.788912842221766
+              ],
+              [
+                -107.39853474968254,
+                24.788851060143752
+              ],
+              [
+                -107.39855939210682,
+                24.788836978758454
+              ],
+              [
+                -107.39865144916322,
+                24.788853700403497
+              ],
+              [
+                -107.39863525557013,
+                24.788935020403613
+              ],
+              [
+                -107.39852436466089,
+                24.788912842221766
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 9,
+        "nombre": "Oficinas del centro de computo",
+        "qgisId": "OCCF",
+        "categoria": "administracion",
+        "pertenece": "ECC",
+        "nombreCorto": "Oficinas CC",
+        "pisos": "",
+        "pertenecePiso": "2"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39873188907679,
+                24.788952974169877
+              ],
+              [
+                -107.39878539834092,
+                24.788962479104953
+              ],
+              [
+                -107.39877237305951,
+                24.78903253399683
+              ],
+              [
+                -107.39871710362222,
+                24.78902408516565
+              ],
+              [
+                -107.39873188907679,
+                24.788952974169877
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 10,
+        "nombre": "Aula de Programacion Movil",
+        "qgisId": "ACCPM",
+        "categoria": "aulas",
+        "pertenece": "ECC",
+        "nombreCorto": "Aula PM",
+        "pisos": "",
+        "pertenecePiso": "1"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39852445266952,
+                24.788912446182806
+              ],
+              [
+                -107.39853536574313,
+                24.788851192156745
+              ],
+              [
+                -107.39855895206351,
+                24.78883675873681
+              ],
+              [
+                -107.39865153717187,
+                24.78885330436454
+              ],
+              [
+                -107.39863569561341,
+                24.788934272330025
+              ],
+              [
+                -107.39852410063489,
+                24.788912094148174
+              ],
+              [
+                -107.39852445266952,
+                24.788912446182806
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 11,
+        "nombre": "Aula de Programacion Web",
+        "qgisId": "ACCPW",
+        "categoria": "aulas",
+        "pertenece": "ECC",
+        "nombreCorto": "Aula PW",
+        "pisos": "",
+        "pertenecePiso": "1"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39859943604627,
+                24.789100432676587
+              ],
+              [
+                -107.39850333059158,
+                24.789085295187387
+              ],
+              [
+                -107.39848995327554,
+                24.789067341421127
+              ],
+              [
+                -107.39850509076474,
+                24.78898883769807
+              ],
+              [
+                -107.39861879795106,
+                24.78901207198382
+              ],
+              [
+                -107.39860014011553,
+                24.789099024538057
+              ],
+              [
+                -107.39859943604627,
+                24.789100432676587
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 12,
+        "nombre": "Aula de Redes",
+        "qgisId": "ACCR",
+        "categoria": "aulas",
+        "pertenece": "ECC",
+        "nombreCorto": "Aula Redes CC",
+        "pisos": "",
+        "pertenecePiso": "2"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39849796206343,
+                24.78898624144265
+              ],
+              [
+                -107.39851239548337,
+                24.788910906031287
+              ],
+              [
+                -107.39860638873026,
+                24.788928859797547
+              ],
+              [
+                -107.39859195531032,
+                24.789006307416706
+              ],
+              [
+                -107.39849796206343,
+                24.78898624144265
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 13,
+        "nombre": "Taller del Centro de Computo",
+        "qgisId": "ACCTC",
+        "categoria": "atencion",
+        "pertenece": "ECC",
+        "nombreCorto": "Taller CC",
+        "pisos": "",
+        "pertenecePiso": "2"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39859934803759,
+                24.789099596594323
+              ],
+              [
+                -107.3985032425829,
+                24.789085163174388
+              ],
+              [
+                -107.39849056933613,
+                24.789066505338862
+              ],
+              [
+                -107.39850570682533,
+                24.78898835365044
+              ],
+              [
+                -107.39861765383849,
+                24.789012292005452
+              ],
+              [
+                -107.39859934803759,
+                24.789099596594323
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "nombre": "Cubiculo 1 del Edificio A",
+        "qgisId": "EAC01",
+        "categoria": "administracion",
+        "nombreCorto": "Cubiculo A1",
+        "pertenece": "EA",
+        "pertenecePiso": "1"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39791413045512,
+                24.788916459667032
+              ],
+              [
+                -107.39791111707879,
+                24.788933535466242
+              ],
+              [
+                -107.39793547520412,
+                24.78893705107196
+              ],
+              [
+                -107.39793798635107,
+                24.788921984190306
+              ],
+              [
+                -107.39791413045512,
+                24.788916459667032
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 2,
+        "nombre": "Cubiculo 2 Del Edificio A",
+        "qgisId": "EAC02",
+        "categoria": "administracion",
+        "nombreCorto": "Cubiculo A2",
+        "pertenece": "EA",
+        "pertenecePiso": "1"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39793170848371,
+                24.78895236906831
+              ],
+              [
+                -107.39792944845146,
+                24.788968189294042
+              ],
+              [
+                -107.39790509032613,
+                24.788962915885467
+              ],
+              [
+                -107.39790735035838,
+                24.7889483512332
+              ],
+              [
+                -107.39790735035838,
+                24.7889483512332
+              ],
+              [
+                -107.39793170848371,
+                24.78895236906831
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 3,
+        "nombre": "Cubiculo 3 del Edificio A",
+        "qgisId": "EAC03",
+        "categoria": "administracion",
+        "nombreCorto": "Cubiculo A3",
+        "pertenece": "EA",
+        "pertenecePiso": "1"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39793447074535,
+                24.78893654884257
+              ],
+              [
+                -107.39793170848371,
+                24.78895236906831
+              ],
+              [
+                -107.39790735035838,
+                24.788948100118507
+              ],
+              [
+                -107.39791011262001,
+                24.788933786580934
+              ],
+              [
+                -107.39793447074535,
+                24.78893654884257
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 4,
+        "nombre": "Baños_Edificio A",
+        "qgisId": "EAB",
+        "categoria": "sanitarios",
+        "nombreCorto": "Baños EA",
+        "pertenece": "EA",
+        "pertenecePiso": "1"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39783628489991,
+                24.78895437798586
+              ],
+              [
+                -107.397867423122,
+                24.78895965139444
+              ],
+              [
+                -107.39786867869546,
+                24.788944333398092
+              ],
+              [
+                -107.39783929827624,
+                24.788939562218903
+              ],
+              [
+                -107.39783628489991,
+                24.78895437798586
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 5,
+        "nombre": "Edificio_A",
+        "qgisId": "EA",
+        "categoria": "edificios",
+        "nombreCorto": "Edificio A",
+        "pertenece": "",
+        "pertenecePiso": "1"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39822742344833,
+                24.788937484646038
+              ],
+              [
+                -107.39820559730111,
+                24.789048375555286
+              ],
+              [
+                -107.39776837028752,
+                24.78897620845562
+              ],
+              [
+                -107.39778174760356,
+                24.788865317546367
+              ],
+              [
+                -107.39822742344833,
+                24.788937484646038
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 6,
+        "nombre": "Oficina 01 del Edificio A",
+        "qgisId": "EAOF01",
+        "categoria": "administracion",
+        "nombreCorto": "Oficina A1",
+        "pertenece": "EA",
+        "pertenecePiso": "1"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39777981141307,
+                24.7888786948624
+              ],
+              [
+                -107.39780639002782,
+                24.78888186317409
+              ],
+              [
+                -107.39780146154297,
+                24.788906153563737
+              ],
+              [
+                -107.39777752318797,
+                24.788901929148146
+              ],
+              [
+                -107.39777981141307,
+                24.7888786948624
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 7,
+        "nombre": "Cubiculo 4 del Edificio A",
+        "qgisId": "EAC04",
+        "categoria": "administracion",
+        "nombreCorto": "Cubiculo A4",
+        "pertenece": "EA",
+        "pertenecePiso": "1"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39789316033597,
+                24.78889581618922
+              ],
+              [
+                -107.39790959647289,
+                24.788898019917074
+              ],
+              [
+                -107.39790399533125,
+                24.788926484735185
+              ],
+              [
+                -107.39788866105827,
+                24.78892428100733
+              ],
+              [
+                -107.39789316033597,
+                24.78889581618922
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 8,
+        "nombre": "Cubiculo 5 del Edificio A",
+        "qgisId": "EAC04",
+        "categoria": "administracion",
+        "nombreCorto": "Cubiculo A5",
+        "pertenece": "EA",
+        "pertenecePiso": "1"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39790959647287,
+                24.788898019917067
+              ],
+              [
+                -107.39794145870476,
+                24.78890325377072
+              ],
+              [
+                -107.39793815311297,
+                24.788920791771552
+              ],
+              [
+                -107.3979137284626,
+                24.788916108849865
+              ],
+              [
+                -107.39791547308049,
+                24.78890591660854
+              ],
+              [
+                -107.39790840278695,
+                24.78890472292262
+              ],
+              [
+                -107.39790959647287,
+                24.788898019917067
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 9,
+        "nombre": "Cubiculo 6 del Edificio A",
+        "qgisId": "EAC06",
+        "categoria": "administracion",
+        "nombreCorto": "Cubiculo A6",
+        "pertenece": "EA",
+        "pertenecePiso": "1"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39787736695301,
+                24.78889370428336
+              ],
+              [
+                -107.39789316033597,
+                24.788895724367226
+              ],
+              [
+                -107.39788838559228,
+                24.788924097363342
+              ],
+              [
+                -107.39787369407327,
+                24.78892189363549
+              ],
+              [
+                -107.39787736695301,
+                24.78889370428336
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 10,
+        "nombre": "Salon de Conferencias del Edificio A",
+        "qgisId": "EASC",
+        "categoria": "administracion",
+        "nombreCorto": "Conferencias Edif A",
+        "pertenece": "EA",
+        "pertenecePiso": "1"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39787727513102,
+                24.788893612461365
+              ],
+              [
+                -107.39787369407327,
+                24.78892189363549
+              ],
+              [
+                -107.39784100544342,
+                24.788916659781837
+              ],
+              [
+                -107.39784522925515,
+                24.78888782767575
+              ],
+              [
+                -107.39787727513102,
+                24.788893612461365
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 11,
+        "nombre": "Oficina 2 del Edificio A",
+        "qgisId": "EAOF02",
+        "categoria": "administracion",
+        "nombreCorto": "Oficina A2",
+        "pertenece": "EA",
+        "pertenecePiso": "1"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39777717115334,
+                24.788902457200095
+              ],
+              [
+                -107.39780128552566,
+                24.788906329581053
+              ],
+              [
+                -107.3977995253525,
+                24.788926043520476
+              ],
+              [
+                -107.39777488292822,
+                24.788923227243416
+              ],
+              [
+                -107.39777717115334,
+                24.788902457200095
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 12,
+        "nombre": "Oficina 3 del Edificio A",
+        "qgisId": "EAOF03",
+        "categoria": "administracion",
+        "nombreCorto": "Oficina A3",
+        "pertenece": "EA",
+        "pertenecePiso": "1"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39779987738713,
+                24.788921467070256
+              ],
+              [
+                -107.3978092063049,
+                24.788923051226103
+              ],
+              [
+                -107.39780286968151,
+                24.788949101788912
+              ],
+              [
+                -107.3977724186858,
+                24.788945581442587
+              ],
+              [
+                -107.39777505894554,
+                24.788923579278052
+              ],
+              [
+                -107.39779934933519,
+                24.788926747589745
+              ],
+              [
+                -107.39779987738713,
+                24.788922347156838
+              ],
+              [
+                -107.39779987738713,
+                24.788921467070256
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 4,
+        "nombre": "Oficina_04 del Edificio A",
+        "qgisId": "EAOF04",
+        "categoria": "administracion",
+        "nombreCorto": "Oficina A4",
+        "pertenece": "EA",
+        "pertenecePiso": "1"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39780304569882,
+                24.788949101788912
+              ],
+              [
+                -107.397808150201,
+                24.788927803693642
+              ],
+              [
+                -107.39783912924867,
+                24.78893220412655
+              ],
+              [
+                -107.39783648898891,
+                24.788954558325717
+              ],
+              [
+                -107.39780304569882,
+                24.788949101788912
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "nombre": "Edifcio_B",
+        "qgisId": "EB",
+        "categoria": "edificios",
+        "pertenece": "",
+        "pertenecePiso": ""
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39794669255843,
+                24.788637796386347
+              ],
+              [
+                -107.39839111100893,
+                24.78869950076625
+              ],
+              [
+                -107.39836466627469,
+                24.78881115631084
+              ],
+              [
+                -107.39792906273561,
+                24.788739167867618
+              ],
+              [
+                -107.39794669255843,
+                24.788637796386347
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "nombre": "Aula_01 del Edificio B",
+        "qgisId": "EB01",
+        "categoria": "aulas",
+        "nombreCorto": "Aula B1",
+        "pertenece": "EB",
+        "pertenecePiso": "1"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39794705984639,
+                24.788638530962302
+              ],
+              [
+                -107.3980102333782,
+                24.788646611297764
+              ],
+              [
+                -107.3979937054193,
+                24.788749819218914
+              ],
+              [
+                -107.39792943002357,
+                24.788738800579647
+              ],
+              [
+                -107.39794705984639,
+                24.788638530962302
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 2,
+        "nombre": "Aula_02 Del Edificio B",
+        "qgisId": "EB02",
+        "categoria": "aulas",
+        "nombreCorto": "Aula B2",
+        "pertenece": "EB",
+        "pertenecePiso": "1"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39801023337819,
+                24.788646611297768
+              ],
+              [
+                -107.39807230504607,
+                24.788656160785134
+              ],
+              [
+                -107.39805504251122,
+                24.788759735994258
+              ],
+              [
+                -107.3979937054193,
+                24.788750186506892
+              ],
+              [
+                -107.39801023337819,
+                24.788646611297768
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 3,
+        "nombre": "Aula_03 del Edificio B",
+        "qgisId": "EB03",
+        "categoria": "aulas",
+        "nombreCorto": "Aula B3",
+        "pertenece": "EB",
+        "pertenecePiso": "1"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39831104223023,
+                24.788688849414964
+              ],
+              [
+                -107.39829231054348,
+                24.788799403095627
+              ],
+              [
+                -107.39822766785977,
+                24.788788384456357
+              ],
+              [
+                -107.39824493039463,
+                24.788679667215572
+              ],
+              [
+                -107.39831104223023,
+                24.788688849414964
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 4,
+        "nombre": "Aula_04 del Edificio B",
+        "qgisId": "EB04",
+        "categoria": "aulas",
+        "nombreCorto": "Aula B4",
+        "pertenece": "EB",
+        "pertenecePiso": "1"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39836613542658,
+                24.788810789022868
+              ],
+              [
+                -107.39829304511943,
+                24.788800137671576
+              ],
+              [
+                -107.39831177680618,
+                24.78868848212699
+              ],
+              [
+                -107.39839037643297,
+                24.788699500766256
+              ],
+              [
+                -107.39836613542658,
+                24.788810789022868
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 5,
+        "nombre": "Aula_05 del Edificio B",
+        "qgisId": "EB05",
+        "categoria": "aulas",
+        "nombreCorto": "Aula B5",
+        "pertenece": "EB",
+        "pertenecePiso": "2"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39836540085062,
+                24.788810421734894
+              ],
+              [
+                -107.39829377969538,
+                24.788798668519675
+              ],
+              [
+                -107.39831251138214,
+                24.78868848212699
+              ],
+              [
+                -107.39839000914499,
+                24.788699500766256
+              ],
+              [
+                -107.39836540085062,
+                24.788810421734894
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 6,
+        "nombre": "Aula_06 del Edificio B",
+        "qgisId": "EB06",
+        "categoria": "aulas",
+        "nombreCorto": "Aula B6",
+        "pertenece": "EB",
+        "pertenecePiso": "2"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39829231054348,
+                24.788798301231697
+              ],
+              [
+                -107.39822693328382,
+                24.788788384456357
+              ],
+              [
+                -107.39824529768259,
+                24.788678932639623
+              ],
+              [
+                -107.3983099403663,
+                24.788689216702938
+              ],
+              [
+                -107.39829231054348,
+                24.788798301231697
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 7,
+        "nombre": "Aula_07 del Edificio B",
+        "qgisId": "EB07",
+        "categoria": "aulas",
+        "nombreCorto": "Aula B7",
+        "pertenece": "EB",
+        "pertenecePiso": "2"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39822619870787,
+                24.788788017168383
+              ],
+              [
+                -107.39816118873618,
+                24.788777733105064
+              ],
+              [
+                -107.39817845127104,
+                24.788668648576305
+              ],
+              [
+                -107.39824419581868,
+                24.788678932639623
+              ],
+              [
+                -107.39822619870787,
+                24.788788017168383
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 8,
+        "nombre": "Aula_08 del Edificio B",
+        "qgisId": "EB08",
+        "categoria": "aulas",
+        "nombreCorto": "Aula B8",
+        "pertenece": "EB",
+        "pertenecePiso": "2"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39807157047014,
+                24.78865652807311
+              ],
+              [
+                -107.39805357335932,
+                24.788760103282236
+              ],
+              [
+                -107.3979937054193,
+                24.788749819218918
+              ],
+              [
+                -107.39800839693832,
+                24.78864734587372
+              ],
+              [
+                -107.39807157047014,
+                24.78865652807311
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 9,
+        "nombre": "Aula_09 del Edificio B",
+        "qgisId": "EB09",
+        "categoria": "aulas",
+        "nombreCorto": "Aula B9",
+        "pertenece": "EB",
+        "pertenecePiso": "2"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39800766236237,
+                24.788647713161694
+              ],
+              [
+                -107.39799297084335,
+                24.78874945193094
+              ],
+              [
+                -107.39792796087167,
+                24.7887395351556
+              ],
+              [
+                -107.39794595798247,
+                24.7886370618104
+              ],
+              [
+                -107.39800766236237,
+                24.788647713161694
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 6,
+        "nombre": "Laboratorio de Inteligencia Artificial",
+        "qgisId": "ECLIA",
+        "categoria": "laboratorios",
+        "nombreCorto": "Lab IA",
+        "pertenece": "EC",
+        "pertenecePiso": "01"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39853676933947,
+                24.788481905688673
+              ],
+              [
+                -107.39847323732182,
+                24.788471358871515
+              ],
+              [
+                -107.39845339926099,
+                24.788570298061043
+              ],
+              [
+                -107.398517433508,
+                24.788581095992893
+              ],
+              [
+                -107.39853676933947,
+                24.788481905688673
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "nombre": "Incubadora de Software",
+        "qgisId": "ECIS",
+        "categoria": "laboratorios",
+        "nombreCorto": "Incubora SW",
+        "pertenece": "EC",
+        "pertenecePiso": "01"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39845365037567,
+                24.788569544716957
+              ],
+              [
+                -107.3983311064049,
+                24.7885504600002
+              ],
+              [
+                -107.39834592217186,
+                24.78845076746659
+              ],
+              [
+                -107.39847223286304,
+                24.788471358871515
+              ],
+              [
+                -107.39845365037567,
+                24.788569544716957
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "nombre": "Edificio_C",
+        "qgisId": "EC",
+        "categoria": "edificios",
+        "pertenece": "",
+        "pertenecePiso": ""
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39853802619918,
+                24.78848169899672
+              ],
+              [
+                -107.3985181926485,
+                24.788580866750138
+              ],
+              [
+                -107.39811858333103,
+                24.78851548949048
+              ],
+              [
+                -107.3981354785779,
+                24.78841632173706
+              ],
+              [
+                -107.39853802619918,
+                24.78848169899672
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 2,
+        "nombre": "Aula 01 del Edifico C",
+        "qgisId": "ECA01",
+        "categoria": "aulas",
+        "nombreCorto": "Aula C1",
+        "pertenece": "EC",
+        "pertenecePiso": "2"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.3981435237283,
+                24.788419754801833
+              ],
+              [
+                -107.39820580017246,
+                24.788430050504296
+              ],
+              [
+                -107.3981912355202,
+                24.78852698077627
+              ],
+              [
+                -107.39812996353481,
+                24.788516685073805
+              ],
+              [
+                -107.3981435237283,
+                24.788419754801833
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 3,
+        "nombre": "Aula 02 del Edificio C",
+        "qgisId": "ECA02",
+        "categoria": "aulas",
+        "nombreCorto": "Aula C2",
+        "pertenece": "EC",
+        "pertenecePiso": "2"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39826895551809,
+                24.788440973993517
+              ],
+              [
+                -107.39825401419378,
+                24.788537025364057
+              ],
+              [
+                -107.39819136107756,
+                24.788527106333635
+              ],
+              [
+                -107.39820567461514,
+                24.788430176061667
+              ],
+              [
+                -107.39826895551809,
+                24.788440973993517
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 4,
+        "nombre": "Aula 03 del Edificio C",
+        "qgisId": "ECA03",
+        "categoria": "aulas",
+        "nombreCorto": "Aula C3",
+        "pertenece": "EC",
+        "pertenecePiso": "2"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39853651822476,
+                24.788481905688666
+              ],
+              [
+                -107.39851668016392,
+                24.78858134710758
+              ],
+              [
+                -107.39845390149036,
+                24.78857054917573
+              ],
+              [
+                -107.39847323732181,
+                24.788471107756816
+              ],
+              [
+                -107.39853651822476,
+                24.788481905688666
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 5,
+        "nombre": "Aula 04 del Edificio C",
+        "qgisId": "ECA04",
+        "categoria": "aulas",
+        "nombreCorto": "Aula C4",
+        "pertenece": "EC",
+        "pertenecePiso": "2"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39845289703159,
+                24.78857004694634
+              ],
+              [
+                -107.39838886278456,
+                24.788560253473264
+              ],
+              [
+                -107.39840568746907,
+                24.788460309824963
+              ],
+              [
+                -107.39847223286304,
+                24.7884718611009
+              ],
+              [
+                -107.39845289703159,
+                24.78857004694634
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 6,
+        "nombre": "Aula 05 del Edificio C",
+        "qgisId": "ECA05",
+        "categoria": "aulas",
+        "nombreCorto": "Aula C5",
+        "pertenece": "EC",
+        "pertenecePiso": "2"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39840493412498,
+                24.788460309824963
+              ],
+              [
+                -107.39838760721108,
+                24.78855924901449
+              ],
+              [
+                -107.398326084111,
+                24.788549455541414
+              ],
+              [
+                -107.39834089987795,
+                24.788450265237195
+              ],
+              [
+                -107.39840493412498,
+                24.788460309824963
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "nombre": "Auditorio",
+        "qgisId": "Audi",
+        "categoria": "zonas-deportivas",
+        "pertenece": "",
+        "pertenecePiso": ""
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39600820119811,
+                24.78524478255937
+              ],
+              [
+                -107.39599508332198,
+                24.785471323918184
+              ],
+              [
+                -107.39595848920462,
+                24.785471909932284
+              ],
+              [
+                -107.3959529007008,
+                24.785527442996425
+              ],
+              [
+                -107.39567147026668,
+                24.785515240466058
+              ],
+              [
+                -107.39567374674542,
+                24.78546051993774
+              ],
+              [
+                -107.39563468674211,
+                24.785462664357944
+              ],
+              [
+                -107.395639906159,
+                24.78523256303231
+              ],
+              [
+                -107.3956817593106,
+                24.785233669152095
+              ],
+              [
+                -107.39568568397719,
+                24.7851594475292
+              ],
+              [
+                -107.3957226744277,
+                24.785160631499444
+              ],
+              [
+                -107.39572624021858,
+                24.785194323309952
+              ],
+              [
+                -107.39592085816614,
+                24.785196979783883
+              ],
+              [
+                -107.39592510672095,
+                24.785164939105204
+              ],
+              [
+                -107.3959689560928,
+                24.785168677566432
+              ],
+              [
+                -107.395962941521,
+                24.785235383557286
+              ],
+              [
+                -107.39600492261484,
+                24.785243148504804
+              ],
+              [
+                -107.39600820119811,
+                24.78524478255937
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "nombre": "Cafeteria",
+        "qgisId": "ECF",
+        "categoria": "edificios",
+        "pertenece": "",
+        "PertenecePisos": ""
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39771436871585,
+                24.788470479970087
+              ],
+              [
+                -107.39766590357986,
+                24.788459179808846
+              ],
+              [
+                -107.3976598768272,
+                24.788447879647606
+              ],
+              [
+                -107.39749715450534,
+                24.788417996998994
+              ],
+              [
+                -107.39749162998207,
+                24.788420508145936
+              ],
+              [
+                -107.39745898507184,
+                24.78855736565429
+              ],
+              [
+                -107.39744065369918,
+                24.788655300385038
+              ],
+              [
+                -107.3976176895586,
+                24.788685685263044
+              ],
+              [
+                -107.39761969847615,
+                24.788673882872416
+              ],
+              [
+                -107.39767494370888,
+                24.788681918542633
+              ],
+              [
+                -107.39771436871585,
+                24.788470479970087
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "nombre": "Cancha de Basquetbol",
+        "qgisId": "CB",
+        "categoria": "zonas-deportivas",
+        "pertenece": "",
+        "pertenecePiso": ""
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39736656214738,
+                24.7864691768422
+              ],
+              [
+                -107.39736662534781,
+                24.786469226996655
+              ],
+              [
+                -107.3973095852103,
+                24.786752517301327
+              ],
+              [
+                -107.39722629331101,
+                24.786738239957874
+              ],
+              [
+                -107.39682289535723,
+                24.786669732246672
+              ],
+              [
+                -107.39683184749799,
+                24.78661147740611
+              ],
+              [
+                -107.39686343110591,
+                24.78647304874106
+              ],
+              [
+                -107.39687825477442,
+                24.78638490853407
+              ],
+              [
+                -107.39718133240328,
+                24.78643600033785
+              ],
+              [
+                -107.39736656214738,
+                24.7864691768422
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "nombre": "Edificio de Direccion y Administracion",
+        "qgisId": "EDA",
+        "categoria": "edificios",
+        "pertenece": "",
+        "pertenecePiso": ""
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.3964504369528,
+                24.788669429352257
+              ],
+              [
+                -107.39644952870158,
+                24.788668628802668
+              ],
+              [
+                -107.39640984817741,
+                24.788849401186575
+              ],
+              [
+                -107.39632206108551,
+                24.788834505398572
+              ],
+              [
+                -107.39630582761491,
+                24.78891899226805
+              ],
+              [
+                -107.39639573924381,
+                24.788936027626413
+              ],
+              [
+                -107.39635981685748,
+                24.789111034112643
+              ],
+              [
+                -107.39605137134151,
+                24.789058917629042
+              ],
+              [
+                -107.39608674607861,
+                24.78888636525829
+              ],
+              [
+                -107.39617769640185,
+                24.788895504829203
+              ],
+              [
+                -107.39619490085207,
+                24.788815077909153
+              ],
+              [
+                -107.39610436294842,
+                24.78879642225617
+              ],
+              [
+                -107.39614103729679,
+                24.788614067878306
+              ],
+              [
+                -107.3964504369528,
+                24.788669429352257
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "nombre": "Edifico Modelo Coppel",
+        "qgisId": "EMC",
+        "categoria": "edificios",
+        "pertenece": "",
+        "pertenecePiso": ""
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39603790843299,
+                24.786990499591305
+              ],
+              [
+                -107.39603736854296,
+                24.786991010066938
+              ],
+              [
+                -107.39601522328847,
+                24.787097250700914
+              ],
+              [
+                -107.39589607157366,
+                24.787075572880713
+              ],
+              [
+                -107.39591436057785,
+                24.786968892183786
+              ],
+              [
+                -107.39603790843299,
+                24.786990499591305
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 14,
+        "nombre": "Edifcio Albergue",
+        "qgisId": "Albergue",
+        "categoria": "edificios",
+        "pertenece": "",
+        "pertenecePiso": ""
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39859945948868,
+                24.78698398476981
+              ],
+              [
+                -107.39873107221106,
+                24.78700667571961
+              ],
+              [
+                -107.3986490456565,
+                24.787370765915043
+              ],
+              [
+                -107.39852473166992,
+                24.78734928421119
+              ],
+              [
+                -107.39859945948868,
+                24.78698398476981
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "nombre": "Edifcio D",
+        "qgisId": "ED",
+        "categoria": "edificios",
+        "pertenece": "",
+        "pertenecePiso": ""
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39834298028144,
+                24.78819407261609
+              ],
+              [
+                -107.39832156921376,
+                24.788295064982645
+              ],
+              [
+                -107.39781915534596,
+                24.788208418848253
+              ],
+              [
+                -107.39781637390831,
+                24.78820499276736
+              ],
+              [
+                -107.3978346039891,
+                24.78810801790142
+              ],
+              [
+                -107.39834351368933,
+                24.788193568256503
+              ],
+              [
+                -107.39834298028144,
+                24.78819407261609
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "nombre": "Edifcio de Posgrado",
+        "qgisId": "EUP",
+        "categoria": "edificios",
+        "pertenece": "",
+        "pertenecePiso": ""
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39797227424916,
+                24.785483378241523
+              ],
+              [
+                -107.39832669548854,
+                24.785543818792714
+              ],
+              [
+                -107.39832316584109,
+                24.785568001114573
+              ],
+              [
+                -107.39832439191976,
+                24.785567841195025
+              ],
+              [
+                -107.39835967619682,
+                24.785573026500217
+              ],
+              [
+                -107.39836719113515,
+                24.78554036433742
+              ],
+              [
+                -107.3984335990754,
+                24.785550100286315
+              ],
+              [
+                -107.39841588323726,
+                24.78565151601948
+              ],
+              [
+                -107.39840617439322,
+                24.785657983622098
+              ],
+              [
+                -107.39846907248949,
+                24.785740854366903
+              ],
+              [
+                -107.39844269720753,
+                24.785759511750335
+              ],
+              [
+                -107.39846744039286,
+                24.78579179706465
+              ],
+              [
+                -107.39846825692717,
+                24.78579430876182
+              ],
+              [
+                -107.39844371671006,
+                24.78581251593078
+              ],
+              [
+                -107.39833361550008,
+                24.785879644803007
+              ],
+              [
+                -107.39828225903263,
+                24.785813701440844
+              ],
+              [
+                -107.39830062315163,
+                24.785801905265
+              ],
+              [
+                -107.3983088311003,
+                24.785797285184472
+              ],
+              [
+                -107.39831524699458,
+                24.78578736372374
+              ],
+              [
+                -107.39832492079285,
+                24.785779073230753
+              ],
+              [
+                -107.39833188108264,
+                24.785773491287127
+              ],
+              [
+                -107.39834214769161,
+                24.785764069162973
+              ],
+              [
+                -107.39834958495327,
+                24.785759321168467
+              ],
+              [
+                -107.39835826447673,
+                24.785755254589926
+              ],
+              [
+                -107.39836631882288,
+                24.78575063696876
+              ],
+              [
+                -107.39837381541705,
+                24.785748973872746
+              ],
+              [
+                -107.39837794096441,
+                24.785747785612383
+              ],
+              [
+                -107.39838377765669,
+                24.785747692049593
+              ],
+              [
+                -107.39839036884959,
+                24.7857468850621
+              ],
+              [
+                -107.39839248684545,
+                24.78574516791897
+              ],
+              [
+                -107.39841758494406,
+                24.78573200138941
+              ],
+              [
+                -107.3983858479649,
+                24.785697962639627
+              ],
+              [
+                -107.39837305908246,
+                24.78570405881589
+              ],
+              [
+                -107.39835792142634,
+                24.785688689872845
+              ],
+              [
+                -107.39833560884354,
+                24.785702891788887
+              ],
+              [
+                -107.39830626236702,
+                24.785720446595843
+              ],
+              [
+                -107.3982898404308,
+                24.785722182624355
+              ],
+              [
+                -107.3979700018287,
+                24.78566721918974
+              ],
+              [
+                -107.39797084490986,
+                24.78566072538965
+              ],
+              [
+                -107.39796893201455,
+                24.785645144445837
+              ],
+              [
+                -107.39797939463627,
+                24.78560197121178
+              ],
+              [
+                -107.3979664585092,
+                24.785600411191837
+              ],
+              [
+                -107.39797421612005,
+                24.78555080102412
+              ],
+              [
+                -107.39795345377088,
+                24.785544948057556
+              ],
+              [
+                -107.39795925929617,
+                24.785511275337754
+              ],
+              [
+                -107.39796667802746,
+                24.78551115643628
+              ],
+              [
+                -107.39797227424916,
+                24.785483378241523
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "nombre": "Edifcio E",
+        "qgisId": "EE",
+        "categoria": "edificios",
+        "pertenece": "",
+        "pertenecePiso": ""
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.3984660808283,
+                24.787958573343555
+              ],
+              [
+                -107.39844005038043,
+                24.788073522415875
+              ],
+              [
+                -107.39801064891199,
+                24.787999093186546
+              ],
+              [
+                -107.39803361265734,
+                24.787887044220565
+              ],
+              [
+                -107.3984640757868,
+                24.78796021686541
+              ],
+              [
+                -107.3984660808283,
+                24.787958573343555
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "nombre": "Edificio F",
+        "qgisId": "EF",
+        "categoria": "edificios",
+        "pertenece": "",
+        "pertenecePiso": ""
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39785595139992,
+                24.787855433111403
+              ],
+              [
+                -107.39785376057193,
+                24.787854476607812
+              ],
+              [
+                -107.39750559181358,
+                24.78779609718018
+              ],
+              [
+                -107.39754602419804,
+                24.787582747295524
+              ],
+              [
+                -107.39790072670544,
+                24.787642013560365
+              ],
+              [
+                -107.39785595139992,
+                24.787855433111403
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "nombre": "Edificio G",
+        "qgisId": "EG",
+        "categoria": "edificios",
+        "pertenece": "",
+        "pertenecePiso": ""
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39774525935712,
+                24.78721116848487
+              ],
+              [
+                -107.39770158881007,
+                24.787425561918184
+              ],
+              [
+                -107.39735224966005,
+                24.787362738532675
+              ],
+              [
+                -107.39739596845563,
+                24.787150823436463
+              ],
+              [
+                -107.3977430685416,
+                24.787210211978664
+              ],
+              [
+                -107.39774525935712,
+                24.78721116848487
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "nombre": "Unidad Academica",
+        "qgisId": "EUA",
+        "categoria": "edificios",
+        "pertenece": "",
+        "pertenecePiso": ""
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39800726633038,
+                24.786044111928902
+              ],
+              [
+                -107.39796676828438,
+                24.786253992289556
+              ],
+              [
+                -107.39754556500277,
+                24.786181908964917
+              ],
+              [
+                -107.39758374921763,
+                24.785978759173865
+              ],
+              [
+                -107.39800647099496,
+                24.78604511629374
+              ],
+              [
+                -107.39800726633038,
+                24.786044111928902
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "nombre": "Edifcio W",
+        "qgisId": "EW",
+        "categoria": "edificios",
+        "pertenece": "",
+        "pertenecePiso": ""
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.3971008131886,
+                24.787084220316384
+              ],
+              [
+                -107.39709971336782,
+                24.787083997491646
+              ],
+              [
+                -107.39675124833187,
+                24.787025192599884
+              ],
+              [
+                -107.39677366597994,
+                24.786909729519746
+              ],
+              [
+                -107.39679252040884,
+                24.78681016644796
+              ],
+              [
+                -107.39714387372376,
+                24.78687355071372
+              ],
+              [
+                -107.3971008131886,
+                24.787084220316384
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "nombre": "Edificio X",
+        "qgisId": "EX",
+        "categoria": "edificios",
+        "pertenece": "",
+        "pertenecePiso": ""
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39652180650197,
+                24.786471257167648
+              ],
+              [
+                -107.39652141988158,
+                24.786471263360536
+              ],
+              [
+                -107.39647795602981,
+                24.7866848559683
+              ],
+              [
+                -107.39612721610987,
+                24.786626216344004
+              ],
+              [
+                -107.39616952748251,
+                24.786412995322276
+              ],
+              [
+                -107.39652180650197,
+                24.786471257167648
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "nombre": "Edifcio Z",
+        "qgisId": "EZ",
+        "categoria": "edificios",
+        "pertenece": "",
+        "pertenecePiso": ""
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39681039426051,
+                24.78592303345969
+              ],
+              [
+                -107.39680971095218,
+                24.785922735119446
+              ],
+              [
+                -107.39668530740022,
+                24.78590153147412
+              ],
+              [
+                -107.39672921061236,
+                24.785682781108008
+              ],
+              [
+                -107.39684376245279,
+                24.785702596119407
+              ],
+              [
+                -107.39684158185817,
+                24.785712528224146
+              ],
+              [
+                -107.39684569358755,
+                24.785714936648045
+              ],
+              [
+                -107.39684482017627,
+                24.785722373518954
+              ],
+              [
+                -107.39685029257745,
+                24.785725069431628
+              ],
+              [
+                -107.39681039426051,
+                24.78592303345969
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "nombre": "Gimnasio",
+        "qgisId": "Gym",
+        "categoria": "edificios",
+        "pertenece": "",
+        "pertenecePiso": ""
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39800183325207,
+                24.787364227608183
+              ],
+              [
+                -107.39799989027871,
+                24.787376158157944
+              ],
+              [
+                -107.39803591489031,
+                24.787385496911643
+              ],
+              [
+                -107.3980288666433,
+                24.787414366784944
+              ],
+              [
+                -107.39803540097567,
+                24.78741525366622
+              ],
+              [
+                -107.39803057257335,
+                24.78747482809296
+              ],
+              [
+                -107.39789219893824,
+                24.787452751338368
+              ],
+              [
+                -107.39791356261554,
+                24.787349280728247
+              ],
+              [
+                -107.39800183325207,
+                24.787364227608183
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "nombre": "Laboratorio de Electronica",
+        "qgisId": "ELE",
+        "categoria": "laboratorios",
+        "pertenece": "",
+        "pertenecePiso": ""
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.3965479713097,
+                24.785647787127
+              ],
+              [
+                -107.39652766816903,
+                24.785760138697892
+              ],
+              [
+                -107.39651681258455,
+                24.785822971390793
+              ],
+              [
+                -107.39653308884078,
+                24.785825748685177
+              ],
+              [
+                -107.39652085439455,
+                24.785881767957783
+              ],
+              [
+                -107.39626244780516,
+                24.78583388101285
+              ],
+              [
+                -107.39625436439725,
+                24.785824516715774
+              ],
+              [
+                -107.39630020202087,
+                24.785612261595624
+              ],
+              [
+                -107.39631167781839,
+                24.78560334353782
+              ],
+              [
+                -107.39654673107792,
+                24.785648186743142
+              ],
+              [
+                -107.3965479713097,
+                24.785647787127
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "nombre": "Laboratorio de Industrial",
+        "qgisId": "ELI",
+        "categoria": "edificios",
+        "pertenece": "",
+        "pertenecePiso": ""
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39840863065115,
+                24.786793042805982
+              ],
+              [
+                -107.39835520803693,
+                24.78703684540325
+              ],
+              [
+                -107.39799941175359,
+                24.786977101847494
+              ],
+              [
+                -107.39799770668348,
+                24.786973162707355
+              ],
+              [
+                -107.39799743024456,
+                24.786958788687205
+              ],
+              [
+                -107.39799943953359,
+                24.786922066641644
+              ],
+              [
+                -107.39801742194045,
+                24.786840465797354
+              ],
+              [
+                -107.39802747994442,
+                24.786798656658405
+              ],
+              [
+                -107.39805118718779,
+                24.786732334120412
+              ],
+              [
+                -107.39840755431295,
+                24.786793555869096
+              ],
+              [
+                -107.39840863065115,
+                24.786793042805982
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "piso": 1,
+        "tipo": "andador",
+        "ancho_m": null,
+        "sentido": "ambos",
+        "accesible": true,
+        "cost_fac": null
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            864186.1372737037,
+            2746399.438039738
+          ],
+          [
+            864186.4078612614,
+            2746401.5363661936
+          ],
+          [
+            864212.018262398,
+            2746398.126815378
+          ],
+          [
+            864211.6415536171,
+            2746395.6912026256
+          ],
+          [
+            864230.9583073979,
+            2746393.0632324326
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "piso": 1,
+        "tipo": "andador",
+        "ancho_m": null,
+        "sentido": "ambos",
+        "accesible": true,
+        "cost_fac": 1.1
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            864211.6415536171,
+            2746395.6912026256
+          ],
+          [
+            864205.6430540854,
+            2746356.7529093334
+          ],
+          [
+            864213.0998058066,
+            2746354.9641325395
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "piso": 1,
+        "tipo": "andador",
+        "ancho_m": null,
+        "sentido": "ambos",
+        "accesible": true,
+        "cost_fac": 1.1
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            864236.3444430693,
+            2746380.6000702153
+          ],
+          [
+            864234.2215141815,
+            2746364.238618012
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "piso": 1,
+        "tipo": "andador",
+        "ancho_m": null,
+        "sentido": "ambos",
+        "accesible": true,
+        "cost_fac": 1.1
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            864236.1489754885,
+            2746379.0935966442
+          ],
+          [
+            864270.8005761108,
+            2746374.071854517
+          ],
+          [
+            864265.4828785344,
+            2746338.217516095
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "piso": 1,
+        "tipo": "andador",
+        "ancho_m": null,
+        "sentido": "ambos",
+        "accesible": true,
+        "cost_fac": 1.1
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            864246.488907657,
+            2746377.5951243867
+          ],
+          [
+            864245.2832292924,
+            2746364.3621701067
+          ],
+          [
+            864234.4876135828,
+            2746366.2894493025
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "piso": 1,
+        "tipo": "andador",
+        "ancho_m": null,
+        "sentido": "ambos",
+        "accesible": true,
+        "cost_fac": 1.1
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            864231.3509774244,
+            2746352.5009613913
+          ],
+          [
+            864228.3538134965,
+            2746336.7663082
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "piso": 1,
+        "tipo": "escaleras",
+        "ancho_m": null,
+        "sentido": "ambos",
+        "accesible": true,
+        "cost_fac": 1.1
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            864270.0377179908,
+            2746368.9283095826
+          ],
+          [
+            864287.8438279284,
+            2746366.415087988
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "piso": 1,
+        "tipo": "andador",
+        "ancho_m": null,
+        "sentido": "ambos",
+        "accesible": true,
+        "cost_fac": 1.1
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            864227.6629991317,
+            2746326.0014052475
+          ],
+          [
+            864225.3616328235,
+            2746309.571635339
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "piso": 1,
+        "tipo": "andador",
+        "ancho_m": null,
+        "sentido": "ambos",
+        "accesible": true,
+        "cost_fac": 1.1
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            864227.2897141213,
+            2746323.336470339
+          ],
+          [
+            864262.0123583059,
+            2746317.775133228
+          ],
+          [
+            864265.4828785344,
+            2746338.217516095
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "piso": 1,
+        "tipo": "escaleras",
+        "ancho_m": null,
+        "sentido": "ambos",
+        "accesible": true,
+        "cost_fac": 1.1
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            864263.7660971489,
+            2746328.1051650736
+          ],
+          [
+            864298.265843221,
+            2746322.634976774
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "piso": 1,
+        "tipo": "andador",
+        "ancho_m": null,
+        "sentido": "ambos",
+        "accesible": true,
+        "cost_fac": 1.1
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            864298.265843221,
+            2746322.634976774
+          ],
+          [
+            864306.0568935128,
+            2746321.495893679
+          ],
+          [
+            864309.5939615289,
+            2746338.7057353714
+          ],
+          [
+            864307.2187052013,
+            2746339.085100994
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "piso": 1,
+        "tipo": "andador",
+        "ancho_m": null,
+        "sentido": "ambos",
+        "accesible": true,
+        "cost_fac": 1.1
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            864287.8438279284,
+            2746366.4150879877
+          ],
+          [
+            864291.2859925668,
+            2746365.840732879
+          ],
+          [
+            864290.8187427822,
+            2746363.401136224
+          ],
+          [
+            864313.1863306251,
+            2746360.846828051
+          ],
+          [
+            864309.5939615287,
+            2746338.70573537
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "nombre": "SUPERFICIE_EDIFICIO_BIBLIOTECA",
+        "qgisId": "ESB",
+        "categoria": "edificios",
+        "pertenece": "",
+        "pertenecePiso": ""
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39761567335283,
+                24.78878285159752
+              ],
+              [
+                -107.39761902633968,
+                24.788787755947506
+              ],
+              [
+                -107.39760601543695,
+                24.788845478268378
+              ],
+              [
+                -107.397636534755,
+                24.788850938854317
+              ],
+              [
+                -107.39762239983845,
+                24.788906695955724
+              ],
+              [
+                -107.39759515724346,
+                24.78890217447114
+              ],
+              [
+                -107.39758502273303,
+                24.788940018346942
+              ],
+              [
+                -107.39761664702901,
+                24.788946452844126
+              ],
+              [
+                -107.397604664817,
+                24.78900118382676
+              ],
+              [
+                -107.39757311675986,
+                24.78899871457519
+              ],
+              [
+                -107.39756227760726,
+                24.789056402088413
+              ],
+              [
+                -107.39716773590273,
+                24.788987361644608
+              ],
+              [
+                -107.39718465220764,
+                24.78890676956929
+              ],
+              [
+                -107.39714858907166,
+                24.788895448016326
+              ],
+              [
+                -107.3971672959682,
+                24.788794994900968
+              ],
+              [
+                -107.39720859792767,
+                24.78879631633105
+              ],
+              [
+                -107.39722660008077,
+                24.788715706853107
+              ],
+              [
+                -107.39761567335283,
+                24.78878285159752
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 2,
+        "nombre": "Salon_Biblioteca",
+        "qgisId": "SB",
+        "categoria": "bibliotecas",
+        "pertenece": "ESB",
+        "pertenecePiso": "1"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39736341559366,
+                24.789022186441322
+              ],
+              [
+                -107.39742128079737,
+                24.788749242945048
+              ],
+              [
+                -107.39761368185671,
+                24.78878216986185
+              ],
+              [
+                -107.39755885044673,
+                24.789055064787522
+              ],
+              [
+                -107.39736279826946,
+                24.789021642329363
+              ],
+              [
+                -107.39736341559366,
+                24.789022186441322
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 3,
+        "nombre": "Sala_Computo_Biblioteca",
+        "qgisId": "SCB",
+        "categoria": "aulas",
+        "pertenece": "ESB",
+        "pertenecePiso": "2"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39739781326415,
+                24.788854325863422
+              ],
+              [
+                -107.39739473729652,
+                24.788852159137793
+              ],
+              [
+                -107.397302182086,
+                24.788835914160078
+              ],
+              [
+                -107.39732143493293,
+                24.78873256080353
+              ],
+              [
+                -107.39742065282485,
+                24.788748144999378
+              ],
+              [
+                -107.39739781326415,
+                24.788854325863422
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 4,
+        "nombre": "Salon_Audovisual_Biblioteca",
+        "qgisId": "SAB",
+        "categoria": "aulas",
+        "pertenece": "ESB",
+        "pertenecePiso": "2"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39721037170176,
+                24.788795280988477
+              ],
+              [
+                -107.39721098902413,
+                24.788795825101232
+              ],
+              [
+                -107.39722767712013,
+                24.788716889049116
+              ],
+              [
+                -107.39732080696135,
+                24.78873146285738
+              ],
+              [
+                -107.3973047788433,
+                24.788813158363276
+              ],
+              [
+                -107.39721037170176,
+                24.788795280988477
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 5,
+        "nombre": "CUBICULO 02",
+        "qgisId": "BC02",
+        "categoria": "aulas",
+        "pertenece": "ESB",
+        "pertenecePiso": "2"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39729302314416,
+                24.788811230339906
+              ],
+              [
+                -107.39728884024417,
+                24.788833056113976
+              ],
+              [
+                -107.39724773255244,
+                24.78882381084766
+              ],
+              [
+                -107.3972519385347,
+                24.788803185187014
+              ],
+              [
+                -107.39729236872235,
+                24.788811390886863
+              ],
+              [
+                -107.39729302314416,
+                24.788811230339906
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 6,
+        "nombre": "CUBICULO 01",
+        "qgisId": "BC01",
+        "categoria": "aulas",
+        "pertenece": "ESB",
+        "pertenecePiso": "2"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39725161565038,
+                24.788803490481556
+              ],
+              [
+                -107.39725177709254,
+                24.788803337834285
+              ],
+              [
+                -107.39724772966805,
+                24.788823660833557
+              ],
+              [
+                -107.39720695928767,
+                24.788814860331552
+              ],
+              [
+                -107.39721069825606,
+                24.78879559269786
+              ],
+              [
+                -107.39725161565038,
+                24.788803490481556
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 7,
+        "nombre": "CUBICULO 03",
+        "qgisId": "BC03",
+        "categoria": "aulas",
+        "pertenece": "ESB",
+        "pertenecePiso": "2"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39720291473989,
+                24.78883533334427
+              ],
+              [
+                -107.39724365628302,
+                24.78884263370587
+              ],
+              [
+                -107.39723941568602,
+                24.78886145919716
+              ],
+              [
+                -107.39719933721196,
+                24.788854448330618
+              ],
+              [
+                -107.39720275618197,
+                24.7888356360056
+              ],
+              [
+                -107.39720291473989,
+                24.78883533334427
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 8,
+        "nombre": "CUBICULO 04",
+        "qgisId": "BC04",
+        "categoria": "aulas",
+        "pertenece": "ESB",
+        "pertenecePiso": "2"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39724359242393,
+                24.78884269779903
+              ],
+              [
+                -107.39728554841328,
+                24.78885044825915
+              ],
+              [
+                -107.39727915853467,
+                24.78886801034695
+              ],
+              [
+                -107.39723933650117,
+                24.788861278536935
+              ],
+              [
+                -107.39724359242393,
+                24.78884269779903
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 9,
+        "nombre": "CUBICULO 05",
+        "qgisId": "BC05",
+        "categoria": "aulas",
+        "pertenece": "ESB",
+        "pertenecePiso": "2"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39723922824808,
+                24.788861340742105
+              ],
+              [
+                -107.39723590669904,
+                24.788878845580538
+              ],
+              [
+                -107.39719575831542,
+                24.788871301732964
+              ],
+              [
+                -107.3971993323702,
+                24.788854654657154
+              ],
+              [
+                -107.39723899438359,
+                24.788861452215553
+              ],
+              [
+                -107.39723922824808,
+                24.788861340742105
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 10,
+        "nombre": "CUBICULO 06",
+        "qgisId": "BC06",
+        "categoria": "aulas",
+        "pertenece": "ESB",
+        "pertenecePiso": "2"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39723922824808,
+                24.788861340742105
+              ],
+              [
+                -107.39727900616174,
+                24.78886802870642
+              ],
+              [
+                -107.39727436833844,
+                24.788884585103528
+              ],
+              [
+                -107.39723543068733,
+                24.788878637756074
+              ],
+              [
+                -107.39723899024227,
+                24.788861236829895
+              ],
+              [
+                -107.39723922824808,
+                24.788861340742105
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 11,
+        "nombre": "CUBICULO 08",
+        "qgisId": "BC08",
+        "categoria": "aulas",
+        "pertenece": "ESB",
+        "pertenecePiso": "2"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39723044168274,
+                24.788913623426946
+              ],
+              [
+                -107.39726928293501,
+                24.78891954811507
+              ],
+              [
+                -107.39726208350997,
+                24.788947946873932
+              ],
+              [
+                -107.39722468622072,
+                24.788942522813144
+              ],
+              [
+                -107.39723129699131,
+                24.788913347838278
+              ],
+              [
+                -107.39723044168274,
+                24.788913623426946
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 12,
+        "nombre": "CUBICULO 07",
+        "qgisId": "BC07",
+        "categoria": "aulas",
+        "pertenece": "ESB",
+        "pertenecePiso": "2"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.3972243944061,
+                24.788942265605858
+              ],
+              [
+                -107.39718725369802,
+                24.788935266124327
+              ],
+              [
+                -107.39719273245528,
+                24.788906894939466
+              ],
+              [
+                -107.39723014483438,
+                24.788913104417052
+              ],
+              [
+                -107.39722466608562,
+                24.78894147560265
+              ],
+              [
+                -107.3972243944061,
+                24.788942265605858
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 13,
+        "nombre": "CUBICULO 09",
+        "qgisId": "BC09",
+        "categoria": "aulas",
+        "pertenece": "ESB",
+        "pertenecePiso": "2"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39722439943988,
+                24.788942527408476
+              ],
+              [
+                -107.39721868927968,
+                24.788973783018147
+              ],
+              [
+                -107.39718269065222,
+                24.788966503352214
+              ],
+              [
+                -107.39718725369802,
+                24.788935266124327
+              ],
+              [
+                -107.39722383091194,
+                24.788942798401795
+              ],
+              [
+                -107.39722439943988,
+                24.788942527408476
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 14,
+        "nombre": "CUBICULO 10",
+        "qgisId": "BC10",
+        "categoria": "aulas",
+        "pertenece": "ESB",
+        "pertenecePiso": "2"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -107.39726179169527,
+                24.788947689666742
+              ],
+              [
+                -107.39726121309968,
+                24.788947437054944
+              ],
+              [
+                -107.3972572387359,
+                24.788979450500705
+              ],
+              [
+                -107.39721811068407,
+                24.7889735304062
+              ],
+              [
+                -107.39722325735023,
+                24.788942807592484
+              ],
+              [
+                -107.39726179169527,
+                24.788947689666742
+              ]
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
