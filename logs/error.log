@@ -100,3 +100,14 @@
     "message": "Expected string, received null"
   }
 ]
+2025-09-25 21:14:12 [error]: [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "null",
+    "path": [
+      "token"
+    ],
+    "message": "Expected string, received null"
+  }
+]

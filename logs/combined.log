@@ -132,3 +132,14 @@
 2025-09-25 21:12:12 [info]: undefined
 2025-09-25 21:12:12 [info]: undefined
 2025-09-25 21:12:22 [info]: undefined
+2025-09-25 21:14:12 [error]: [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "null",
+    "path": [
+      "token"
+    ],
+    "message": "Expected string, received null"
+  }
+]
