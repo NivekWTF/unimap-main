@@ -59,7 +59,7 @@ export const loginCliente = publicProc
       usuario.password!
     );
 
-    if (!sonCredencialesValidas && process.env.NODE_ENV !== 'development') {
+    if (!sonCredencialesValidas) {
       throw new TRPCError({
         code: 'UNAUTHORIZED',
         message: LOGIN_INCORRECTO,

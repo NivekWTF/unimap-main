@@ -143,3 +143,294 @@
     "message": "Expected string, received null"
   }
 ]
+2025-11-03 04:33:41 [info]: undefined
+2025-11-03 04:33:41 [info]: undefined
+2025-11-03 04:33:51 [info]: undefined
+2025-11-03 06:17:34 [info]: undefined
+2025-11-03 06:17:34 [info]: undefined
+2025-11-03 06:17:44 [info]: undefined
+2025-11-03 06:46:54 [info]: undefined
+2025-11-03 06:46:54 [info]: undefined
+2025-11-03 06:47:05 [info]: undefined
+2025-11-03 06:51:47 [info]: undefined
+2025-11-03 06:51:47 [info]: undefined
+2025-11-03 06:51:58 [info]: undefined
+2025-11-03 06:52:48 [error]: [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "username"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "password"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "nombres"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "apellidos"
+    ],
+    "message": "Required"
+  },
+  {
+    "expected": "'ADMIN' | 'ALUMNO' | 'PROFESOR'",
+    "received": "undefined",
+    "code": "invalid_type",
+    "path": [
+      "tipoUsuario"
+    ],
+    "message": "Required"
+  }
+]
+2025-11-03 06:58:21 [info]: undefined
+2025-11-03 06:58:21 [info]: undefined
+2025-11-03 06:58:32 [info]: undefined
+2025-11-03 07:01:00 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-03 07:01:23 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-03 07:04:42 [info]: undefined
+2025-11-03 07:04:42 [info]: undefined
+2025-11-03 07:04:53 [info]: undefined
+2025-11-03 07:05:19 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-03 07:06:16 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-03 07:11:11 [error]: invalid token
+2025-11-03 07:11:21 [error]: invalid token
+2025-11-03 07:13:59 [info]: undefined
+2025-11-03 07:13:59 [info]: undefined
+2025-11-03 07:14:10 [info]: undefined
+2025-11-03 07:16:18 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-03 07:16:34 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-03 07:32:00 [info]: undefined
+2025-11-03 07:32:00 [info]: undefined
+2025-11-03 07:32:10 [info]: undefined
+2025-11-03 07:32:50 [info]: undefined
+2025-11-03 07:32:50 [info]: undefined
+2025-11-03 07:33:01 [info]: undefined
+2025-11-03 07:33:12 [info]: undefined
+2025-11-03 07:33:12 [info]: undefined
+2025-11-03 07:33:24 [info]: undefined
+2025-11-03 07:35:40 [info]: undefined
+2025-11-03 07:35:40 [info]: undefined
+2025-11-03 07:35:50 [info]: undefined
+2025-11-03 07:38:56 [info]: undefined
+2025-11-03 07:38:56 [info]: undefined
+2025-11-03 07:39:07 [info]: undefined
+2025-11-03 07:40:46 [info]: undefined
+2025-11-03 07:40:46 [info]: undefined
+2025-11-03 07:40:57 [info]: undefined
+2025-11-03 07:47:10 [info]: undefined
+2025-11-03 07:47:10 [info]: undefined
+2025-11-03 07:47:21 [info]: undefined
+2025-11-03 07:48:01 [info]: undefined
+2025-11-03 07:48:01 [info]: undefined
+2025-11-03 07:48:12 [info]: undefined
+2025-11-03 07:48:41 [info]: undefined
+2025-11-03 07:48:41 [info]: undefined
+2025-11-03 07:48:52 [info]: undefined
+2025-11-03 07:50:10 [info]: undefined
+2025-11-03 07:50:10 [info]: undefined
+2025-11-03 07:50:21 [info]: undefined
+2025-11-03 16:30:06 [info]: undefined
+2025-11-03 16:30:06 [info]: undefined
+2025-11-03 16:30:14 [info]: undefined
+2025-11-03 18:43:39 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-03 18:44:04 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-03 18:44:25 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-03 18:45:54 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-03 18:46:04 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-03 18:46:35 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-03 18:47:15 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-03 18:47:25 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-03 18:48:03 [info]: undefined
+2025-11-03 18:48:03 [info]: undefined
+2025-11-03 18:48:13 [info]: undefined
+2025-11-03 18:48:35 [error]: Usuario validation failed: apellidos: Path `apellidos` is required.
+2025-11-03 18:48:47 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-03 18:49:07 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-03 18:53:17 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-03 19:07:51 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-03 19:08:05 [error]: [
+  {
+    "code": "invalid_type",
+    "expected": "object",
+    "received": "undefined",
+    "path": [],
+    "message": "Required"
+  }
+]
+2025-11-03 19:08:06 [error]: [
+  {
+    "code": "invalid_type",
+    "expected": "object",
+    "received": "undefined",
+    "path": [],
+    "message": "Required"
+  }
+]
+2025-11-03 19:08:08 [error]: [
+  {
+    "code": "invalid_type",
+    "expected": "object",
+    "received": "undefined",
+    "path": [],
+    "message": "Required"
+  }
+]
+2025-11-03 19:09:35 [error]: [
+  {
+    "code": "invalid_type",
+    "expected": "object",
+    "received": "undefined",
+    "path": [],
+    "message": "Required"
+  }
+]
+2025-11-03 19:09:39 [error]: [
+  {
+    "code": "invalid_type",
+    "expected": "object",
+    "received": "undefined",
+    "path": [],
+    "message": "Required"
+  }
+]
+2025-11-03 19:09:47 [error]: [
+  {
+    "code": "invalid_type",
+    "expected": "object",
+    "received": "undefined",
+    "path": [],
+    "message": "Required"
+  }
+]
+2025-11-03 19:11:33 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-03 19:21:04 [info]: undefined
+2025-11-03 19:21:04 [info]: undefined
+2025-11-03 19:21:13 [info]: undefined
+2025-11-03 19:21:30 [error]: Cannot read properties of undefined (reading '_parseAsync')
+2025-11-03 19:22:22 [info]: undefined
+2025-11-03 19:22:22 [info]: undefined
+2025-11-03 19:22:32 [info]: undefined
+2025-11-03 19:22:35 [error]: Cannot read properties of undefined (reading '_parseAsync')
+2025-11-03 19:24:58 [info]: undefined
+2025-11-03 19:24:58 [info]: undefined
+2025-11-03 19:25:09 [info]: undefined
+2025-11-03 22:03:33 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-04 01:09:06 [info]: undefined
+2025-11-04 01:09:06 [info]: undefined
+2025-11-04 01:09:16 [info]: undefined
+2025-11-04 22:40:05 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-04 22:43:17 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-04 22:43:24 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-04 22:44:26 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-04 22:46:18 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-04 22:46:21 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-04 22:53:58 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-04 22:55:18 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-04 22:55:23 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-04 22:55:39 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-04 22:55:41 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-04 22:55:42 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-04 22:55:48 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-04 22:55:54 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-04 22:56:52 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-04 23:17:53 [info]: undefined
+2025-11-04 23:17:53 [info]: undefined
+2025-11-04 23:18:04 [info]: undefined
+2025-11-04 23:19:14 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-04 23:19:19 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-04 23:19:23 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-04 23:19:25 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-04 23:19:29 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-04 23:19:50 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-04 23:20:03 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-04 23:20:10 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-04 23:21:15 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-04 23:21:34 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-04 23:22:14 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-04 23:22:16 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-04 23:22:17 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-04 23:23:44 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-04 23:24:16 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-04 23:25:51 [info]: undefined
+2025-11-04 23:25:51 [info]: undefined
+2025-11-04 23:26:01 [info]: undefined
+2025-11-04 23:31:03 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-04 23:31:09 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-04 23:31:09 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-04 23:40:55 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-04 23:44:18 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-04 23:48:59 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-04 23:49:34 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-04 23:50:19 [error]: Cannot read properties of undefined (reading 'replace')
+2025-11-04 23:50:26 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-04 23:50:27 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-04 23:50:33 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-05 00:00:10 [error]: Cannot read properties of undefined (reading 'replace')
+2025-11-05 00:00:20 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-05 00:00:27 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-05 00:00:38 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-05 00:00:40 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-05 00:01:03 [error]: Cannot read properties of undefined (reading 'replace')
+2025-11-05 00:01:12 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-05 15:15:33 [error]: Cannot read properties of undefined (reading 'replace')
+2025-11-05 15:15:44 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-05 15:15:59 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-05 15:16:29 [error]: Cannot read properties of undefined (reading 'replace')
+2025-11-05 15:17:46 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-05 15:19:44 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-05 19:46:39 [info]: undefined
+2025-11-05 19:46:39 [info]: undefined
+2025-11-05 19:46:49 [info]: undefined
+2025-11-13 20:13:06 [info]: undefined
+2025-11-13 20:13:06 [info]: undefined
+2025-11-13 20:13:12 [error]: [
+  {
+    "code": "invalid_type",
+    "expected": "object",
+    "received": "undefined",
+    "path": [],
+    "message": "Required"
+  }
+]
+2025-11-13 20:13:14 [error]: [
+  {
+    "code": "invalid_type",
+    "expected": "object",
+    "received": "undefined",
+    "path": [],
+    "message": "Required"
+  }
+]
+2025-11-13 20:13:16 [error]: [
+  {
+    "code": "invalid_type",
+    "expected": "object",
+    "received": "undefined",
+    "path": [],
+    "message": "Required"
+  }
+]
+2025-11-13 20:13:16 [info]: undefined
+2025-11-16 06:09:07 [info]: undefined
+2025-11-16 06:09:07 [info]: undefined
+2025-11-16 06:09:17 [info]: undefined

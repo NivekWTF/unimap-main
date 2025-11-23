@@ -19,8 +19,8 @@ export type Usuario = {
   avatar?: string;
   tipoUsuario: TipoUsuario;
   activo: boolean;
-  fechaCreacion: string;
-  fechaModificacion: string;
+  fechaCreacion: string | Date;
+  fechaModificacion: string | Date;
   _id: string;
   password?: string | undefined;
 };
@@ -29,8 +29,8 @@ export type Categoria = {
   _id: string;
   nombre: string;
   activo?: boolean;
-  fechaCreacion: string;
-  fechaModificacion: string;
+  fechaCreacion: string | Date;
+  fechaModificacion: string | Date;
   pertenece: Categoria[];
   palabrasClave: string;
   descripcion: string;

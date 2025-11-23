@@ -4,6 +4,7 @@ import { ref, onMounted, computed } from 'vue';
 import type { StyleFunction } from 'leaflet';
 import { buildGraphFromPasillos, nearestNodeId, pathToGeoJson } from '@/lib/routing/buildGraph';
 import { aStar } from '@/lib/routing/graph';
+import { useObjetos } from '@/composables/useObjetos';
 
 // ===== env y datos =====
 const rawCenter = import.meta.env.VITE_CENTRO_DEFAULT_MAPA ?? '24.790277777778,-107.38777777778';
@@ -34,6 +35,8 @@ const markers = ref<{ lat: number; lng: number; etiqueta?: string }[]>([]);
 const constrainToCenterBounds = ref(true);
 const loading = ref(false);
 const errorMsg = ref('');
+// Flag to temporarily enable/disable route calculation on map clicks
+const routingEnabled = ref(false);
 let graph: ReturnType<typeof buildGraphFromPasillos> | null = null;
 
 function mergeMany(items: any[]) {
@@ -94,6 +97,15 @@ onMounted(async () => {
     if (!b.ok) throw new Error(`No se pudo cargar ${GEOJSON_PASILLOS} (${b.status})`);
     pasillos.value = await b.json();
 
+    // Normalizar GeoJSON a objetos y guardarlos en la store (para categorías/objetos interactivos)
+    try {
+      const { normalizeFromGeoJson } = useObjetos();
+      normalizeFromGeoJson(contorno.value);
+      normalizeFromGeoJson(pasillos.value);
+    } catch (e) {
+      console.debug('normalizeFromGeoJson fallo:', e);
+    }
+
     // 3) Cargar extras (ej. Biblioteca)
     if (GEOJSON_EXTRA.length) {
       const loaded = await Promise.all(
@@ -127,6 +139,7 @@ const start = ref<[number, number] | null>(null);
 const end = ref<[number, number] | null>(null);
 
 async function handleMapClick(latlng: [number, number]) {
+  if (!routingEnabled.value) return; // routing disabled for now
   if (!start.value) {
     start.value = latlng;
     markers.value = [{ lat: latlng[0], lng: latlng[1], etiqueta: 'Inicio' }];
@@ -164,15 +177,20 @@ async function computeRoute() {
 </script>
 
 <template>
-  <div style="height:100vh; width:100vw; display:grid; grid-template-rows:auto 1fr; gap:8px; padding:8px;">
-    <div style="display:flex; flex-wrap:wrap; align-items:center; gap:12px;">
-      <span v-if="loading">Cargando…</span>
-      <span v-if="errorMsg" style="color:#b71c1c">{{ errorMsg }}</span>
-      <span v-if="start && !end">Selecciona el destino con un click en el mapa…</span>
-      <span v-if="start && end">Click de nuevo para reiniciar desde un nuevo origen.</span>
+  <!-- Contenedor fijo para que el mapa siempre llene el viewport -->
+  <div style="position:fixed; inset:0; display:flex; flex-direction:column;">
+    <!-- controles/avisos como capa superior (overlay) -->
+    <div style="position:absolute; top:8px; left:8px; right:8px; z-index:1000; display:flex; gap:12px; align-items:center; pointer-events:auto;">
+      <div style="background:rgba(255,255,255,0.9); padding:8px 12px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.12);">
+        <span v-if="loading">Cargando…</span>
+        <span v-if="errorMsg" style="color:#b71c1c">{{ errorMsg }}</span>
+        <span v-if="start && !end">Selecciona el destino con un click en el mapa…</span>
+        <span v-if="start && end">Click de nuevo para reiniciar desde un nuevo origen.</span>
+      </div>
     </div>
 
-    <div style="height:100%; width:100%;">
+    <!-- mapa ocupa todo el espacio disponible -->
+    <div style="flex:1 1 auto; min-height:0;">
       <UnimapMap :center="center" :geojson="merged" :markers="markers" :styleFunction="styleFn"
         :constrainToCenterBounds="true" :zoom="18" :minZoom="TILE_MIN_ZOOM" :maxZoom="TILE_MAX_ZOOM"
         :tileMaxNativeZoom="TILE_MAX_NATIVE" @map-click="handleMapClick" />

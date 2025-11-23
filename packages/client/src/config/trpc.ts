@@ -1,5 +1,6 @@
 import { createTRPCReact } from '@trpc/react-query';
 import { httpBatchLink, createTRPCProxyClient } from '@trpc/client';
+import SuperJSON from 'superjson';
 
 import store from '../store';
 
@@ -21,6 +22,7 @@ export const trpcVanilla = createTRPCProxyClient<AppRouter>({
       headers,
     }),
   ],
+  transformer: SuperJSON,
 });
 
 export const trpcClient = trpc.createClient({
@@ -30,6 +32,7 @@ export const trpcClient = trpc.createClient({
       headers,
     }),
   ],
+  transformer: SuperJSON,
 });
 
 export default trpc;

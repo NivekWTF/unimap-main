@@ -74,7 +74,8 @@ services:
       context: ./packages/web-vue
       dockerfile: Dockerfile
       args:
-        VITE_TRPC_BASE_URL: "http://back-end:3000/api/v1"
+        # Use localhost here so the built frontend talks to the host-mapped backend
+        VITE_TRPC_BASE_URL: "http://localhost:3000/api/v1"
         VITE_TILES_URL: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         VITE_CENTRO_DEFAULT_MAPA: "24.788020,-107.396755"
         VITE_GEOJSON_PATH: "/data/Tec_Contorno.geojson"

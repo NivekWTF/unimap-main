@@ -5,7 +5,7 @@ export interface Usuario {
   campus:            string;
   clave:             string;
   activo:            boolean;
-  fechaCreacion?:     string;
+  fechaCreacion?:     string | Date;
   nombres:           string;
   apellidos:         string;
   correo:            string;

@@ -5,7 +5,7 @@ import { TipoUsuario } from '../constants/tipo-usuario';
 import { TModelo } from '../utilities/types';
 import { objetoValidator } from './objeto';
 import { claseValidator } from './clase';
-import { campusValidator } from '.';
+import { campusValidator } from './campus';
 import { tiposUsuarioValidator } from '../utilities/validators';
 
 const cargaValidator = z.object({
@@ -25,6 +25,7 @@ export const usuarioGuardarValidator = z.object({
   correo: z.string().optional(),
   clave: z.string().optional(),
   tipoUsuario: tiposUsuarioValidator,
+  campus: z.string().or(campusValidator).optional(),
   activo: z.boolean().optional(),
 });
 
