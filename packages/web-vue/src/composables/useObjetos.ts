@@ -237,7 +237,50 @@ export function useObjetos() {
   }
 
   function openObjeto(id: string) {
+    // If object already exists in store, just open it
+    const existing = app.objetosPorId?.[id];
+    if (existing) {
+      app.abrirSwipeableObjeto(id);
+      return existing;
+    }
+
+    // Open placeholder immediately so UI responds, then try to fetch full object
     app.abrirSwipeableObjeto(id);
+
+    // Async fetch: try to load the object from backend and merge into store
+    (async () => {
+      try {
+        const resp = await (trpc as any).objetos.obtenerTodos.query({ id });
+        const objs = (resp ?? []) as any[];
+        if (!objs.length) return;
+
+        const mapped = objs.map((o) => {
+          const obj = { ...o };
+          if (!obj.centroide && obj.geometria) {
+            const c = centroidFromGeom(obj.geometria);
+            if (c && Array.isArray(c)) obj.centroide = { lat: c[0], lng: c[1] };
+          }
+          if (obj.categoria && typeof obj.categoria === 'string') {
+            const found = categoriasPorId.value.get(obj.categoria);
+            if (found) obj.categoria = found;
+          }
+          return obj;
+        });
+
+        // Merge with existing store objects to avoid wiping other entries
+        const existingArr = Object.values(app.objetosPorId || {});
+        const combined = [...existingArr, ...mapped];
+        app.setObjetosPorId(combined as any[]);
+
+        // set the selected objeto to the freshly loaded one (first match)
+        const first = mapped[0];
+        if (first) app.setObjetoSeleccionado(first);
+      } catch (e) {
+        console.debug('Error cargando objeto por id', id, e);
+      }
+    })();
+
+    return null;
   }
 
   return {

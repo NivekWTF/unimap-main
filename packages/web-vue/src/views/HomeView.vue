@@ -4,8 +4,9 @@ import Sidebar from '@/components/ui/Sidebar.vue';
 import Alerts from '@/components/ui/Alerts.vue';
 
 import { ref, onMounted, computed } from 'vue';
-import type { StyleFunction } from 'leaflet';
 import { useAppStore } from '@/stores/app';
+import { useObjetos } from '@/composables/useObjetos';
+import type { StyleFunction } from 'leaflet';
 import { buildGraphFromPasillos, nearestNodeId, pathToGeoJson } from '@/lib/routing/buildGraph';
 import { aStar } from '@/lib/routing/graph';
 
@@ -25,7 +26,21 @@ const errorMsg = ref('');
 
 let graph: ReturnType<typeof buildGraphFromPasillos> | null = null;
 
-const merged = computed(() => mergeMany([contorno.value, pasillos.value, routeFc.value]));
+// objetos layer (from composable) -> to enable feature clicks on objects
+const { objetosEnCapa } = useObjetos();
+const objetosGeojson = computed(() => {
+  const objs = objetosEnCapa?.value ?? [];
+  const features = objs
+    .filter((o: any) => o && o.geometria)
+    .map((o: any) => ({
+      type: 'Feature',
+      geometry: o.geometria,
+      properties: { _id: o._id, nombre: o.nombre, categoria: o.categoria?._id ?? o.categoria },
+    }));
+  return features.length ? { type: 'FeatureCollection', features } : null;
+});
+
+const merged = computed(() => mergeMany([contorno.value, pasillos.value, routeFc.value, objetosGeojson.value]));
 const routeFc = computed(() => routeFeature.value ? ({ type:'FeatureCollection', features:[routeFeature.value] }) : null);
 
 function mergeMany(items:any[]){
@@ -58,6 +73,16 @@ onMounted(async ()=>{
     if (a.ok) contorno.value = await a.json();
     if (!b.ok) throw new Error(`No se pudo cargar ${GEOJSON_PASILLOS} (${b.status})`);
     pasillos.value = await b.json();
+    // normalize geojson into objetos store so we render objetos layer
+    try {
+      const { normalizeFromGeoJson, loadObjetos } = useObjetos();
+      normalizeFromGeoJson(contorno.value);
+      normalizeFromGeoJson(pasillos.value);
+      // ensure backend objects are loaded for current campus
+      loadObjetos();
+    } catch (e) {
+      console.debug('normalizeFromGeoJson/loadObjetos failed:', e);
+    }
     center.value = computeCenter(pasillos.value || contorno.value);
     graph = buildGraphFromPasillos(pasillos.value);
   } catch (e:any) {
@@ -89,6 +114,11 @@ async function computeRoute(){
 // click en polígonos/lineas → abre Sidebar
 function onFeatureClick(payload:{feature:any, latlng:[number,number]}){
   app.selectFeature(payload.feature); // Sidebar muestra properties
+  try{
+    const id = payload?.feature?.properties?._id ?? payload?.feature?.properties?.id;
+    const msg = id ? `Click objeto ${id}` : `Click objeto sin id`;
+    app.pushAlert({ message: msg, type: 'success' });
+  }catch(e){ console.debug('onFeatureClick alert error', e); }
 }
 </script>
 
