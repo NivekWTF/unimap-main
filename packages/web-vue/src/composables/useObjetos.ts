@@ -1,4 +1,4 @@
-import { ref, computed, onMounted } from 'vue';
+import { ref, computed, onMounted, watch } from 'vue';
 import { useAppStore } from '@/stores/app';
 import { trpc } from '@/lib/trpc';
 
@@ -44,7 +44,43 @@ export function useObjetos() {
 
   onMounted(() => {
     loadCategorias();
+    // initial load of objetos for the current campus (if any)
+    loadObjetos(app.campusId);
   });
+
+  // Reload objetos when the selected campus changes
+  watch(() => app.campusId, (newCampus) => {
+    loadObjetos(newCampus);
+  });
+
+  // Load objetos from backend (public procedure). Optionally filter by campus.
+  async function loadObjetos(campus?: string) {
+    try {
+      const resp = await (trpc as any).objetos.obtenerTodos.query({ campus: campus ?? app.campusId ?? undefined });
+      const objetosServer = (resp ?? []) as any[];
+
+      // Compute centroide if missing and normalize category if server returned object
+      const mapped = objetosServer.map((o) => {
+        const obj = { ...o };
+        if (!obj.centroide && obj.geometria) {
+          const c = centroidFromGeom(obj.geometria);
+          if (c && Array.isArray(c)) obj.centroide = { lat: c[0], lng: c[1] };
+        }
+        // If categoria is an id string, try to enrich from categoriasPorId
+        if (obj.categoria && typeof obj.categoria === 'string') {
+          const found = categoriasPorId.value.get(obj.categoria);
+          if (found) obj.categoria = found;
+        }
+        return obj;
+      });
+
+      app.setObjetosPorId(mapped as any[]);
+      return mapped;
+    } catch (e) {
+      console.debug('Error cargando objetos desde backend', e);
+      return [];
+    }
+  }
 
   const objetosRaiz = computed(() => objetos.value.filter((obj: any) => !obj.pertenece));
 
@@ -210,6 +246,7 @@ export function useObjetos() {
     categorias,
     categoriasPorId,
     setCategoria,
+    loadObjetos,
     objetos,
     objetosRaiz,
     objetosEnCapa,
