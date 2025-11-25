@@ -1,5 +1,6 @@
-import { ref, computed } from 'vue';
+import { ref, computed, onMounted } from 'vue';
 import { useAppStore } from '@/stores/app';
+import { trpc } from '@/lib/trpc';
 
 type CategoriaLike = { _id?: string; nombre?: string; icono?: string; color?: string; colorSecundario?: string } | string | null | undefined;
 
@@ -13,6 +14,8 @@ export function useObjetos() {
   const loading = ref(false);
   // Selected category filter (equivalent to React's `categoria` state)
   const categoria = ref<string>('');
+  const categorias = ref<any[]>([]);
+  const categoriasPorId = computed(() => new Map((categorias.value || []).map((c: any) => [c._id, c])));
 
   // Derived arrays/maps from store objetosPorId
   const objetos = computed(() => {
@@ -26,6 +29,21 @@ export function useObjetos() {
       return o;
     });
     return arr;
+  });
+
+  // Load categorias from backend once
+  async function loadCategorias() {
+    try {
+      const resp = await (trpc as any).categorias.obtenerTodos.query({ habilitado: true });
+      categorias.value = resp ?? [];
+    } catch (e) {
+      // ignore; keep empty
+      console.debug('No se pudieron cargar categorias', e);
+    }
+  }
+
+  onMounted(() => {
+    loadCategorias();
   });
 
   const objetosRaiz = computed(() => objetos.value.filter((obj: any) => !obj.pertenece));
@@ -75,8 +93,7 @@ export function useObjetos() {
 
         const rawCategoria: CategoriaLike = props.categoria ?? props.cat ?? null;
 
-        // Normalize category into the client Categoria shape. Use a safe any-cast
-        // to accept different incoming shapes and avoid TS errors on unknown keys.
+        // Normalize category into the client Categoria shape.
         let categoriaObj: any = null;
         if (rawCategoria && typeof rawCategoria === 'object') {
           const rc: any = rawCategoria as any;
@@ -88,7 +105,19 @@ export function useObjetos() {
             colorSecundario: rc.colorSecundario ?? rc.color_secondary ?? rc.color_secondary ?? '#ffffff',
           };
         } else if (rawCategoria && typeof rawCategoria === 'string') {
-          categoriaObj = { _id: rawCategoria, nombre: rawCategoria, icono: '', color: '#1572A1', colorSecundario: '#ffffff' };
+          // Try to enrich string category from backend
+          const found = categoriasPorId.value.get(rawCategoria);
+          if (found) {
+            categoriaObj = {
+              _id: found._id,
+              nombre: found.nombre ?? found.name ?? found._id,
+              icono: found.icono ?? '',
+              color: found.color ?? '#1572A1',
+              colorSecundario: found.colorSecundario ?? found.colorSecundario ?? '#ffffff',
+            };
+          } else {
+            categoriaObj = { _id: rawCategoria, nombre: rawCategoria, icono: '', color: '#1572A1', colorSecundario: '#ffffff' };
+          }
         } else {
           categoriaObj = { _id: 'sin-categoria', nombre: 'Sin categoría', icono: '', color: '#1572A1', colorSecundario: '#ffffff' };
         }
@@ -178,6 +207,8 @@ export function useObjetos() {
   return {
     loading,
     categoria,
+    categorias,
+    categoriasPorId,
     setCategoria,
     objetos,
     objetosRaiz,

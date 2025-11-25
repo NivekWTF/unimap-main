@@ -2,10 +2,13 @@
 import { computed } from 'vue';
 import { useObjetos } from '@/composables/useObjetos';
 
-const { objetos, categoria, setCategoria } = useObjetos();
+const { objetos, categoria, setCategoria, categorias: categoriasBackend } = useObjetos();
 
-// Derive unique categories from objetos
+// Use backend categorias if available, otherwise derive from objetos
 const categorias = computed(() => {
+  if ((categoriasBackend.value || []).length) {
+    return categoriasBackend.value.map((c: any) => ({ id: c._id, nombre: c.nombre }));
+  }
   const map = new Map<string, { id: string; nombre: string }>();
   for (const o of objetos.value || []) {
     const cid = o?.categoria?._id ?? o?.categoria;
