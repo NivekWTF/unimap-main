@@ -1,5 +1,6 @@
-import { ref, computed } from 'vue';
+import { ref, computed, onMounted, watch } from 'vue';
 import { useAppStore } from '@/stores/app';
+import { trpc } from '@/lib/trpc';
 
 type CategoriaLike = { _id?: string; nombre?: string; icono?: string; color?: string; colorSecundario?: string } | string | null | undefined;
 
@@ -13,6 +14,8 @@ export function useObjetos() {
   const loading = ref(false);
   // Selected category filter (equivalent to React's `categoria` state)
   const categoria = ref<string>('');
+  const categorias = ref<any[]>([]);
+  const categoriasPorId = computed(() => new Map((categorias.value || []).map((c: any) => [c._id, c])));
 
   // Derived arrays/maps from store objetosPorId
   const objetos = computed(() => {
@@ -27,6 +30,57 @@ export function useObjetos() {
     });
     return arr;
   });
+
+  // Load categorias from backend once
+  async function loadCategorias() {
+    try {
+      const resp = await (trpc as any).categorias.obtenerTodos.query({ habilitado: true });
+      categorias.value = resp ?? [];
+    } catch (e) {
+      // ignore; keep empty
+      console.debug('No se pudieron cargar categorias', e);
+    }
+  }
+
+  onMounted(() => {
+    loadCategorias();
+    // initial load of objetos for the current campus (if any)
+    loadObjetos(app.campusId);
+  });
+
+  // Reload objetos when the selected campus changes
+  watch(() => app.campusId, (newCampus) => {
+    loadObjetos(newCampus);
+  });
+
+  // Load objetos from backend (public procedure). Optionally filter by campus.
+  async function loadObjetos(campus?: string) {
+    try {
+      const resp = await (trpc as any).objetos.obtenerTodos.query({ campus: campus ?? app.campusId ?? undefined });
+      const objetosServer = (resp ?? []) as any[];
+
+      // Compute centroide if missing and normalize category if server returned object
+      const mapped = objetosServer.map((o) => {
+        const obj = { ...o };
+        if (!obj.centroide && obj.geometria) {
+          const c = centroidFromGeom(obj.geometria);
+          if (c && Array.isArray(c)) obj.centroide = { lat: c[0], lng: c[1] };
+        }
+        // If categoria is an id string, try to enrich from categoriasPorId
+        if (obj.categoria && typeof obj.categoria === 'string') {
+          const found = categoriasPorId.value.get(obj.categoria);
+          if (found) obj.categoria = found;
+        }
+        return obj;
+      });
+
+      app.setObjetosPorId(mapped as any[]);
+      return mapped;
+    } catch (e) {
+      console.debug('Error cargando objetos desde backend', e);
+      return [];
+    }
+  }
 
   const objetosRaiz = computed(() => objetos.value.filter((obj: any) => !obj.pertenece));
 
@@ -75,8 +129,7 @@ export function useObjetos() {
 
         const rawCategoria: CategoriaLike = props.categoria ?? props.cat ?? null;
 
-        // Normalize category into the client Categoria shape. Use a safe any-cast
-        // to accept different incoming shapes and avoid TS errors on unknown keys.
+        // Normalize category into the client Categoria shape.
         let categoriaObj: any = null;
         if (rawCategoria && typeof rawCategoria === 'object') {
           const rc: any = rawCategoria as any;
@@ -88,7 +141,19 @@ export function useObjetos() {
             colorSecundario: rc.colorSecundario ?? rc.color_secondary ?? rc.color_secondary ?? '#ffffff',
           };
         } else if (rawCategoria && typeof rawCategoria === 'string') {
-          categoriaObj = { _id: rawCategoria, nombre: rawCategoria, icono: '', color: '#1572A1', colorSecundario: '#ffffff' };
+          // Try to enrich string category from backend
+          const found = categoriasPorId.value.get(rawCategoria);
+          if (found) {
+            categoriaObj = {
+              _id: found._id,
+              nombre: found.nombre ?? found.name ?? found._id,
+              icono: found.icono ?? '',
+              color: found.color ?? '#1572A1',
+              colorSecundario: found.colorSecundario ?? found.colorSecundario ?? '#ffffff',
+            };
+          } else {
+            categoriaObj = { _id: rawCategoria, nombre: rawCategoria, icono: '', color: '#1572A1', colorSecundario: '#ffffff' };
+          }
         } else {
           categoriaObj = { _id: 'sin-categoria', nombre: 'Sin categoría', icono: '', color: '#1572A1', colorSecundario: '#ffffff' };
         }
@@ -172,13 +237,59 @@ export function useObjetos() {
   }
 
   function openObjeto(id: string) {
+    // If object already exists in store, just open it
+    const existing = app.objetosPorId?.[id];
+    if (existing) {
+      app.abrirSwipeableObjeto(id);
+      return existing;
+    }
+
+    // Open placeholder immediately so UI responds, then try to fetch full object
     app.abrirSwipeableObjeto(id);
+
+    // Async fetch: try to load the object from backend and merge into store
+    (async () => {
+      try {
+        const resp = await (trpc as any).objetos.obtenerTodos.query({ id });
+        const objs = (resp ?? []) as any[];
+        if (!objs.length) return;
+
+        const mapped = objs.map((o) => {
+          const obj = { ...o };
+          if (!obj.centroide && obj.geometria) {
+            const c = centroidFromGeom(obj.geometria);
+            if (c && Array.isArray(c)) obj.centroide = { lat: c[0], lng: c[1] };
+          }
+          if (obj.categoria && typeof obj.categoria === 'string') {
+            const found = categoriasPorId.value.get(obj.categoria);
+            if (found) obj.categoria = found;
+          }
+          return obj;
+        });
+
+        // Merge with existing store objects to avoid wiping other entries
+        const existingArr = Object.values(app.objetosPorId || {});
+        const combined = [...existingArr, ...mapped];
+        app.setObjetosPorId(combined as any[]);
+
+        // set the selected objeto to the freshly loaded one (first match)
+        const first = mapped[0];
+        if (first) app.setObjetoSeleccionado(first);
+      } catch (e) {
+        console.debug('Error cargando objeto por id', id, e);
+      }
+    })();
+
+    return null;
   }
 
   return {
     loading,
     categoria,
+    categorias,
+    categoriasPorId,
     setCategoria,
+    loadObjetos,
     objetos,
     objetosRaiz,
     objetosEnCapa,
