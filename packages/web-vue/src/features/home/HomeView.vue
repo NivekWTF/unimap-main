@@ -1,6 +1,11 @@
 <script setup lang="ts">
 import UnimapMap from '@/components/map/UnimapMap.vue';
+import CategorySelector from '@/components/ui/CategorySelector.vue';
+import FloorSelector from '@/components/ui/FloorSelector.vue';
+import Sidebar from '@/components/ui/Sidebar.vue';
+import Alerts from '@/components/ui/Alerts.vue';
 import { ref, onMounted, computed } from 'vue';
+import { useAppStore } from '@/stores/app';
 import type { StyleFunction } from 'leaflet';
 import { buildGraphFromPasillos, nearestNodeId, pathToGeoJson } from '@/lib/routing/buildGraph';
 import { aStar } from '@/lib/routing/graph';
@@ -20,18 +25,42 @@ const TILE_MAX_ZOOM = Number(import.meta.env.VITE_TILE_MAX_ZOOM ?? 21);
 const TILE_MAX_NATIVE = Number(import.meta.env.VITE_TILE_MAX_NATIVE_ZOOM ?? 20);
 
 // ===== estado =====
+const app = useAppStore();
 const center = ref<[number, number]>(centroDefault);
 const contorno = ref<any | null>(null);
 const pasillos = ref<any | null>(null);
 const routeFeature = ref<any | null>(null);
 const extras = ref<any[]>([]);
-const merged = computed(() => mergeMany([contorno.value, pasillos.value, routeFc.value, ...extras.value]));
+
+// objetos composable: filtering and normalization
+const { normalizeFromGeoJson, objetosEnCapa, openObjeto } = useObjetos();
 
 const routeFc = computed(() => routeFeature.value
   ? { type: 'FeatureCollection', features: [routeFeature.value] }
   : null
 );
-const markers = ref<{ lat: number; lng: number; etiqueta?: string }[]>([]);
+const routeMarkers = ref<{ lat: number; lng: number; etiqueta?: string }[]>([]);
+const objetosMarkers = computed(() => {
+  const objs = objetosEnCapa?.value ?? [];
+  return objs
+    .map((o: any) => (o?.centroide ? { lat: o.centroide.lat, lng: o.centroide.lng, etiqueta: o.nombre } : null))
+    .filter(Boolean) as { lat: number; lng: number; etiqueta?: string }[];
+});
+const markers = computed(() => (routeMarkers.value && routeMarkers.value.length ? routeMarkers.value : objetosMarkers.value));
+
+const objetosGeojson = computed(() => {
+  const objs = objetosEnCapa?.value ?? [];
+  const features = objs
+    .filter((o: any) => o && o.geometria)
+    .map((o: any) => ({
+      type: 'Feature',
+      geometry: o.geometria,
+      properties: { _id: o._id, nombre: o.nombre, categoria: o.categoria?._id ?? o.categoria },
+    }));
+  return features.length ? { type: 'FeatureCollection', features } : null;
+});
+
+const merged = computed(() => mergeMany([contorno.value, pasillos.value, routeFc.value, objetosGeojson.value, ...extras.value]));
 const constrainToCenterBounds = ref(true);
 const loading = ref(false);
 const errorMsg = ref('');
@@ -99,7 +128,6 @@ onMounted(async () => {
 
     // Normalizar GeoJSON a objetos y guardarlos en la store (para categorías/objetos interactivos)
     try {
-      const { normalizeFromGeoJson } = useObjetos();
       normalizeFromGeoJson(contorno.value);
       normalizeFromGeoJson(pasillos.value);
     } catch (e) {
@@ -140,15 +168,15 @@ const end = ref<[number, number] | null>(null);
 
 async function handleMapClick(latlng: [number, number]) {
   if (!routingEnabled.value) return; // routing disabled for now
-  if (!start.value) {
+    if (!start.value) {
     start.value = latlng;
-    markers.value = [{ lat: latlng[0], lng: latlng[1], etiqueta: 'Inicio' }];
+    routeMarkers.value = [{ lat: latlng[0], lng: latlng[1], etiqueta: 'Inicio' }];
     routeFeature.value = null;
     return;
   }
   if (!end.value) {
     end.value = latlng;
-    markers.value = [
+    routeMarkers.value = [
       { lat: start.value[0], lng: start.value[1], etiqueta: 'Inicio' },
       { lat: latlng[0], lng: latlng[1], etiqueta: 'Destino' }
     ];
@@ -159,7 +187,7 @@ async function handleMapClick(latlng: [number, number]) {
   start.value = latlng;
   end.value = null;
   routeFeature.value = null;
-  markers.value = [{ lat: latlng[0], lng: latlng[1], etiqueta: 'Inicio' }];
+  routeMarkers.value = [{ lat: latlng[0], lng: latlng[1], etiqueta: 'Inicio' }];
 }
 
 async function computeRoute() {
@@ -174,6 +202,20 @@ async function computeRoute() {
   }
   routeFeature.value = pathToGeoJson(graph, nodePath);
 }
+
+// abrir objeto al hacer click en su feature
+function onFeatureClick(payload: { feature: any; latlng: [number, number] }) {
+  try {
+    console.log('[HomeView] onFeatureClick payload', payload && payload.feature && payload.feature.properties ? { id: payload.feature.properties._id ?? payload.feature.properties.id, props: payload.feature.properties } : payload);
+    const id = payload?.feature?.properties?._id ?? payload?.feature?.properties?.id;
+    const msg = id ? `Click objeto ${id}` : `Click objeto sin id: ${JSON.stringify(payload?.feature?.properties ?? {})}`;
+    app.pushAlert({ message: msg, type: 'success' });
+    if (id) openObjeto(String(id));
+    else console.debug('[HomeView] feature has no id in properties', payload?.feature?.properties);
+  } catch (e) {
+    console.debug('onFeatureClick error', e);
+  }
+}
 </script>
 
 <template>
@@ -181,19 +223,25 @@ async function computeRoute() {
   <div style="position:fixed; inset:0; display:flex; flex-direction:column;">
     <!-- controles/avisos como capa superior (overlay) -->
     <div style="position:absolute; top:8px; left:8px; right:8px; z-index:1000; display:flex; gap:12px; align-items:center; pointer-events:auto;">
-      <div style="background:rgba(255,255,255,0.9); padding:8px 12px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.12);">
-        <span v-if="loading">Cargando…</span>
-        <span v-if="errorMsg" style="color:#b71c1c">{{ errorMsg }}</span>
-        <span v-if="start && !end">Selecciona el destino con un click en el mapa…</span>
-        <span v-if="start && end">Click de nuevo para reiniciar desde un nuevo origen.</span>
+      <div style="background:rgba(255,255,255,0.9); padding:8px 12px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.12); display:flex; gap:12px; align-items:center;">
+        <CategorySelector />
+        <FloorSelector />
+        <div style="display:flex;flex-direction:column;gap:4px;">
+          <span v-if="loading">Cargando…</span>
+          <span v-if="errorMsg" style="color:#b71c1c">{{ errorMsg }}</span>
+          <span v-if="start && !end">Selecciona el destino con un click en el mapa…</span>
+          <span v-if="start && end">Click de nuevo para reiniciar desde un nuevo origen.</span>
+        </div>
       </div>
     </div>
 
     <!-- mapa ocupa todo el espacio disponible -->
     <div style="flex:1 1 auto; min-height:0;">
       <UnimapMap :center="center" :geojson="merged" :markers="markers" :styleFunction="styleFn"
-        :constrainToCenterBounds="true" :zoom="18" :minZoom="TILE_MIN_ZOOM" :maxZoom="TILE_MAX_ZOOM"
-        :tileMaxNativeZoom="TILE_MAX_NATIVE" @map-click="handleMapClick" />
+          :constrainToCenterBounds="true" :zoom="18" :minZoom="TILE_MIN_ZOOM" :maxZoom="TILE_MAX_ZOOM"
+          :tileMaxNativeZoom="TILE_MAX_NATIVE" @map-click="handleMapClick" @feature-click="onFeatureClick" />
     </div>
+    <Sidebar />
+    <Alerts />
   </div>
 </template>

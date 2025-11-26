@@ -67,10 +67,37 @@ export const useAppStore = defineStore('app', {
     abrirSwipeable(tipo: string, itemBusqueda: any | null) { this.swipeableVisible = tipo; this.itemBusquedaSelecionado = itemBusqueda; },
     cerrarSwipeable() { this.swipeableVisible = null; this.itemBusquedaSelecionado = null; },
     abrirSwipeableObjeto(objetoId: string, zoom = 18) {
-      const objeto = this.objetosPorId?.[objetoId];
-      if (!this.map || !objeto) return;
-      // @ts-ignore flyTo exists on Leaflet map
-      (this.map as any).flyTo(objeto.centroide, zoom);
+      let objeto = this.objetosPorId?.[objetoId];
+      // Try fuzzy lookups when direct key not found (id type mismatches, qgisId, etc.)
+      if (!objeto) {
+        for (const k in this.objetosPorId) {
+          const o = this.objetosPorId[k];
+          if (!o) continue;
+          if (String(k) === String(objetoId) || String(o._id) === String(objetoId) || String(o.qgisId) === String(objetoId)) {
+            objeto = o;
+            break;
+          }
+        }
+      }
+
+      if (!objeto) {
+        console.debug('[app] abrirSwipeableObjeto: objeto not found, setting placeholder to open UI', objetoId);
+        // Still open the UI with a minimal placeholder so Sidebar mounts and user sees feedback.
+        this.swipeableVisible = 'objetos';
+        this.objetoSeleccionado = { _id: objetoId, nombre: `Objeto ${objetoId}`, cargando: true } as any;
+        return;
+      }
+
+      try {
+        if (this.map && objeto.centroide) {
+          // @ts-ignore flyTo exists on Leaflet map
+          (this.map as any).flyTo(objeto.centroide, zoom);
+        } else {
+          console.debug('[app] abrirSwipeableObjeto: map not set or objeto lacks centroide, skipping flyTo');
+        }
+      } catch (e) {
+        console.debug('[app] abrirSwipeableObjeto flyTo error', e);
+      }
       this.swipeableVisible = 'objetos';
       this.objetoSeleccionado = objeto;
     },
