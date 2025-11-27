@@ -15,7 +15,9 @@ async function submit() {
   const parsed = recoverySchema.safeParse({ correo: correo.value?.trim() || undefined });
   if (!parsed.success) {
     const map = zodErrorsToMap(parsed.error);
-    error.value = map.correo || parsed.error?.message || 'Valor inválido';
+    // prefer field-specific correo error, then root-level form error (map._form),
+    // then Zod message string, otherwise fallback
+    error.value = map.correo || map._form || (typeof parsed.error?.message === 'string' ? parsed.error.message : 'Valor inválido');
     return;
   }
 
