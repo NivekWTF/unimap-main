@@ -88,11 +88,62 @@ export const enviarPassword = publicProc
 
     const html = await parseHtml(Templates.CORREO_PASSWORD, contexto);
 
-    transporter.sendMail({
+    (await transporter).sendMail({
       to: usuario.correo,
       subject: 'Generación de contraseña',
       html,
     });
+  });
+
+// Public procedure to request password recovery by email (uses correo)
+export const enviarRecuperacion = publicProc
+  .input(z.object({ correo: z.string().email().optional(), username: z.string().optional() }).refine(data => !!(data.correo || data.username), { message: 'correo o username requerido' }))
+  .mutation(async ({ input }) => {
+    const { correo, username } = input as { correo?: string; username?: string };
+
+    // Support lookup by correo if present, otherwise by username for legacy DBs
+    const findQuery: any = { activo: true };
+    if (correo) findQuery.correo = correo;
+    else if (username) findQuery.username = username;
+
+    const usuario = await Usuario.findOne(findQuery);
+    if (!usuario) {
+      throw new TRPCError({ code: 'NOT_FOUND', message: 'Usuario no encontrado.' });
+    }
+
+    // Generate a new password and hash it
+    const { hashedPassword, password } = await generateHashedPassword();
+
+    // Save hashed password first
+    usuario.password = hashedPassword;
+    await usuario.save();
+
+    const contexto = {
+      nombre: `${usuario.nombres} ${usuario.apellidos}`,
+      username: usuario.username,
+      password,
+    };
+
+    const html = await parseHtml(Templates.CORREO_REINICIAR_PASSWORD, contexto);
+
+    try {
+      await (await transporter).sendMail({
+        to: usuario.correo,
+        subject: 'Recuperación de contraseña',
+        html,
+      });
+    } catch (e) {
+      // revert saved password if sending failed
+      try {
+        usuario.password = undefined as any;
+        await usuario.save();
+      } catch (e2) {
+        console.error('Error revertiendo password tras fallo de envío', e2);
+      }
+      throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR', message: 'No se pudo enviar el correo de recuperación.' });
+    }
+
+    return { ok: true };
   });
 
 export const obtenerPorId = privateProc
@@ -160,7 +211,7 @@ export const reiniciarPassword = privateProc
     const contexto = { correo, nombres, username, password };
     const html = await parseHtml(Templates.CORREO_REINICIAR_PASSWORD, contexto); 
 
-    transporter.sendMail({
+    (await transporter).sendMail({
       to: usuario.correo,
       subject: 'Recuperación de contraseña',
       html,

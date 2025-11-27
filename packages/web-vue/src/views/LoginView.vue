@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, reactive } from 'vue';
 import { useRouter } from 'vue-router';
 import { trpc } from '@/lib/trpc';
 import { useAppStore } from '@/stores/app';
@@ -12,8 +12,34 @@ const password = ref('');
 const loading = ref(false);
 const error = ref('');
 
+// field-level errors for inputs
+const errors = reactive<{ username: string; password: string }>({
+  username: '',
+  password: '',
+});
+
+function validate(field: 'username' | 'password') {
+  const v = field === 'username' ? username.value : password.value;
+  if (!v || (typeof v === 'string' && v.trim() === '')) {
+    errors[field] = 'Campo necesario.';
+  } else {
+    errors[field] = '';
+  }
+}
+
 async function submit() {
+  // clear server error
   error.value = '';
+  // validate fields before submit
+  validate('username');
+  validate('password');
+  const hasFieldError = errors.username || errors.password;
+  if (hasFieldError) {
+    // show general server-style error to inform user
+    error.value = 'Corrige los campos marcados.';
+    return;
+  }
+
   loading.value = true;
   try {
     // trpc client is untyped here; cast to any to avoid TS complaints in this small example
@@ -48,8 +74,11 @@ async function submit() {
         <p class="subtitle">Ingresa tus credenciales</p>
 
         <form class="form" @submit.prevent="submit">
-          <input class="input" placeholder="Usuario" v-model="username" />
-          <input class="input" placeholder="Contraseña" v-model="password" type="password" />
+          <input class="input" placeholder="Usuario" v-model="username" @blur="validate('username')" />
+          <div v-if="errors.username" class="field-error">{{ errors.username }}</div>
+
+          <input class="input" placeholder="Contraseña" v-model="password" type="password" @blur="validate('password')" />
+          <div v-if="errors.password" class="field-error">{{ errors.password }}</div>
 
           <button class="btn" type="submit" :disabled="loading">{{ loading ? 'Iniciando...' : 'Entrar' }}</button>
 
@@ -57,7 +86,7 @@ async function submit() {
         </form>
 
         <div class="links">
-          <a href="#">Olvidé mi contraseña</a>
+          <a href="#/Recuperar-password">Olvidé mi contraseña</a>
           <a href="#/register">Crear una cuenta</a>
         </div>
       </div>
@@ -95,6 +124,7 @@ async function submit() {
 .btn{ margin-top:6px; padding:10px 14px; border-radius:8px; border:none; background:linear-gradient(180deg,#f59d3c,#e86b1d); color:white; font-weight:600; cursor:pointer }
 .btn:disabled{ opacity:.6; cursor:default }
 .error{ margin-top:8px; color:#b00020; font-size:13px; text-align:left }
+.field-error{ margin-top:4px; color:#b00020; font-size:13px; text-align:left }
 .links{ margin-top:14px; display:flex; justify-content:space-between; font-size:13px; color:#4b6b7a }
 .links a{ color:#2b6f99; text-decoration:none }
 

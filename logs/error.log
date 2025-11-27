@@ -408,3 +408,8 @@
     "message": "Required"
   }
 ]
+2025-11-26 16:35:32 [error]: Usuario no encontrado.
+2025-11-26 17:35:14 [error]: No se pudo enviar el correo de recuperación.
+2025-11-26 17:37:59 [error]: No se pudo enviar el correo de recuperación.
+2025-11-26 17:47:59 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-11-26 17:48:02 [error]: El nombre de usuario o la contraseña son incorrectos

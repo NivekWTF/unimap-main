@@ -21,6 +21,15 @@ async function submit() {
   error.value = '';
   loading.value = true;
   try {
+    // validate correo is present and looks like an email
+    const email = correo.value?.trim() ?? '';
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email) {
+      throw new Error('El correo es obligatorio.');
+    }
+    if (!re.test(email)) {
+      throw new Error('Ingrese un correo válido.');
+    }
     // obtener campus según subdominio (el middleware devolverá DEV_SUB_DOMAIN en dev)
     let campusId: string | undefined = undefined;
     try {
@@ -36,7 +45,7 @@ async function submit() {
       password: password.value,
       nombres: nombres.value,
       apellidos: apellidos.value,
-      correo: correo.value || undefined,
+      correo: correo.value,
       tipoUsuario: tipoUsuario.value,
     };
 
@@ -73,12 +82,12 @@ async function submit() {
           <input class="input" placeholder="Contraseña" v-model="password" type="password" />
           <input class="input" placeholder="Nombres" v-model="nombres" />
           <input class="input" placeholder="Apellidos" v-model="apellidos" />
-          <input class="input" placeholder="Correo (opcional)" v-model="correo" />
+          <input class="input" placeholder="Correo electrónico" v-model="correo" />
 
           <select class="input" v-model="tipoUsuario">
             <option value="ALUMNO">Alumno</option>
             <option value="PROFESOR">Profesor</option>
-            <option value="ADMIN">Administrador</option>
+            <option value="VISITANTE">Visitante</option>
           </select>
 
           <button class="btn" type="submit" :disabled="loading">{{ loading ? 'Creando...' : 'Crear cuenta' }}</button>
