@@ -2,6 +2,7 @@
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { trpc } from '@/lib/trpc';
+import { recoverySchema, zodErrorsToMap } from '@/utils/validators';
 
 const router = useRouter();
 const correo = ref('');
@@ -11,14 +12,10 @@ const loading = ref(false);
 
 async function submit() {
   error.value = '';
-  if (!correo.value || correo.value.trim() === '') {
-    error.value = 'Campo necesario.';
-    return;
-  }
-  // validación básica de correo
-  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!re.test(correo.value)) {
-    error.value = 'Ingrese un correo válido. Ejemplo=HolaMundo@HolaMundo.com';
+  const parsed = recoverySchema.safeParse({ correo: correo.value?.trim() || undefined });
+  if (!parsed.success) {
+    const map = zodErrorsToMap(parsed.error);
+    error.value = map.correo || parsed.error?.message || 'Valor inválido';
     return;
   }
 

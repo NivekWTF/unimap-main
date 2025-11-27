@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, reactive } from 'vue';
 import { useRouter } from 'vue-router';
 import { trpc } from '@/lib/trpc';
 import { useAppStore } from '@/stores/app';
+import { registerSchema, zodErrorsToMap } from '@/utils/validators';
 
 const router = useRouter();
 const app = useAppStore();
@@ -16,19 +17,33 @@ const tipoUsuario = ref('ALUMNO');
 
 const loading = ref(false);
 const error = ref('');
+const fieldErrors = reactive({ username: '', password: '', nombres: '', apellidos: '', correo: '' });
 
 async function submit() {
   error.value = '';
   loading.value = true;
+  // reset field errors
+  Object.keys(fieldErrors).forEach((k) => (fieldErrors[k as keyof typeof fieldErrors] = ''));
   try {
-    // validate correo is present and looks like an email
-    const email = correo.value?.trim() ?? '';
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!email) {
-      throw new Error('El correo es obligatorio.');
-    }
-    if (!re.test(email)) {
-      throw new Error('Ingrese un correo válido.');
+    const payload: any = {
+      username: username.value,
+      password: password.value,
+      nombres: nombres.value,
+      apellidos: apellidos.value,
+      correo: correo.value || undefined,
+      tipoUsuario: tipoUsuario.value,
+    };
+
+    // validate with Zod
+    const parsed = registerSchema.safeParse(payload);
+    if (!parsed.success) {
+      const map = zodErrorsToMap(parsed.error);
+      fieldErrors.username = map.username || '';
+      fieldErrors.password = map.password || '';
+      fieldErrors.nombres = map.nombres || '';
+      fieldErrors.apellidos = map.apellidos || '';
+      fieldErrors.correo = map.correo || '';
+      throw new Error('Corrige los campos marcados.');
     }
     // obtener campus según subdominio (el middleware devolverá DEV_SUB_DOMAIN en dev)
     let campusId: string | undefined = undefined;
@@ -40,19 +55,10 @@ async function submit() {
       console.warn('No se pudo obtener campus por subdominio', err);
     }
 
-    const payload: any = {
-      username: username.value,
-      password: password.value,
-      nombres: nombres.value,
-      apellidos: apellidos.value,
-      correo: correo.value,
-      tipoUsuario: tipoUsuario.value,
-    };
-
-    if (campusId) payload.campus = campusId;
+    if (campusId) parsed.success && (parsed.data.campus = campusId);
 
     // uso any para evitar problemas de tipado del cliente trpc en este ejemplo
-    await (trpc as any).usuarios.guardar.mutate(payload);
+    await (trpc as any).usuarios.guardar.mutate(parsed.success ? parsed.data : payload);
 
     app.pushAlert({ type: 'success', message: 'Usuario creado. Inicia sesión.' });
     router.push('/login');
@@ -77,12 +83,17 @@ async function submit() {
         <h2 class="title">Registro</h2>
         <p class="subtitle">Crea una cuenta</p>
 
-        <form class="form" @submit.prevent="submit">
+        <form class="form" @submit.prevent="submit" novalidate>
           <input class="input" placeholder="Usuario" v-model="username" />
+          <div v-if="fieldErrors.username" class="field-error">{{ fieldErrors.username }}</div>
           <input class="input" placeholder="Contraseña" v-model="password" type="password" />
+          <div v-if="fieldErrors.password" class="field-error">{{ fieldErrors.password }}</div>
           <input class="input" placeholder="Nombres" v-model="nombres" />
+          <div v-if="fieldErrors.nombres" class="field-error">{{ fieldErrors.nombres }}</div>
           <input class="input" placeholder="Apellidos" v-model="apellidos" />
-          <input class="input" placeholder="Correo electrónico" v-model="correo" />
+          <div v-if="fieldErrors.apellidos" class="field-error">{{ fieldErrors.apellidos }}</div>
+          <input class="input" placeholder="Correo electrónico" v-model="correo" type="email" />
+          <div v-if="fieldErrors.correo" class="field-error">{{ fieldErrors.correo }}</div>
 
           <select class="input" v-model="tipoUsuario">
             <option value="ALUMNO">Alumno</option>
@@ -129,6 +140,7 @@ async function submit() {
 .btn{ margin-top:6px; padding:10px 14px; border-radius:8px; border:none; background:linear-gradient(180deg,#f59d3c,#e86b1d); color:white; font-weight:600; cursor:pointer }
 .btn:disabled{ opacity:.6; cursor:default }
 .error{ margin-top:8px; color:#b00020; font-size:13px; text-align:left }
+.field-error{ margin-top:4px; color:#b00020; font-size:13px; text-align:left }
 .links{ margin-top:14px; display:flex; justify-content:space-between; font-size:13px; color:#4b6b7a }
 .links a{ color:#2b6f99; text-decoration:none }
 </style>

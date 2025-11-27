@@ -3,6 +3,7 @@ import { ref, reactive } from 'vue';
 import { useRouter } from 'vue-router';
 import { trpc } from '@/lib/trpc';
 import { useAppStore } from '@/stores/app';
+import { loginSchema, zodErrorsToMap } from '@/utils/validators';
 
 const router = useRouter();
 const app = useAppStore();
@@ -18,24 +19,17 @@ const errors = reactive<{ username: string; password: string }>({
   password: '',
 });
 
-function validate(field: 'username' | 'password') {
-  const v = field === 'username' ? username.value : password.value;
-  if (!v || (typeof v === 'string' && v.trim() === '')) {
-    errors[field] = 'Campo necesario.';
-  } else {
-    errors[field] = '';
-  }
-}
-
 async function submit() {
   // clear server error
   error.value = '';
-  // validate fields before submit
-  validate('username');
-  validate('password');
-  const hasFieldError = errors.username || errors.password;
-  if (hasFieldError) {
-    // show general server-style error to inform user
+  // validate with Zod
+  errors.username = '';
+  errors.password = '';
+  const parsed = loginSchema.safeParse({ username: username.value, password: password.value });
+  if (!parsed.success) {
+    const map = zodErrorsToMap(parsed.error);
+    errors.username = map.username || '';
+    errors.password = map.password || '';
     error.value = 'Corrige los campos marcados.';
     return;
   }
@@ -74,10 +68,10 @@ async function submit() {
         <p class="subtitle">Ingresa tus credenciales</p>
 
         <form class="form" @submit.prevent="submit">
-          <input class="input" placeholder="Usuario" v-model="username" @blur="validate('username')" />
+          <input class="input" placeholder="Usuario" v-model="username" />
           <div v-if="errors.username" class="field-error">{{ errors.username }}</div>
 
-          <input class="input" placeholder="Contraseña" v-model="password" type="password" @blur="validate('password')" />
+          <input class="input" placeholder="Contraseña" v-model="password" type="password" />
           <div v-if="errors.password" class="field-error">{{ errors.password }}</div>
 
           <button class="btn" type="submit" :disabled="loading">{{ loading ? 'Iniciando...' : 'Entrar' }}</button>
