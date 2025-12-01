@@ -85,8 +85,6 @@ function backToLogin() {
 </template>
 
 <style scoped>
-/* Fondo: si quieres que sea igual que el login, usa el degradado.
-   Si prefieres todo blanco, deja background:#ffffff; */
 .auth-bg{
   position:fixed;
   inset:0;
@@ -104,7 +102,7 @@ function backToLogin() {
   z-index:0;
 }
 
-/* === MISMO RECUDRO QUE EL LOGIN === */
+/* === MISMO RECUADRO QUE EL LOGIN === */
 .auth-card{
   width:420px;
   background: rgba(255,255,255,0.98);

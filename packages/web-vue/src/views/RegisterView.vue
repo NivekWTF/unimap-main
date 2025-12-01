@@ -22,7 +22,7 @@ const fieldErrors = reactive({ username: '', password: '', nombres: '', apellido
 async function submit() {
   error.value = '';
   loading.value = true;
-  // reset field errors
+
   Object.keys(fieldErrors).forEach((k) => (fieldErrors[k as keyof typeof fieldErrors] = ''));
   try {
     const payload: any = {
@@ -34,7 +34,7 @@ async function submit() {
       tipoUsuario: tipoUsuario.value,
     };
 
-    // validate with Zod
+    // validaciones con Zod
     const parsed = registerSchema.safeParse(payload);
     if (!parsed.success) {
       const map = zodErrorsToMap(parsed.error);
@@ -146,7 +146,6 @@ async function submit() {
 </style>
 
 <style scoped>
-/* reuse same responsive rules as login */
 @media (min-width: 900px) {
   .auth-card{
     width:900px;

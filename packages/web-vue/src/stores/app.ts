@@ -6,13 +6,12 @@ export type MapCenter = [number, number];
 
 type Alert = { id: string; message: string; type?: 'success'|'error'|'warning' };
 
-// Minimal migration of Zustand global state to Pinia for Vue app.
 export const useAppStore = defineStore('app', {
   state: () => ({
-    // session
+    // sessions
     user: null as User,
     token: '' as string,
-    // map
+    // mapa
     center: [24.790277777778, -107.38777777778] as MapCenter,
     selectedFeature: null as any | null,
     map: null as LeafletMap | null,
@@ -22,17 +21,17 @@ export const useAppStore = defineStore('app', {
     campusId: '' as string,
     // UI
     alerts: [] as Alert[],
-    // swipeable / drawers
+
     swipeableVisible: null as string | null,
     itemBusquedaSelecionado: null as any | null,
-    // search
+
     busqueda: '' as string,
-    // onboarding
+
     isWelcomeVisible: true as boolean,
     isTourVisible: true as boolean,
   }),
   actions: {
-    /** Session related */
+    /** Sesiones */
     setUser(user: User, token?: string) {
       this.user = user;
       if (token) {
@@ -50,7 +49,7 @@ export const useAppStore = defineStore('app', {
       localStorage.removeItem('UNIMAP_TOKEN');
     },
 
-    /** Map & objetos */
+    /** Mapa & objetos */
     setCenter(c: MapCenter) { this.center = c; },
     setMap(m: LeafletMap) { this.map = m; },
     selectFeature(f: any | null) { this.selectedFeature = f; },
@@ -68,7 +67,7 @@ export const useAppStore = defineStore('app', {
     cerrarSwipeable() { this.swipeableVisible = null; this.itemBusquedaSelecionado = null; },
     abrirSwipeableObjeto(objetoId: string, zoom = 18) {
       let objeto = this.objetosPorId?.[objetoId];
-      // Try fuzzy lookups when direct key not found (id type mismatches, qgisId, etc.)
+      
       if (!objeto) {
         for (const k in this.objetosPorId) {
           const o = this.objetosPorId[k];
@@ -82,7 +81,7 @@ export const useAppStore = defineStore('app', {
 
       if (!objeto) {
         console.debug('[app] abrirSwipeableObjeto: objeto not found, setting placeholder to open UI', objetoId);
-        // Still open the UI with a minimal placeholder so Sidebar mounts and user sees feedback.
+        
         this.swipeableVisible = 'objetos';
         this.objetoSeleccionado = { _id: objetoId, nombre: `Objeto ${objetoId}`, cargando: true } as any;
         return;
@@ -90,7 +89,7 @@ export const useAppStore = defineStore('app', {
 
       try {
         if (this.map && objeto.centroide) {
-          // @ts-ignore flyTo exists on Leaflet map
+          
           (this.map as any).flyTo(objeto.centroide, zoom);
         } else {
           console.debug('[app] abrirSwipeableObjeto: map not set or objeto lacks centroide, skipping flyTo');
@@ -102,7 +101,7 @@ export const useAppStore = defineStore('app', {
       this.objetoSeleccionado = objeto;
     },
 
-    /** Search & UI */
+    /** Busqueda & UI */
     setBusqueda(b: string) { this.busqueda = b; },
     pushAlert(a: Omit<Alert,'id'>){ 
       const id = Math.random().toString(36).slice(2);
@@ -111,7 +110,7 @@ export const useAppStore = defineStore('app', {
     },
     dismissAlert(id: string){ this.alerts = this.alerts.filter((x: Alert)=>x.id!==id); },
 
-    /** Onboarding */
+    
     setWelcomeVisible(v: boolean){ this.isWelcomeVisible = v; },
     setTourVisible(v: boolean){
       this.isTourVisible = v;

@@ -413,3 +413,33 @@
 2025-11-26 17:37:59 [error]: No se pudo enviar el correo de recuperación.
 2025-11-26 17:47:59 [error]: El nombre de usuario o la contraseña son incorrectos
 2025-11-26 17:48:02 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-12-01 04:49:05 [error]: No autorizado
+2025-12-01 04:49:11 [error]: No autorizado
+2025-12-01 04:49:20 [error]: No autorizado
+2025-12-01 04:49:40 [error]: [
+  {
+    "code": "invalid_type",
+    "expected": "object",
+    "received": "undefined",
+    "path": [],
+    "message": "Required"
+  }
+]
+2025-12-01 04:49:41 [error]: [
+  {
+    "code": "invalid_type",
+    "expected": "object",
+    "received": "undefined",
+    "path": [],
+    "message": "Required"
+  }
+]
+2025-12-01 04:49:48 [error]: [
+  {
+    "code": "invalid_type",
+    "expected": "object",
+    "received": "undefined",
+    "path": [],
+    "message": "Required"
+  }
+]

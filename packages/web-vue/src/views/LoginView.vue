@@ -13,16 +13,16 @@ const password = ref('');
 const loading = ref(false);
 const error = ref('');
 
-// field-level errors for inputs
+
 const errors = reactive<{ username: string; password: string }>({
   username: '',
   password: '',
 });
 
 async function submit() {
-  // clear server error
+
   error.value = '';
-  // validate with Zod
+  // validaciones con zod
   errors.username = '';
   errors.password = '';
   const parsed = loginSchema.safeParse({ username: username.value, password: password.value });
@@ -36,10 +36,10 @@ async function submit() {
 
   loading.value = true;
   try {
-    // trpc client is untyped here; cast to any to avoid TS complaints in this small example
+    
     const res = await (trpc as any).sesiones.loginCliente.mutate({ username: username.value, password: password.value });
     const { token, usuario } = res as any;
-    // store token in both keys to be compatible with existing helpers
+    
     localStorage.setItem('token', token);
     localStorage.setItem('UNIMAP_TOKEN', token);
     app.setUser(usuario ? { id: usuario._id ?? usuario.id ?? usuario.username, name: usuario.nombres ?? 
@@ -60,7 +60,7 @@ async function submit() {
 
       <div class="card-main">
         <div class="logo-wrap">
-          <!-- use favicon as a simple logo placeholder -->
+          
           <img src="/logo.png" alt="UniMap" class="logo-img" />
         </div>
 
@@ -122,7 +122,7 @@ async function submit() {
 .links{ margin-top:14px; display:flex; justify-content:space-between; font-size:13px; color:#4b6b7a }
 .links a{ color:#2b6f99; text-decoration:none }
 
-/* responsive layout: show decorative column on wider screens */
+
 @media (min-width: 900px) {
   .auth-card{
     width:900px;
