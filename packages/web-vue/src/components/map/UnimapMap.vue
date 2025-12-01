@@ -82,9 +82,8 @@ const geojsonOptions = computed(() => ({
   <LMap ref="mapRef"
     :zoom="zoom" :minZoom="minZoom" :maxZoom="maxZoom"
     :center="center" :maxBounds="constrainToCenterBounds ? maxBounds : undefined"
-    :zoomControl="false" style="height:100%;width:100%" @click="onMapClick"
+    :zoomControl="true" style="height:100%;width:100%" @click="onMapClick"
   >
-    <LControlZoom position="bottomright" />
     <LTileLayer :url="tilesUrl" :maxZoom="maxZoom" :maxNativeZoom="tileMaxNativeZoom" />
     <LGeoJson v-if="geojson" :geojson="geojson" :options="geojsonOptions" :optionsStyle="styleFunction" />
     <LMarker v-for="(m,i) in markers" :key="i" :lat-lng="[m.lat, m.lng]" />
