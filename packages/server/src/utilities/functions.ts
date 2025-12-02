@@ -5,7 +5,8 @@ import { Templates } from '../constants/templates';
 
 export const isUndefined = (value: any) => value === undefined;
 
-export const obtenerSubdominio = (url: string) => {
+export const obtenerSubdominio = (url?: string) => {
+  if (!url) return '';
   url = url
     .replace('http://', '')
     .replace('https://', '')

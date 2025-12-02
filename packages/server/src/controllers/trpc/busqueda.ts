@@ -13,38 +13,19 @@ export const buscar = publicProc
   .query(async ({ input }) => {
     const { query, campus } = input;
 
+    // Build query objects and include campus only when provided (non-empty)
+    const claseQuery: any = { $text: { $search: query }, activo: true };
+    const servicioQuery: any = { $text: { $search: query }, activo: true };
+    const objetoQuery: any = { $text: { $search: query }, activo: true };
+    if (campus && campus.trim()) {
+      claseQuery.campus = campus;
+      objetoQuery.campus = campus;
+    }
+
     const [clases, servicios, objetos] = await Promise.all([
-      Clase.find(
-        {
-          campus,
-          $text: {
-            $search: query,
-          },
-          activo: true,
-        },
-        "_id nombre descripcion",
-      ).lean(),
-      Servicio.find(
-        {
-          $text: {
-            $search: query,
-          },
-          activo: true,
-        },
-        "_id nombre descripcion",
-      ).lean(),
-      Objeto.find(
-        {
-          campus,
-          $text: {
-            $search: query,
-          },
-          activo: true,
-        },
-        "_id nombre descripcion",
-      )
-        .populate("categoria", "_id nombre")
-        .lean(),
+      Clase.find(claseQuery, '_id nombre descripcion').lean(),
+      Servicio.find(servicioQuery, '_id nombre descripcion').lean(),
+      Objeto.find(objetoQuery, '_id nombre descripcion').populate('categoria', '_id nombre').lean(),
     ]);
 
     const resultados = [
@@ -82,5 +63,6 @@ export const buscar = publicProc
       agrupador: string;
     }>;
 
+    console.log(`[busqueda] query="${query}" campus="${campus}" resultados=${resultados.length}`);
     return resultados;
   });

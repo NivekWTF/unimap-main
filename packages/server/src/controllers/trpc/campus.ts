@@ -38,7 +38,8 @@ export const obtener = privateProc.query(async () => {
 });
 
 export const obtenerPorSubdominio = publicProc
-  .input(z.object({}))
+  // Allow undefined input (some clients call without passing an empty object)
+  .input(z.object({}).optional())
   .use(obtenerSubdominio)
   .query(async ({ ctx }) => {
     const { subdominio } = ctx;

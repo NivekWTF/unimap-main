@@ -2,6 +2,7 @@
 import UnimapMap from '@/components/map/UnimapMap.vue';
 import CategorySelector from '@/components/ui/CategorySelector.vue';
 import FloorSelector from '@/components/ui/FloorSelector.vue';
+import SearchField from '@/components/ui/SearchField.vue';
 import Sidebar from '@/components/ui/Sidebar.vue';
 import Alerts from '@/components/ui/Alerts.vue';
 import { ref, onMounted, computed } from 'vue';
@@ -221,12 +222,20 @@ function onFeatureClick(payload: { feature: any; latlng: [number, number] }) {
 <template>
   <!-- Contenedor fijo para que el mapa siempre llene el viewport -->
   <div style="position:fixed; inset:0; display:flex; flex-direction:column;">
-    <!-- controles/avisos como capa superior (overlay) -->
-    <div style="position:absolute; top:8px; left:8px; right:8px; z-index:1000; display:flex; gap:12px; align-items:center; pointer-events:auto;">
-      <div style="background:rgba(255,255,255,0.9); padding:8px 12px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.12); display:flex; gap:12px; align-items:center;">
-        <CategorySelector />
-        <FloorSelector />
-        <div style="display:flex;flex-direction:column;gap:4px;">
+    <!-- controles centrados: SearchField arriba y categorías/selector debajo -->
+    <div class="top-controls">
+      <div class="top-controls-inner">
+        <div class="controls-box">
+          <div class="search-wrap">
+            <SearchField width="560px" />
+          </div>
+          <div style="height:8px; width:100%;"></div>
+          <div class="controls-row">
+            <div class="category-wrap"><CategorySelector :floating="false" /></div>
+            <div class="floor-wrap"><FloorSelector /></div>
+          </div>
+        </div>
+        <div class="status-row">
           <span v-if="loading">Cargando…</span>
           <span v-if="errorMsg" style="color:#b71c1c">{{ errorMsg }}</span>
           <span v-if="start && !end">Selecciona el destino con un click en el mapa…</span>
@@ -245,3 +254,22 @@ function onFeatureClick(payload: { feature: any; latlng: [number, number] }) {
     <Alerts />
   </div>
 </template>
+
+<style scoped>
+.top-controls{ position:absolute; top:8px; left:8px; right:8px; z-index:1000; display:flex; justify-content:center; pointer-events:auto }
+.top-controls-inner{ background:rgba(255,255,255,0.95); padding:12px; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,.12); display:flex; flex-direction:column; align-items:flex-start; gap:12px; max-width:100% }
+.search-wrap{ width:100%; display:flex; justify-content:center }
+.controls-box{ width:560px; max-width:90vw; display:flex; flex-direction:column; gap:8px }
+.controls-row{ display:flex; gap:12px; align-items:center; width:100% }
+.category-wrap{ flex:1 }
+.floor-wrap{ width:auto }
+.status-row{ margin-top:4px; display:flex; flex-direction:column; gap:4px; align-items:flex-start }
+
+@media (max-width:640px){
+  .top-controls-inner{ padding:10px; gap:10px; width:calc(100vw - 24px) }
+  .controls-box{ width:100% }
+  .controls-row{ flex-direction:column; align-items:stretch }
+  .controls-row > *{ width:100% }
+  .status-row{ align-items:flex-start }
+}
+</style>
