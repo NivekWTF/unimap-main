@@ -239,12 +239,15 @@ export function useObjetos() {
   function openObjeto(id: string) {
     // If object already exists in store, just open it
     const existing = app.objetosPorId?.[id];
+    console.log('[useObjetos] openObjeto called', { id, existing });
     if (existing) {
+      console.log('[useObjetos] existing object before abrirSwipeableObjeto', { id, centroide: existing.centroide });
       app.abrirSwipeableObjeto(id);
       return existing;
     }
 
     // Open placeholder immediately so UI responds, then try to fetch full object
+    console.log('[useObjetos] object not in store, opening placeholder and fetching from backend', { id });
     app.abrirSwipeableObjeto(id);
 
     // Async fetch: try to load the object from backend and merge into store
@@ -274,7 +277,15 @@ export function useObjetos() {
 
         // set the selected objeto to the freshly loaded one (first match)
         const first = mapped[0];
-        if (first) app.setObjetoSeleccionado(first);
+        if (first) {
+          app.setObjetoSeleccionado(first);
+          // Ensure the map zooms/flys to the objeto when it was fetched async
+          try {
+            app.abrirSwipeableObjeto(first._id);
+          } catch (e) {
+            console.debug('Error invoking abrirSwipeableObjeto after fetch', e);
+          }
+        }
       } catch (e) {
         console.debug('Error cargando objeto por id', id, e);
       }

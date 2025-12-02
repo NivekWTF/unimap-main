@@ -6,7 +6,16 @@ const app = useAppStore();
 const selectedFeature = computed(() => app.selectedFeature as any | null);
 const objetoSeleccionado = computed(() => app.objetoSeleccionado as any | null);
 
-function close(){ app.selectFeature(null); app.setObjetoSeleccionado(null); }
+function close(){
+  // Use the centralized close action so side-effects (like map reset) run
+  try {
+    app.cerrarSwipeable();
+  } catch (e) {
+    console.debug('[Sidebar] cerrarSwipeable error', e);
+    app.selectFeature(null);
+    app.setObjetoSeleccionado(null);
+  }
+}
 
 function formatCategoria(cat: any) {
   if (!cat) return null;

@@ -72,6 +72,16 @@ const geojsonOptions = computed(() => ({
       } catch (e) {
         console.debug('[UnimapMap] feature click log error', e);
       }
+      // Ensure the global store has the Leaflet map instance available
+      try {
+        const maybeMap = (layer && (layer._map)) || (mapRef.value && mapRef.value.mapObject) || null;
+        if (maybeMap) {
+          app.setMap(maybeMap);
+        }
+      } catch (err) {
+        console.debug('[UnimapMap] error setting map from layer click', err);
+      }
+
       emit('feature-click', { feature, latlng: [lat, lng] });
     });
   },
