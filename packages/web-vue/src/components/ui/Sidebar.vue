@@ -47,8 +47,8 @@ function share() {
 </script>
 
 <template>
-  <aside v-if="selectedFeature || objetoSeleccionado" style="position:absolute; right:0; top:0; height:100%; width:360px; background:#fff; box-shadow:-2px 0 14px rgba(0,0,0,.18); padding:16px; overflow:auto; z-index:500;">
-    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; gap:12px;">
+  <aside v-if="selectedFeature || objetoSeleccionado" class="unimap-sidebar">
+    <div class="unimap-sidebar__header">
       <div>
         <h3 style="margin:0; font-size:18px;">{{ objetoSeleccionado?.nombre ?? (selectedFeature?.properties?.nombre ?? selectedFeature?.properties?.name ?? 'Detalle') }}</h3>
         <div style="margin-top:6px; display:flex; gap:8px; align-items:center;">
@@ -60,7 +60,7 @@ function share() {
           <small style="color:#666">ID: {{ objetoSeleccionado?._id ?? selectedFeature?.properties?._id ?? selectedFeature?.properties?.id ?? '—' }}</small>
         </div>
       </div>
-      <button @click="close" style="background:transparent;border:none;font-size:20px;line-height:1;cursor:pointer">✕</button>
+      <button @click="close" class="unimap-sidebar__close" aria-label="Cerrar">✕</button>
     </div>
 
     <!-- Imagen principal -->
@@ -106,3 +106,42 @@ function share() {
     </div>
   </aside>
 </template>
+
+<style scoped>
+.unimap-sidebar{
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 360px;
+  background: #fff;
+  box-shadow: -2px 0 14px rgba(0,0,0,.18);
+  padding: 16px;
+  overflow: auto;
+  z-index: 9999; /* above leaflet controls */
+  -webkit-overflow-scrolling: touch;
+}
+.unimap-sidebar__header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:8px;
+  gap:12px;
+}
+.unimap-sidebar__close{
+  background:transparent;
+  border:none;
+  font-size:22px;
+  line-height:1;
+  cursor:pointer;
+  padding:8px;
+  border-radius:6px;
+}
+.unimap-sidebar__close:active{ transform:scale(0.98); }
+
+/* Responsive: on small screens make sidebar full width and overlay content */
+@media (max-width: 640px){
+  .unimap-sidebar{ width: 100%; }
+}
+
+</style>
