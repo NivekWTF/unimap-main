@@ -11,71 +11,73 @@
         <h2 class="title">Admin</h2>
         <p class="subtitle">Panel de administración</p>
 
-        <div class="footer-buttons">
-          <button @click="onImportClick">
-            <i class="icon-cloud"></i> Importar Datos
-          </button>
-          <button @click="goToCampus"><i class="icon-campus"></i> Campus</button>
-          <button><i class="icon-student"></i> Alumnos</button>
-          <button><i class="icon-building"></i> Edificios</button>
-          <button><i class="icon-classroom"></i> Aulas</button>
-          <button><i class="icon-lab"></i> Laboratorios</button>
-          <button><i class="icon-admin"></i> Administración</button>
-          <button><i class="icon-wc"></i> Sanitarios</button>
-          <button><i class="icon-library"></i> Bibliotecas</button>
-          <button><i class="icon-sport"></i> Zonas Deportivas</button>
-        </div>
+        <div class="admin-layout">
+          <aside class="admin-sidebar">
+            <button :class="{active: activeSection==='import'}" @click="activeSection='import'"><i class="icon-cloud"></i> Importar Datos</button>
+            <button :class="{active: activeSection==='campus'}" @click="activeSection='campus'" @click.prevent="goToCampus"><i class="icon-campus"></i> Campus</button>
+            <button :class="{active: activeSection==='alumnos'}" @click="activeSection='alumnos'"><i class="icon-student"></i> Alumnos</button>
+            <button :class="{active: activeSection==='edificios'}" @click="activeSection='edificios'"><i class="icon-building"></i> Edificios</button>
+            <button :class="{active: activeSection==='aulas'}" @click="activeSection='aulas'"><i class="icon-classroom"></i> Aulas</button>
+            <button :class="{active: activeSection==='laboratorios'}" @click="activeSection='laboratorios'"><i class="icon-lab"></i> Laboratorios</button>
+            <button :class="{active: activeSection==='administracion'}" @click="activeSection='administracion'"><i class="icon-admin"></i> Administración</button>
+            <button :class="{active: activeSection==='sanitarios'}" @click="activeSection='sanitarios'"><i class="icon-wc"></i> Sanitarios</button>
+            <button :class="{active: activeSection==='bibliotecas'}" @click="activeSection='bibliotecas'"><i class="icon-library"></i> Bibliotecas</button>
+            <button :class="{active: activeSection==='deporte'}" @click="activeSection='deporte'"><i class="icon-sport"></i> Zonas Deportivas</button>
+          </aside>
 
-        <!-- Import Modal -->
-        <div v-if="showImport" class="modal-overlay">
-          <div class="modal">
-            <h2>Importar objetos GeoJSON</h2>
-            <p>Sube aquí tus archivos GeoJSON</p>
+          <section class="admin-content">
+            <div v-if="activeSection==='import'" class="import-panel">
+              <h2>Importar objetos GeoJSON</h2>
+              <p>Sube aquí tus archivos GeoJSON</p>
 
-            <label class="file-input">
-              Seleccionar archivos
-              <input type="file" accept="application/json,.geojson" multiple @change="onFilesSelected" />
-            </label>
+              <label class="file-input">
+                Seleccionar archivos
+                <input type="file" accept="application/json,.geojson" multiple @change="onFilesSelected" />
+              </label>
 
-            <div class="file-list">
-              <div v-for="(f, i) in files" :key="i" class="file-item">
-                <div class="name">{{ f.name }}</div>
-                <div class="actions">
-                  <button @click="removeFile(i)">Eliminar</button>
-                  <button v-if="errors[i]" @click="viewErrors(i)">Ver errores</button>
+              <div class="file-list">
+                <div v-for="(f, i) in files" :key="i" class="file-item">
+                  <div class="name">{{ f.name }}</div>
+                  <div class="actions">
+                    <button @click="removeFile(i)">Eliminar</button>
+                    <button v-if="errors[i]" @click="viewErrors(i)">Ver errores</button>
+                  </div>
                 </div>
               </div>
+
+              <label>
+                Seleccionar campus
+                <select v-model="selectedCampus">
+                  <option value="">-- Selecciona --</option>
+                  <option v-for="c in campusList" :key="c._id" :value="String(c._id)">{{ c.nombre }}</option>
+                </select>
+              </label>
+              <div style="margin-top:8px; font-size:13px; color:#556">
+                <span v-if="campusLoading">Cargando campus…</span>
+                <span v-else-if="campusLoadError">Error cargando campus: {{ campusLoadError }} <button @click="loadCampusList">Reintentar</button></span>
+                <span v-else-if="!campusList.length">No hay campus disponibles. Puedes crear uno en la sección Campus.</span>
+              </div>
+
+              <div class="modal-actions">
+                <button :disabled="!files.length || !selectedCampus || loading" @click="importar">Importar</button>
+                <button @click="clearImport">Cancelar</button>
+              </div>
+
+              <div v-if="loading">Importando...</div>
+              <div v-if="serverError" class="error">{{ serverError }}</div>
             </div>
 
-            <label>
-              Seleccionar campus
-              <select v-model="selectedCampus">
-                <option value="">-- Selecciona --</option>
-                <option v-for="c in campusList" :key="c._id" :value="c._id">{{ c.nombre }}</option>
-              </select>
-            </label>
-
-            <div class="modal-actions">
-              <button :disabled="!files.length || !selectedCampus || loading" @click="importar">Importar</button>
-              <button @click="closeImport">Cancelar</button>
+            <!-- error drawer -->
+            <div v-if="showErrorIndex !== null" class="error-drawer">
+              <h3>Errores en archivo: {{ files[showErrorIndex!]?.name }}</h3>
+              <ul>
+                <li v-for="(e, idx) in errors[showErrorIndex!]" :key="idx">{{ e }}</li>
+              </ul>
+              <div class="modal-actions">
+                <button @click="showErrorIndex = null">Cerrar</button>
+              </div>
             </div>
-
-            <div v-if="loading">Importando...</div>
-            <div v-if="serverError" class="error">{{ serverError }}</div>
-          </div>
-        </div>
-
-        <!-- error modal -->
-        <div v-if="showErrorIndex !== null" class="modal-overlay">
-          <div class="modal">
-            <h3>Errores en archivo: {{ files[showErrorIndex!]?.name }}</h3>
-            <ul>
-              <li v-for="(e, idx) in errors[showErrorIndex!]" :key="idx">{{ e }}</li>
-            </ul>
-            <div class="modal-actions">
-              <button @click="showErrorIndex = null">Cerrar</button>
-            </div>
-          </div>
+          </section>
         </div>
       </div>
     </div>
@@ -83,31 +85,36 @@
 </template>
 
 <script setup lang="ts">
-import { ref, reactive, onMounted } from 'vue';
+import { ref, reactive, onMounted, watch } from 'vue';
+import { useAppStore } from '@/stores/app';
 import { trpc } from '@/lib/trpc';
 import { useRouter } from 'vue-router';
 
 const showImport = ref(false);
+const activeSection = ref('import');
+const app = useAppStore();
 const router = useRouter();
 const files = ref<File[]>([]);
 const parsedGeoJsons = ref<any[]>([]);
 const errors = reactive<Record<number, string[]>>({});
 const showErrorIndex = ref<number | null>(null);
 const campusList = ref<any[]>([]);
+const campusLoading = ref(false);
+const campusLoadError = ref<string | null>(null);
 const selectedCampus = ref<string>('');
 const loading = ref(false);
 const serverError = ref<string | null>(null);
 
 function onImportClick() {
-  showImport.value = true;
+  activeSection.value = 'import';
 }
 
 function goToCampus() {
   router.push('/admin/campus');
 }
 
-function closeImport() {
-  showImport.value = false;
+function clearImport() {
+  // Clear import form fields
   files.value = [];
   parsedGeoJsons.value = [];
   Object.keys(errors).forEach((k) => delete errors[Number(k)]);
@@ -166,7 +173,7 @@ async function importar() {
   try {
     await (trpc as any).importarObjetos.importar.mutate({ campus: selectedCampus.value, geoJson: parsed });
     alert('Importación exitosa');
-    closeImport();
+    clearImport();
   } catch (err: any) {
     serverError.value = err?.message || String(err);
   } finally {
@@ -174,14 +181,35 @@ async function importar() {
   }
 }
 
-onMounted(async () => {
+async function loadCampusList() {
+  campusLoading.value = true;
+  campusLoadError.value = null;
   try {
     const resp = await (trpc as any).campus.obtener.query();
     campusList.value = resp || [];
-  } catch (err) {
-    // ignore; campus can be selected later
+  } catch (err: any) {
+    campusList.value = [];
+    campusLoadError.value = err?.message ?? String(err);
     console.warn('No se pudieron cargar campus', err);
+  } finally {
+    campusLoading.value = false;
   }
+}
+
+onMounted(() => {
+  // Require an authenticated session for admin pages
+  const token = app.token || localStorage.getItem('token') || localStorage.getItem('UNIMAP_TOKEN') || '';
+  if (!token) {
+    // If no token, redirect to login to obtain credentials
+    router.push('/login');
+    return;
+  }
+  loadCampusList();
+});
+
+// reload campuses when user switches to import section
+watch(activeSection, (v) => {
+  if (v === 'import') loadCampusList();
 });
 </script>
 
@@ -303,5 +331,14 @@ onMounted(async () => {
   color: #fff;
   transform: translateY(-2px);
 }
+
+/* Admin layout styles */
+.admin-layout{ display:flex; gap:18px; align-items:flex-start; width:100% }
+.admin-sidebar{ width:220px; background:#fff; border-radius:10px; padding:12px; box-shadow:0 6px 20px rgba(15,23,42,0.06); display:flex; flex-direction:column; gap:8px }
+.admin-sidebar button{ display:flex; align-items:center; gap:10px; padding:10px 12px; border-radius:8px; border:none; background:transparent; text-align:left; cursor:pointer; color:#143A57 }
+.admin-sidebar button.active{ background:linear-gradient(180deg,#f59d3c,#e86b1d); color:#fff }
+.admin-content{ flex:1; background:#fff; border-radius:10px; padding:18px; box-shadow:0 6px 20px rgba(15,23,42,0.04) }
+.import-panel h2{ margin-top:0 }
+.error-drawer{ margin-top:12px; background:#fff7f7; border:1px solid #f5c6cb; padding:12px; border-radius:8px }
 
 </style>
