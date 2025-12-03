@@ -58,6 +58,11 @@
                 <span v-else-if="!campusList.length">No hay campus disponibles. Puedes crear uno en la sección Campus.</span>
               </div>
 
+              <div style="margin-top:8px; display:flex; gap:8px; align-items:center;">
+                <button class="btn" :disabled="!selectedCampus || !selectedCampus.length" @click="applyCampusToMap">Usar campus en mapa</button>
+                <span style="font-size:13px; color:#556">Campus activo: <strong>{{ currentCampusName }}</strong></span>
+              </div>
+
               <div class="modal-actions">
                 <button :disabled="!files.length || !selectedCampus || loading" @click="importar">Importar</button>
                 <button @click="clearImport">Cancelar</button>
@@ -85,7 +90,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, reactive, onMounted, watch } from 'vue';
+import { ref, reactive, onMounted, watch, computed } from 'vue';
 import { useAppStore } from '@/stores/app';
 import { trpc } from '@/lib/trpc';
 import { useRouter } from 'vue-router';
@@ -210,6 +215,24 @@ onMounted(() => {
 // reload campuses when user switches to import section
 watch(activeSection, (v) => {
   if (v === 'import') loadCampusList();
+});
+
+function applyCampusToMap() {
+  if (!selectedCampus.value) return;
+  app.setCampusId(String(selectedCampus.value));
+  // loadObjetos will react to app.campusId via useObjetos composable
+  try {
+    app.pushAlert({ message: `Campus aplicado: ${selectedCampus.value}`, type: 'success' });
+  } catch (e) {
+    console.debug('applyCampusToMap: pushAlert failed', e);
+  }
+}
+
+const currentCampusName = computed(() => {
+  const id = app.campusId;
+  if (!id) return '-';
+  const found = campusList.value.find((c: any) => String(c._id) === String(id));
+  return found ? found.nombre : id;
 });
 </script>
 

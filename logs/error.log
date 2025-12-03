@@ -581,3 +581,10046 @@
     "message": "Required"
   }
 ]
+2025-12-03 22:40:39 [error]: [
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      0,
+      "properties",
+      "nombreCorto"
+    ]
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      0,
+      "properties",
+      "pisos"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      0,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      1,
+      "properties",
+      "pisos"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      1,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      2,
+      "properties",
+      "pisos"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      2,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      3,
+      "properties",
+      "pisos"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      3,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "too_big",
+    "maximum": 10,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at most 10 character(s)",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      4,
+      "properties",
+      "nombreCorto"
+    ]
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      4,
+      "properties",
+      "pisos"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      4,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      5,
+      "properties",
+      "pisos"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      5,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "too_big",
+    "maximum": 10,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at most 10 character(s)",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      6,
+      "properties",
+      "nombreCorto"
+    ]
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      6,
+      "properties",
+      "pisos"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      6,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      7,
+      "properties",
+      "pisos"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      7,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "too_big",
+    "maximum": 10,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at most 10 character(s)",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      8,
+      "properties",
+      "nombreCorto"
+    ]
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      8,
+      "properties",
+      "pisos"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      8,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      9,
+      "properties",
+      "pisos"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      9,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      10,
+      "properties",
+      "pisos"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      10,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "too_big",
+    "maximum": 10,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at most 10 character(s)",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      11,
+      "properties",
+      "nombreCorto"
+    ]
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      11,
+      "properties",
+      "pisos"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      11,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      12,
+      "properties",
+      "pisos"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      12,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "too_big",
+    "maximum": 10,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at most 10 character(s)",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      13,
+      "properties",
+      "nombreCorto"
+    ]
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      13,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "too_big",
+    "maximum": 10,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at most 10 character(s)",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      14,
+      "properties",
+      "nombreCorto"
+    ]
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      14,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "too_big",
+    "maximum": 10,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at most 10 character(s)",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      15,
+      "properties",
+      "nombreCorto"
+    ]
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      15,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      16,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      17,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      18,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "too_big",
+    "maximum": 10,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at most 10 character(s)",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      19,
+      "properties",
+      "nombreCorto"
+    ]
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      19,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "too_big",
+    "maximum": 10,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at most 10 character(s)",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      20,
+      "properties",
+      "nombreCorto"
+    ]
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      20,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "too_big",
+    "maximum": 10,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at most 10 character(s)",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      21,
+      "properties",
+      "nombreCorto"
+    ]
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      21,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      22,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      23,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      24,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      25,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      26,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      27,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      28,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      29,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      30,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      31,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      32,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      33,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      34,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      35,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "too_big",
+    "maximum": 10,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at most 10 character(s)",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      36,
+      "properties",
+      "nombreCorto"
+    ]
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      36,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      37,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      38,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      39,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      40,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      41,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      42,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      43,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      45,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      46,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      47,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      48,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      49,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      50,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      51,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      52,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      53,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      54,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      55,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      56,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      57,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      58,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      59,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      60,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "received": "LineString",
+    "code": "invalid_enum_value",
+    "options": [
+      "Polygon",
+      "MultiPolygon"
+    ],
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      61,
+      "geometry",
+      "type"
+    ],
+    "message": "Invalid enum value. Expected 'Polygon' | 'MultiPolygon', received 'LineString'"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      61,
+      "geometry",
+      "coordinates",
+      0,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      61,
+      "geometry",
+      "coordinates",
+      0,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      61,
+      "geometry",
+      "coordinates",
+      1,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      61,
+      "geometry",
+      "coordinates",
+      1,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      61,
+      "geometry",
+      "coordinates",
+      2,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      61,
+      "geometry",
+      "coordinates",
+      2,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      61,
+      "geometry",
+      "coordinates",
+      3,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      61,
+      "geometry",
+      "coordinates",
+      3,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      61,
+      "geometry",
+      "coordinates",
+      4,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      61,
+      "geometry",
+      "coordinates",
+      4,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      61,
+      "properties",
+      "qgisId"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      61,
+      "properties",
+      "nombre"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      61,
+      "properties",
+      "categoria"
+    ],
+    "message": "Required"
+  },
+  {
+    "received": "LineString",
+    "code": "invalid_enum_value",
+    "options": [
+      "Polygon",
+      "MultiPolygon"
+    ],
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      62,
+      "geometry",
+      "type"
+    ],
+    "message": "Invalid enum value. Expected 'Polygon' | 'MultiPolygon', received 'LineString'"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      62,
+      "geometry",
+      "coordinates",
+      0,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      62,
+      "geometry",
+      "coordinates",
+      0,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      62,
+      "geometry",
+      "coordinates",
+      1,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      62,
+      "geometry",
+      "coordinates",
+      1,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      62,
+      "geometry",
+      "coordinates",
+      2,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      62,
+      "geometry",
+      "coordinates",
+      2,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      62,
+      "properties",
+      "qgisId"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      62,
+      "properties",
+      "nombre"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      62,
+      "properties",
+      "categoria"
+    ],
+    "message": "Required"
+  },
+  {
+    "received": "LineString",
+    "code": "invalid_enum_value",
+    "options": [
+      "Polygon",
+      "MultiPolygon"
+    ],
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      63,
+      "geometry",
+      "type"
+    ],
+    "message": "Invalid enum value. Expected 'Polygon' | 'MultiPolygon', received 'LineString'"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      63,
+      "geometry",
+      "coordinates",
+      0,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      63,
+      "geometry",
+      "coordinates",
+      0,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      63,
+      "geometry",
+      "coordinates",
+      1,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      63,
+      "geometry",
+      "coordinates",
+      1,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      63,
+      "properties",
+      "qgisId"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      63,
+      "properties",
+      "nombre"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      63,
+      "properties",
+      "categoria"
+    ],
+    "message": "Required"
+  },
+  {
+    "received": "LineString",
+    "code": "invalid_enum_value",
+    "options": [
+      "Polygon",
+      "MultiPolygon"
+    ],
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      64,
+      "geometry",
+      "type"
+    ],
+    "message": "Invalid enum value. Expected 'Polygon' | 'MultiPolygon', received 'LineString'"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      64,
+      "geometry",
+      "coordinates",
+      0,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      64,
+      "geometry",
+      "coordinates",
+      0,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      64,
+      "geometry",
+      "coordinates",
+      1,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      64,
+      "geometry",
+      "coordinates",
+      1,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      64,
+      "geometry",
+      "coordinates",
+      2,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      64,
+      "geometry",
+      "coordinates",
+      2,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      64,
+      "properties",
+      "qgisId"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      64,
+      "properties",
+      "nombre"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      64,
+      "properties",
+      "categoria"
+    ],
+    "message": "Required"
+  },
+  {
+    "received": "LineString",
+    "code": "invalid_enum_value",
+    "options": [
+      "Polygon",
+      "MultiPolygon"
+    ],
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      65,
+      "geometry",
+      "type"
+    ],
+    "message": "Invalid enum value. Expected 'Polygon' | 'MultiPolygon', received 'LineString'"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      65,
+      "geometry",
+      "coordinates",
+      0,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      65,
+      "geometry",
+      "coordinates",
+      0,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      65,
+      "geometry",
+      "coordinates",
+      1,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      65,
+      "geometry",
+      "coordinates",
+      1,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      65,
+      "geometry",
+      "coordinates",
+      2,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      65,
+      "geometry",
+      "coordinates",
+      2,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      65,
+      "properties",
+      "qgisId"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      65,
+      "properties",
+      "nombre"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      65,
+      "properties",
+      "categoria"
+    ],
+    "message": "Required"
+  },
+  {
+    "received": "LineString",
+    "code": "invalid_enum_value",
+    "options": [
+      "Polygon",
+      "MultiPolygon"
+    ],
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      66,
+      "geometry",
+      "type"
+    ],
+    "message": "Invalid enum value. Expected 'Polygon' | 'MultiPolygon', received 'LineString'"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      66,
+      "geometry",
+      "coordinates",
+      0,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      66,
+      "geometry",
+      "coordinates",
+      0,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      66,
+      "geometry",
+      "coordinates",
+      1,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      66,
+      "geometry",
+      "coordinates",
+      1,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      66,
+      "properties",
+      "qgisId"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      66,
+      "properties",
+      "nombre"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      66,
+      "properties",
+      "categoria"
+    ],
+    "message": "Required"
+  },
+  {
+    "received": "LineString",
+    "code": "invalid_enum_value",
+    "options": [
+      "Polygon",
+      "MultiPolygon"
+    ],
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      67,
+      "geometry",
+      "type"
+    ],
+    "message": "Invalid enum value. Expected 'Polygon' | 'MultiPolygon', received 'LineString'"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      67,
+      "geometry",
+      "coordinates",
+      0,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      67,
+      "geometry",
+      "coordinates",
+      0,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      67,
+      "geometry",
+      "coordinates",
+      1,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      67,
+      "geometry",
+      "coordinates",
+      1,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      67,
+      "properties",
+      "qgisId"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      67,
+      "properties",
+      "nombre"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      67,
+      "properties",
+      "categoria"
+    ],
+    "message": "Required"
+  },
+  {
+    "received": "LineString",
+    "code": "invalid_enum_value",
+    "options": [
+      "Polygon",
+      "MultiPolygon"
+    ],
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      68,
+      "geometry",
+      "type"
+    ],
+    "message": "Invalid enum value. Expected 'Polygon' | 'MultiPolygon', received 'LineString'"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      68,
+      "geometry",
+      "coordinates",
+      0,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      68,
+      "geometry",
+      "coordinates",
+      0,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      68,
+      "geometry",
+      "coordinates",
+      1,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      68,
+      "geometry",
+      "coordinates",
+      1,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      68,
+      "properties",
+      "qgisId"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      68,
+      "properties",
+      "nombre"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      68,
+      "properties",
+      "categoria"
+    ],
+    "message": "Required"
+  },
+  {
+    "received": "LineString",
+    "code": "invalid_enum_value",
+    "options": [
+      "Polygon",
+      "MultiPolygon"
+    ],
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      69,
+      "geometry",
+      "type"
+    ],
+    "message": "Invalid enum value. Expected 'Polygon' | 'MultiPolygon', received 'LineString'"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      69,
+      "geometry",
+      "coordinates",
+      0,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      69,
+      "geometry",
+      "coordinates",
+      0,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      69,
+      "geometry",
+      "coordinates",
+      1,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      69,
+      "geometry",
+      "coordinates",
+      1,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      69,
+      "geometry",
+      "coordinates",
+      2,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      69,
+      "geometry",
+      "coordinates",
+      2,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      69,
+      "properties",
+      "qgisId"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      69,
+      "properties",
+      "nombre"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      69,
+      "properties",
+      "categoria"
+    ],
+    "message": "Required"
+  },
+  {
+    "received": "LineString",
+    "code": "invalid_enum_value",
+    "options": [
+      "Polygon",
+      "MultiPolygon"
+    ],
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      70,
+      "geometry",
+      "type"
+    ],
+    "message": "Invalid enum value. Expected 'Polygon' | 'MultiPolygon', received 'LineString'"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      70,
+      "geometry",
+      "coordinates",
+      0,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      70,
+      "geometry",
+      "coordinates",
+      0,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      70,
+      "geometry",
+      "coordinates",
+      1,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      70,
+      "geometry",
+      "coordinates",
+      1,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      70,
+      "properties",
+      "qgisId"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      70,
+      "properties",
+      "nombre"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      70,
+      "properties",
+      "categoria"
+    ],
+    "message": "Required"
+  },
+  {
+    "received": "LineString",
+    "code": "invalid_enum_value",
+    "options": [
+      "Polygon",
+      "MultiPolygon"
+    ],
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      71,
+      "geometry",
+      "type"
+    ],
+    "message": "Invalid enum value. Expected 'Polygon' | 'MultiPolygon', received 'LineString'"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      71,
+      "geometry",
+      "coordinates",
+      0,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      71,
+      "geometry",
+      "coordinates",
+      0,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      71,
+      "geometry",
+      "coordinates",
+      1,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      71,
+      "geometry",
+      "coordinates",
+      1,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      71,
+      "geometry",
+      "coordinates",
+      2,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      71,
+      "geometry",
+      "coordinates",
+      2,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      71,
+      "geometry",
+      "coordinates",
+      3,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      71,
+      "geometry",
+      "coordinates",
+      3,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      71,
+      "properties",
+      "qgisId"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      71,
+      "properties",
+      "nombre"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      71,
+      "properties",
+      "categoria"
+    ],
+    "message": "Required"
+  },
+  {
+    "received": "LineString",
+    "code": "invalid_enum_value",
+    "options": [
+      "Polygon",
+      "MultiPolygon"
+    ],
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      72,
+      "geometry",
+      "type"
+    ],
+    "message": "Invalid enum value. Expected 'Polygon' | 'MultiPolygon', received 'LineString'"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      72,
+      "geometry",
+      "coordinates",
+      0,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      72,
+      "geometry",
+      "coordinates",
+      0,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      72,
+      "geometry",
+      "coordinates",
+      1,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      72,
+      "geometry",
+      "coordinates",
+      1,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      72,
+      "geometry",
+      "coordinates",
+      2,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      72,
+      "geometry",
+      "coordinates",
+      2,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      72,
+      "geometry",
+      "coordinates",
+      3,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      72,
+      "geometry",
+      "coordinates",
+      3,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      72,
+      "geometry",
+      "coordinates",
+      4,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      72,
+      "geometry",
+      "coordinates",
+      4,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      72,
+      "properties",
+      "qgisId"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      72,
+      "properties",
+      "nombre"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      72,
+      "properties",
+      "categoria"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      73,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      74,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      75,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      76,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      77,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      78,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      79,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      80,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      81,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      82,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      83,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      84,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      85,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      86,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  }
+]
+2025-12-03 22:41:11 [error]: [
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      0,
+      "properties",
+      "nombreCorto"
+    ]
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      0,
+      "properties",
+      "pisos"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      0,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      1,
+      "properties",
+      "pisos"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      1,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      2,
+      "properties",
+      "pisos"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      2,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      3,
+      "properties",
+      "pisos"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      3,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "too_big",
+    "maximum": 10,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at most 10 character(s)",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      4,
+      "properties",
+      "nombreCorto"
+    ]
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      4,
+      "properties",
+      "pisos"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      4,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      5,
+      "properties",
+      "pisos"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      5,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "too_big",
+    "maximum": 10,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at most 10 character(s)",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      6,
+      "properties",
+      "nombreCorto"
+    ]
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      6,
+      "properties",
+      "pisos"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      6,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      7,
+      "properties",
+      "pisos"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      7,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "too_big",
+    "maximum": 10,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at most 10 character(s)",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      8,
+      "properties",
+      "nombreCorto"
+    ]
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      8,
+      "properties",
+      "pisos"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      8,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      9,
+      "properties",
+      "pisos"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      9,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      10,
+      "properties",
+      "pisos"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      10,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "too_big",
+    "maximum": 10,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at most 10 character(s)",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      11,
+      "properties",
+      "nombreCorto"
+    ]
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      11,
+      "properties",
+      "pisos"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      11,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      12,
+      "properties",
+      "pisos"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      12,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "too_big",
+    "maximum": 10,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at most 10 character(s)",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      13,
+      "properties",
+      "nombreCorto"
+    ]
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      13,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "too_big",
+    "maximum": 10,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at most 10 character(s)",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      14,
+      "properties",
+      "nombreCorto"
+    ]
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      14,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "too_big",
+    "maximum": 10,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at most 10 character(s)",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      15,
+      "properties",
+      "nombreCorto"
+    ]
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      15,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      16,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      17,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      18,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "too_big",
+    "maximum": 10,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at most 10 character(s)",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      19,
+      "properties",
+      "nombreCorto"
+    ]
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      19,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "too_big",
+    "maximum": 10,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at most 10 character(s)",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      20,
+      "properties",
+      "nombreCorto"
+    ]
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      20,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "too_big",
+    "maximum": 10,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at most 10 character(s)",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      21,
+      "properties",
+      "nombreCorto"
+    ]
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      21,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      22,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      23,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      24,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      25,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      26,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      27,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      28,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      29,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      30,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      31,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      32,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      33,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      34,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      35,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "too_big",
+    "maximum": 10,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at most 10 character(s)",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      36,
+      "properties",
+      "nombreCorto"
+    ]
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      36,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      37,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      38,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      39,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      40,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      41,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      42,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      43,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      45,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      46,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      47,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      48,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      49,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      50,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      51,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      52,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      53,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      54,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      55,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      56,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      57,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      58,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      59,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      60,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "received": "LineString",
+    "code": "invalid_enum_value",
+    "options": [
+      "Polygon",
+      "MultiPolygon"
+    ],
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      61,
+      "geometry",
+      "type"
+    ],
+    "message": "Invalid enum value. Expected 'Polygon' | 'MultiPolygon', received 'LineString'"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      61,
+      "geometry",
+      "coordinates",
+      0,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      61,
+      "geometry",
+      "coordinates",
+      0,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      61,
+      "geometry",
+      "coordinates",
+      1,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      61,
+      "geometry",
+      "coordinates",
+      1,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      61,
+      "geometry",
+      "coordinates",
+      2,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      61,
+      "geometry",
+      "coordinates",
+      2,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      61,
+      "geometry",
+      "coordinates",
+      3,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      61,
+      "geometry",
+      "coordinates",
+      3,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      61,
+      "geometry",
+      "coordinates",
+      4,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      61,
+      "geometry",
+      "coordinates",
+      4,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      61,
+      "properties",
+      "qgisId"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      61,
+      "properties",
+      "nombre"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      61,
+      "properties",
+      "categoria"
+    ],
+    "message": "Required"
+  },
+  {
+    "received": "LineString",
+    "code": "invalid_enum_value",
+    "options": [
+      "Polygon",
+      "MultiPolygon"
+    ],
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      62,
+      "geometry",
+      "type"
+    ],
+    "message": "Invalid enum value. Expected 'Polygon' | 'MultiPolygon', received 'LineString'"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      62,
+      "geometry",
+      "coordinates",
+      0,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      62,
+      "geometry",
+      "coordinates",
+      0,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      62,
+      "geometry",
+      "coordinates",
+      1,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      62,
+      "geometry",
+      "coordinates",
+      1,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      62,
+      "geometry",
+      "coordinates",
+      2,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      62,
+      "geometry",
+      "coordinates",
+      2,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      62,
+      "properties",
+      "qgisId"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      62,
+      "properties",
+      "nombre"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      62,
+      "properties",
+      "categoria"
+    ],
+    "message": "Required"
+  },
+  {
+    "received": "LineString",
+    "code": "invalid_enum_value",
+    "options": [
+      "Polygon",
+      "MultiPolygon"
+    ],
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      63,
+      "geometry",
+      "type"
+    ],
+    "message": "Invalid enum value. Expected 'Polygon' | 'MultiPolygon', received 'LineString'"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      63,
+      "geometry",
+      "coordinates",
+      0,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      63,
+      "geometry",
+      "coordinates",
+      0,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      63,
+      "geometry",
+      "coordinates",
+      1,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      63,
+      "geometry",
+      "coordinates",
+      1,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      63,
+      "properties",
+      "qgisId"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      63,
+      "properties",
+      "nombre"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      63,
+      "properties",
+      "categoria"
+    ],
+    "message": "Required"
+  },
+  {
+    "received": "LineString",
+    "code": "invalid_enum_value",
+    "options": [
+      "Polygon",
+      "MultiPolygon"
+    ],
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      64,
+      "geometry",
+      "type"
+    ],
+    "message": "Invalid enum value. Expected 'Polygon' | 'MultiPolygon', received 'LineString'"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      64,
+      "geometry",
+      "coordinates",
+      0,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      64,
+      "geometry",
+      "coordinates",
+      0,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      64,
+      "geometry",
+      "coordinates",
+      1,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      64,
+      "geometry",
+      "coordinates",
+      1,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      64,
+      "geometry",
+      "coordinates",
+      2,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      64,
+      "geometry",
+      "coordinates",
+      2,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      64,
+      "properties",
+      "qgisId"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      64,
+      "properties",
+      "nombre"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      64,
+      "properties",
+      "categoria"
+    ],
+    "message": "Required"
+  },
+  {
+    "received": "LineString",
+    "code": "invalid_enum_value",
+    "options": [
+      "Polygon",
+      "MultiPolygon"
+    ],
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      65,
+      "geometry",
+      "type"
+    ],
+    "message": "Invalid enum value. Expected 'Polygon' | 'MultiPolygon', received 'LineString'"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      65,
+      "geometry",
+      "coordinates",
+      0,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      65,
+      "geometry",
+      "coordinates",
+      0,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      65,
+      "geometry",
+      "coordinates",
+      1,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      65,
+      "geometry",
+      "coordinates",
+      1,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      65,
+      "geometry",
+      "coordinates",
+      2,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      65,
+      "geometry",
+      "coordinates",
+      2,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      65,
+      "properties",
+      "qgisId"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      65,
+      "properties",
+      "nombre"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      65,
+      "properties",
+      "categoria"
+    ],
+    "message": "Required"
+  },
+  {
+    "received": "LineString",
+    "code": "invalid_enum_value",
+    "options": [
+      "Polygon",
+      "MultiPolygon"
+    ],
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      66,
+      "geometry",
+      "type"
+    ],
+    "message": "Invalid enum value. Expected 'Polygon' | 'MultiPolygon', received 'LineString'"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      66,
+      "geometry",
+      "coordinates",
+      0,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      66,
+      "geometry",
+      "coordinates",
+      0,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      66,
+      "geometry",
+      "coordinates",
+      1,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      66,
+      "geometry",
+      "coordinates",
+      1,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      66,
+      "properties",
+      "qgisId"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      66,
+      "properties",
+      "nombre"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      66,
+      "properties",
+      "categoria"
+    ],
+    "message": "Required"
+  },
+  {
+    "received": "LineString",
+    "code": "invalid_enum_value",
+    "options": [
+      "Polygon",
+      "MultiPolygon"
+    ],
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      67,
+      "geometry",
+      "type"
+    ],
+    "message": "Invalid enum value. Expected 'Polygon' | 'MultiPolygon', received 'LineString'"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      67,
+      "geometry",
+      "coordinates",
+      0,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      67,
+      "geometry",
+      "coordinates",
+      0,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      67,
+      "geometry",
+      "coordinates",
+      1,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      67,
+      "geometry",
+      "coordinates",
+      1,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      67,
+      "properties",
+      "qgisId"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      67,
+      "properties",
+      "nombre"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      67,
+      "properties",
+      "categoria"
+    ],
+    "message": "Required"
+  },
+  {
+    "received": "LineString",
+    "code": "invalid_enum_value",
+    "options": [
+      "Polygon",
+      "MultiPolygon"
+    ],
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      68,
+      "geometry",
+      "type"
+    ],
+    "message": "Invalid enum value. Expected 'Polygon' | 'MultiPolygon', received 'LineString'"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      68,
+      "geometry",
+      "coordinates",
+      0,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      68,
+      "geometry",
+      "coordinates",
+      0,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      68,
+      "geometry",
+      "coordinates",
+      1,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      68,
+      "geometry",
+      "coordinates",
+      1,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      68,
+      "properties",
+      "qgisId"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      68,
+      "properties",
+      "nombre"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      68,
+      "properties",
+      "categoria"
+    ],
+    "message": "Required"
+  },
+  {
+    "received": "LineString",
+    "code": "invalid_enum_value",
+    "options": [
+      "Polygon",
+      "MultiPolygon"
+    ],
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      69,
+      "geometry",
+      "type"
+    ],
+    "message": "Invalid enum value. Expected 'Polygon' | 'MultiPolygon', received 'LineString'"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      69,
+      "geometry",
+      "coordinates",
+      0,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      69,
+      "geometry",
+      "coordinates",
+      0,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      69,
+      "geometry",
+      "coordinates",
+      1,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      69,
+      "geometry",
+      "coordinates",
+      1,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      69,
+      "geometry",
+      "coordinates",
+      2,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      69,
+      "geometry",
+      "coordinates",
+      2,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      69,
+      "properties",
+      "qgisId"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      69,
+      "properties",
+      "nombre"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      69,
+      "properties",
+      "categoria"
+    ],
+    "message": "Required"
+  },
+  {
+    "received": "LineString",
+    "code": "invalid_enum_value",
+    "options": [
+      "Polygon",
+      "MultiPolygon"
+    ],
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      70,
+      "geometry",
+      "type"
+    ],
+    "message": "Invalid enum value. Expected 'Polygon' | 'MultiPolygon', received 'LineString'"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      70,
+      "geometry",
+      "coordinates",
+      0,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      70,
+      "geometry",
+      "coordinates",
+      0,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      70,
+      "geometry",
+      "coordinates",
+      1,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      70,
+      "geometry",
+      "coordinates",
+      1,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      70,
+      "properties",
+      "qgisId"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      70,
+      "properties",
+      "nombre"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      70,
+      "properties",
+      "categoria"
+    ],
+    "message": "Required"
+  },
+  {
+    "received": "LineString",
+    "code": "invalid_enum_value",
+    "options": [
+      "Polygon",
+      "MultiPolygon"
+    ],
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      71,
+      "geometry",
+      "type"
+    ],
+    "message": "Invalid enum value. Expected 'Polygon' | 'MultiPolygon', received 'LineString'"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      71,
+      "geometry",
+      "coordinates",
+      0,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      71,
+      "geometry",
+      "coordinates",
+      0,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      71,
+      "geometry",
+      "coordinates",
+      1,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      71,
+      "geometry",
+      "coordinates",
+      1,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      71,
+      "geometry",
+      "coordinates",
+      2,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      71,
+      "geometry",
+      "coordinates",
+      2,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      71,
+      "geometry",
+      "coordinates",
+      3,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      71,
+      "geometry",
+      "coordinates",
+      3,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      71,
+      "properties",
+      "qgisId"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      71,
+      "properties",
+      "nombre"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      71,
+      "properties",
+      "categoria"
+    ],
+    "message": "Required"
+  },
+  {
+    "received": "LineString",
+    "code": "invalid_enum_value",
+    "options": [
+      "Polygon",
+      "MultiPolygon"
+    ],
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      72,
+      "geometry",
+      "type"
+    ],
+    "message": "Invalid enum value. Expected 'Polygon' | 'MultiPolygon', received 'LineString'"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      72,
+      "geometry",
+      "coordinates",
+      0,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      72,
+      "geometry",
+      "coordinates",
+      0,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      72,
+      "geometry",
+      "coordinates",
+      1,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      72,
+      "geometry",
+      "coordinates",
+      1,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      72,
+      "geometry",
+      "coordinates",
+      2,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      72,
+      "geometry",
+      "coordinates",
+      2,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      72,
+      "geometry",
+      "coordinates",
+      3,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      72,
+      "geometry",
+      "coordinates",
+      3,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      72,
+      "geometry",
+      "coordinates",
+      4,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      72,
+      "geometry",
+      "coordinates",
+      4,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      72,
+      "properties",
+      "qgisId"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      72,
+      "properties",
+      "nombre"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      72,
+      "properties",
+      "categoria"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      73,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      74,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      75,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      76,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      77,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      78,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      79,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      80,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      81,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      82,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      83,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      84,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      85,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      86,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  }
+]
+2025-12-03 22:42:24 [error]: [
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      0,
+      "properties",
+      "nombreCorto"
+    ]
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      0,
+      "properties",
+      "pisos"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      0,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      1,
+      "properties",
+      "pisos"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      1,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      2,
+      "properties",
+      "pisos"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      2,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      3,
+      "properties",
+      "pisos"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      3,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "too_big",
+    "maximum": 10,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at most 10 character(s)",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      4,
+      "properties",
+      "nombreCorto"
+    ]
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      4,
+      "properties",
+      "pisos"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      4,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      5,
+      "properties",
+      "pisos"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      5,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "too_big",
+    "maximum": 10,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at most 10 character(s)",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      6,
+      "properties",
+      "nombreCorto"
+    ]
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      6,
+      "properties",
+      "pisos"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      6,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      7,
+      "properties",
+      "pisos"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      7,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "too_big",
+    "maximum": 10,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at most 10 character(s)",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      8,
+      "properties",
+      "nombreCorto"
+    ]
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      8,
+      "properties",
+      "pisos"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      8,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      9,
+      "properties",
+      "pisos"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      9,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      10,
+      "properties",
+      "pisos"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      10,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "too_big",
+    "maximum": 10,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at most 10 character(s)",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      11,
+      "properties",
+      "nombreCorto"
+    ]
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      11,
+      "properties",
+      "pisos"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      11,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      12,
+      "properties",
+      "pisos"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      12,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "too_big",
+    "maximum": 10,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at most 10 character(s)",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      13,
+      "properties",
+      "nombreCorto"
+    ]
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      13,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "too_big",
+    "maximum": 10,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at most 10 character(s)",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      14,
+      "properties",
+      "nombreCorto"
+    ]
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      14,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "too_big",
+    "maximum": 10,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at most 10 character(s)",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      15,
+      "properties",
+      "nombreCorto"
+    ]
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      15,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      16,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      17,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      18,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "too_big",
+    "maximum": 10,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at most 10 character(s)",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      19,
+      "properties",
+      "nombreCorto"
+    ]
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      19,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "too_big",
+    "maximum": 10,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at most 10 character(s)",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      20,
+      "properties",
+      "nombreCorto"
+    ]
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      20,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "too_big",
+    "maximum": 10,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at most 10 character(s)",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      21,
+      "properties",
+      "nombreCorto"
+    ]
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      21,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "too_big",
+    "maximum": 10,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at most 10 character(s)",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      22,
+      "properties",
+      "nombreCorto"
+    ]
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      22,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      23,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      24,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      25,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      26,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      27,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      28,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      29,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      30,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      31,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      32,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      33,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      34,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      35,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      36,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "too_big",
+    "maximum": 10,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at most 10 character(s)",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      37,
+      "properties",
+      "nombreCorto"
+    ]
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      37,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      38,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      39,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      40,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      41,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      42,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      43,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      44,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      46,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      47,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      48,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      49,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      50,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      51,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      52,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      53,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      54,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      55,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      56,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      57,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      58,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      59,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      60,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      61,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "received": "LineString",
+    "code": "invalid_enum_value",
+    "options": [
+      "Polygon",
+      "MultiPolygon"
+    ],
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      62,
+      "geometry",
+      "type"
+    ],
+    "message": "Invalid enum value. Expected 'Polygon' | 'MultiPolygon', received 'LineString'"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      62,
+      "geometry",
+      "coordinates",
+      0,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      62,
+      "geometry",
+      "coordinates",
+      0,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      62,
+      "geometry",
+      "coordinates",
+      1,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      62,
+      "geometry",
+      "coordinates",
+      1,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      62,
+      "geometry",
+      "coordinates",
+      2,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      62,
+      "geometry",
+      "coordinates",
+      2,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      62,
+      "geometry",
+      "coordinates",
+      3,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      62,
+      "geometry",
+      "coordinates",
+      3,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      62,
+      "geometry",
+      "coordinates",
+      4,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      62,
+      "geometry",
+      "coordinates",
+      4,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      62,
+      "properties",
+      "qgisId"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      62,
+      "properties",
+      "nombre"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      62,
+      "properties",
+      "categoria"
+    ],
+    "message": "Required"
+  },
+  {
+    "received": "LineString",
+    "code": "invalid_enum_value",
+    "options": [
+      "Polygon",
+      "MultiPolygon"
+    ],
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      63,
+      "geometry",
+      "type"
+    ],
+    "message": "Invalid enum value. Expected 'Polygon' | 'MultiPolygon', received 'LineString'"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      63,
+      "geometry",
+      "coordinates",
+      0,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      63,
+      "geometry",
+      "coordinates",
+      0,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      63,
+      "geometry",
+      "coordinates",
+      1,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      63,
+      "geometry",
+      "coordinates",
+      1,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      63,
+      "geometry",
+      "coordinates",
+      2,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      63,
+      "geometry",
+      "coordinates",
+      2,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      63,
+      "properties",
+      "qgisId"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      63,
+      "properties",
+      "nombre"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      63,
+      "properties",
+      "categoria"
+    ],
+    "message": "Required"
+  },
+  {
+    "received": "LineString",
+    "code": "invalid_enum_value",
+    "options": [
+      "Polygon",
+      "MultiPolygon"
+    ],
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      64,
+      "geometry",
+      "type"
+    ],
+    "message": "Invalid enum value. Expected 'Polygon' | 'MultiPolygon', received 'LineString'"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      64,
+      "geometry",
+      "coordinates",
+      0,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      64,
+      "geometry",
+      "coordinates",
+      0,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      64,
+      "geometry",
+      "coordinates",
+      1,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      64,
+      "geometry",
+      "coordinates",
+      1,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      64,
+      "properties",
+      "qgisId"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      64,
+      "properties",
+      "nombre"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      64,
+      "properties",
+      "categoria"
+    ],
+    "message": "Required"
+  },
+  {
+    "received": "LineString",
+    "code": "invalid_enum_value",
+    "options": [
+      "Polygon",
+      "MultiPolygon"
+    ],
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      65,
+      "geometry",
+      "type"
+    ],
+    "message": "Invalid enum value. Expected 'Polygon' | 'MultiPolygon', received 'LineString'"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      65,
+      "geometry",
+      "coordinates",
+      0,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      65,
+      "geometry",
+      "coordinates",
+      0,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      65,
+      "geometry",
+      "coordinates",
+      1,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      65,
+      "geometry",
+      "coordinates",
+      1,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      65,
+      "geometry",
+      "coordinates",
+      2,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      65,
+      "geometry",
+      "coordinates",
+      2,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      65,
+      "properties",
+      "qgisId"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      65,
+      "properties",
+      "nombre"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      65,
+      "properties",
+      "categoria"
+    ],
+    "message": "Required"
+  },
+  {
+    "received": "LineString",
+    "code": "invalid_enum_value",
+    "options": [
+      "Polygon",
+      "MultiPolygon"
+    ],
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      66,
+      "geometry",
+      "type"
+    ],
+    "message": "Invalid enum value. Expected 'Polygon' | 'MultiPolygon', received 'LineString'"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      66,
+      "geometry",
+      "coordinates",
+      0,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      66,
+      "geometry",
+      "coordinates",
+      0,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      66,
+      "geometry",
+      "coordinates",
+      1,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      66,
+      "geometry",
+      "coordinates",
+      1,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      66,
+      "geometry",
+      "coordinates",
+      2,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      66,
+      "geometry",
+      "coordinates",
+      2,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      66,
+      "properties",
+      "qgisId"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      66,
+      "properties",
+      "nombre"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      66,
+      "properties",
+      "categoria"
+    ],
+    "message": "Required"
+  },
+  {
+    "received": "LineString",
+    "code": "invalid_enum_value",
+    "options": [
+      "Polygon",
+      "MultiPolygon"
+    ],
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      67,
+      "geometry",
+      "type"
+    ],
+    "message": "Invalid enum value. Expected 'Polygon' | 'MultiPolygon', received 'LineString'"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      67,
+      "geometry",
+      "coordinates",
+      0,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      67,
+      "geometry",
+      "coordinates",
+      0,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      67,
+      "geometry",
+      "coordinates",
+      1,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      67,
+      "geometry",
+      "coordinates",
+      1,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      67,
+      "properties",
+      "qgisId"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      67,
+      "properties",
+      "nombre"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      67,
+      "properties",
+      "categoria"
+    ],
+    "message": "Required"
+  },
+  {
+    "received": "LineString",
+    "code": "invalid_enum_value",
+    "options": [
+      "Polygon",
+      "MultiPolygon"
+    ],
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      68,
+      "geometry",
+      "type"
+    ],
+    "message": "Invalid enum value. Expected 'Polygon' | 'MultiPolygon', received 'LineString'"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      68,
+      "geometry",
+      "coordinates",
+      0,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      68,
+      "geometry",
+      "coordinates",
+      0,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      68,
+      "geometry",
+      "coordinates",
+      1,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      68,
+      "geometry",
+      "coordinates",
+      1,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      68,
+      "properties",
+      "qgisId"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      68,
+      "properties",
+      "nombre"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      68,
+      "properties",
+      "categoria"
+    ],
+    "message": "Required"
+  },
+  {
+    "received": "LineString",
+    "code": "invalid_enum_value",
+    "options": [
+      "Polygon",
+      "MultiPolygon"
+    ],
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      69,
+      "geometry",
+      "type"
+    ],
+    "message": "Invalid enum value. Expected 'Polygon' | 'MultiPolygon', received 'LineString'"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      69,
+      "geometry",
+      "coordinates",
+      0,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      69,
+      "geometry",
+      "coordinates",
+      0,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      69,
+      "geometry",
+      "coordinates",
+      1,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      69,
+      "geometry",
+      "coordinates",
+      1,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      69,
+      "properties",
+      "qgisId"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      69,
+      "properties",
+      "nombre"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      69,
+      "properties",
+      "categoria"
+    ],
+    "message": "Required"
+  },
+  {
+    "received": "LineString",
+    "code": "invalid_enum_value",
+    "options": [
+      "Polygon",
+      "MultiPolygon"
+    ],
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      70,
+      "geometry",
+      "type"
+    ],
+    "message": "Invalid enum value. Expected 'Polygon' | 'MultiPolygon', received 'LineString'"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      70,
+      "geometry",
+      "coordinates",
+      0,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      70,
+      "geometry",
+      "coordinates",
+      0,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      70,
+      "geometry",
+      "coordinates",
+      1,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      70,
+      "geometry",
+      "coordinates",
+      1,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      70,
+      "geometry",
+      "coordinates",
+      2,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      70,
+      "geometry",
+      "coordinates",
+      2,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      70,
+      "properties",
+      "qgisId"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      70,
+      "properties",
+      "nombre"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      70,
+      "properties",
+      "categoria"
+    ],
+    "message": "Required"
+  },
+  {
+    "received": "LineString",
+    "code": "invalid_enum_value",
+    "options": [
+      "Polygon",
+      "MultiPolygon"
+    ],
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      71,
+      "geometry",
+      "type"
+    ],
+    "message": "Invalid enum value. Expected 'Polygon' | 'MultiPolygon', received 'LineString'"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      71,
+      "geometry",
+      "coordinates",
+      0,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      71,
+      "geometry",
+      "coordinates",
+      0,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      71,
+      "geometry",
+      "coordinates",
+      1,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      71,
+      "geometry",
+      "coordinates",
+      1,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      71,
+      "properties",
+      "qgisId"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      71,
+      "properties",
+      "nombre"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      71,
+      "properties",
+      "categoria"
+    ],
+    "message": "Required"
+  },
+  {
+    "received": "LineString",
+    "code": "invalid_enum_value",
+    "options": [
+      "Polygon",
+      "MultiPolygon"
+    ],
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      72,
+      "geometry",
+      "type"
+    ],
+    "message": "Invalid enum value. Expected 'Polygon' | 'MultiPolygon', received 'LineString'"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      72,
+      "geometry",
+      "coordinates",
+      0,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      72,
+      "geometry",
+      "coordinates",
+      0,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      72,
+      "geometry",
+      "coordinates",
+      1,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      72,
+      "geometry",
+      "coordinates",
+      1,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      72,
+      "geometry",
+      "coordinates",
+      2,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      72,
+      "geometry",
+      "coordinates",
+      2,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      72,
+      "geometry",
+      "coordinates",
+      3,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      72,
+      "geometry",
+      "coordinates",
+      3,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      72,
+      "properties",
+      "qgisId"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      72,
+      "properties",
+      "nombre"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      72,
+      "properties",
+      "categoria"
+    ],
+    "message": "Required"
+  },
+  {
+    "received": "LineString",
+    "code": "invalid_enum_value",
+    "options": [
+      "Polygon",
+      "MultiPolygon"
+    ],
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      73,
+      "geometry",
+      "type"
+    ],
+    "message": "Invalid enum value. Expected 'Polygon' | 'MultiPolygon', received 'LineString'"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      73,
+      "geometry",
+      "coordinates",
+      0,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      73,
+      "geometry",
+      "coordinates",
+      0,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      73,
+      "geometry",
+      "coordinates",
+      1,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      73,
+      "geometry",
+      "coordinates",
+      1,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      73,
+      "geometry",
+      "coordinates",
+      2,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      73,
+      "geometry",
+      "coordinates",
+      2,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      73,
+      "geometry",
+      "coordinates",
+      3,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      73,
+      "geometry",
+      "coordinates",
+      3,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      73,
+      "geometry",
+      "coordinates",
+      4,
+      0
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "number",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      73,
+      "geometry",
+      "coordinates",
+      4,
+      1
+    ],
+    "message": "Expected array, received number"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      73,
+      "properties",
+      "qgisId"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      73,
+      "properties",
+      "nombre"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      73,
+      "properties",
+      "categoria"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      74,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      75,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      76,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      77,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      78,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      79,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      80,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      81,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      82,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      83,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      84,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      85,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      86,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      87,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      88,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      89,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      90,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      91,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      92,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      93,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      94,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      95,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      96,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      97,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      98,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      99,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      100,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "geoJson",
+      0,
+      "features",
+      101,
+      "properties",
+      "pertenecePiso"
+    ],
+    "message": "Expected number, received string"
+  }
+]
+2025-12-03 22:45:08 [error]: El objeto con qgisId: "EAC01" hace referencia al piso: 1 del objeto con qgisId: "EA", pero este solo cuenta con 0 piso(s)
