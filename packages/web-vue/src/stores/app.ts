@@ -11,6 +11,7 @@ export const useAppStore = defineStore('app', {
     // sessions
     user: null as User,
     token: '' as string,
+    userFull: null as any,
     // mapa
     center: [24.790277777778, -107.38777777778] as MapCenter,
     selectedFeature: null as any | null,
@@ -42,17 +43,22 @@ export const useAppStore = defineStore('app', {
       if (token) {
         this.token = token;
         localStorage.setItem('UNIMAP_TOKEN', token);
+        localStorage.setItem('token', token);
       }
     },
     loadToken() {
-      const t = localStorage.getItem('UNIMAP_TOKEN') || localStorage.getItem('token') || '';
+      const t = localStorage.getItem('token') || localStorage.getItem('UNIMAP_TOKEN') || '';
       this.token = t;
     },
     logout() {
       this.user = null;
       this.token = '';
+      this.userFull = null;
       localStorage.removeItem('UNIMAP_TOKEN');
+      localStorage.removeItem('token');
     },
+
+    setUserFull(userFull: any | null) { this.userFull = userFull; },
 
     /** Mapa & objetos */
     setCenter(c: MapCenter) { this.center = c; },

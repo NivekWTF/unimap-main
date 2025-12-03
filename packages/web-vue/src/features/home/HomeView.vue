@@ -5,6 +5,7 @@ import FloorSelector from '@/components/ui/FloorSelector.vue';
 import SearchField from '@/components/ui/SearchField.vue';
 import Sidebar from '@/components/ui/Sidebar.vue';
 import Alerts from '@/components/ui/Alerts.vue';
+import ProfileButton from '@/components/ui/ProfileButton.vue';
 import { ref, onMounted, computed } from 'vue';
 import { useAppStore } from '@/stores/app';
 import type { StyleFunction } from 'leaflet';
@@ -225,6 +226,9 @@ function onFeatureClick(payload: { feature: any; latlng: [number, number] }) {
     <!-- controles centrados: SearchField arriba y categorías/selector debajo -->
     <div class="top-controls">
       <div class="top-controls-inner">
+        <div style="width:100%; display:flex; justify-content:flex-end;">
+          <ProfileButton />
+        </div>
         <div class="controls-box">
           <div class="search-wrap">
             <SearchField width="560px" />
