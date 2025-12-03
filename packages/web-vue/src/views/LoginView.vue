@@ -43,7 +43,9 @@ async function submit() {
     localStorage.setItem('token', token);
     localStorage.setItem('UNIMAP_TOKEN', token);
     app.setUser(usuario ? { id: usuario._id ?? usuario.id ?? usuario.username, name: usuario.nombres ?? 
-        usuario.name ?? usuario.username } : null, token);
+      usuario.name ?? usuario.username } : null, token);
+    // store full user object for profile display
+    app.setUserFull(usuario ?? null);
     router.push('/');
   } catch (e:any) {
     error.value = e?.message ?? 'Error iniciando sesión';
