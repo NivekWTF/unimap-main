@@ -81,8 +81,8 @@ services:
       context: ./packages/web-vue
       dockerfile: Dockerfile
       args:
-        # Use localhost here so the built frontend talks to the host-mapped backend
-        VITE_TRPC_BASE_URL: "http://localhost:3000/api/v1"
+        # Build-time API base: use relative path so client calls same origin via nginx
+        VITE_TRPC_BASE_URL: "/api/v1"
         # Serve drone tiles from the app's `public/tiles` folder
         VITE_TILES_URL: "/tiles/{z}/{x}/{y}.jpg"
         VITE_CENTRO_DEFAULT_MAPA: "24.788020,-107.396755"
@@ -91,7 +91,7 @@ services:
     ports:
       - "8082:80"
     environment:
-      - VITE_TRPC_BASE_URL=http://localhost:3000/api/v1
+      - VITE_TRPC_BASE_URL=/api/v1
       - VITE_TILES_URL=/tiles/{z}/{x}/{y}.jpg
       - VITE_CENTRO_DEFAULT_MAPA=24.788020,-107.396755
       - VITE_GEOJSON_PATH=/data/Tec_Contorno.geojson

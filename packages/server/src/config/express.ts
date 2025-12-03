@@ -42,6 +42,32 @@ const rateLimitConfig = rateLimit({
  */
 export const configurarServidorExpress = (app: Express) => {
   app.use(json());
+  // PNA-aware CORS preflight handler: must run before the cors middleware
+  app.use((req, res, next) => {
+    const origin = (req.headers.origin as string) || '*';
+
+    // Allow the requesting origin (safer than wildcard when private-network requests occur)
+    if (origin && origin !== '*') {
+      res.setHeader('Access-Control-Allow-Origin', origin);
+      res.setHeader('Vary', 'Origin');
+    } else {
+      res.setHeader('Access-Control-Allow-Origin', '*');
+    }
+
+    res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type,Authorization');
+
+    // If this is a preflight and the browser signals it will make a private-network request,
+    // respond with the header that allows the PNA request to proceed.
+    if (req.method === 'OPTIONS') {
+      if (req.headers['access-control-request-private-network'] === 'true') {
+        res.setHeader('Access-Control-Allow-Private-Network', 'true');
+      }
+      return res.sendStatus(204);
+    }
+
+    next();
+  });
   app.use(helmetConfig);
   app.use(rateLimitConfig);
   app.use(corsConfig);
