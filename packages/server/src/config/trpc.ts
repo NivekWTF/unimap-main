@@ -1,6 +1,5 @@
 import { TRPCError, initTRPC } from '@trpc/server';
 import jwt from 'jsonwebtoken';
-import SuperJSON from 'superjson';
 
 import { CreateExpressContextOptions } from '@trpc/server/adapters/express';
 import { TUsuario } from '../models';
@@ -43,8 +42,9 @@ export function createContext(opts: CreateExpressContextOptions) {
 
 export type Context = ReturnType<typeof createContext>;
 
-// Use SuperJSON to match the client transformer
-const t = initTRPC.context<Context>().create({ transformer: SuperJSON });
+// Avoid importing ESM-only `superjson` here to preserve CommonJS build.
+// The transformer is optional; omit it so the server compiles under CommonJS.
+const t = initTRPC.context<Context>().create();
 
 export const router = t.router;
 export const middleware = t.middleware;

@@ -480,3 +480,104 @@
   }
 ]
 2025-12-03 18:56:26 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-12-03 20:26:09 [error]: No autorizado
+2025-12-03 20:28:19 [error]: No autorizado
+2025-12-03 20:28:20 [error]: No autorizado
+2025-12-03 20:35:29 [error]: No autorizado
+2025-12-03 20:35:35 [error]: No autorizado
+2025-12-03 20:35:55 [error]: No autorizado
+2025-12-03 20:36:31 [error]: No autorizado
+2025-12-03 20:38:49 [error]: No autorizado
+2025-12-03 20:38:53 [error]: No autorizado
+2025-12-03 20:38:55 [error]: No autorizado
+2025-12-03 21:04:59 [error]: [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "token"
+    ],
+    "message": "Required"
+  }
+]
+2025-12-03 21:05:56 [error]: [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "username"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "password"
+    ],
+    "message": "Required"
+  }
+]
+2025-12-03 21:15:04 [error]: [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "username"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "password"
+    ],
+    "message": "Required"
+  }
+]
+2025-12-03 21:16:15 [error]: [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "username"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "password"
+    ],
+    "message": "Required"
+  }
+]
+2025-12-03 21:16:24 [error]: [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "username"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "password"
+    ],
+    "message": "Required"
+  }
+]

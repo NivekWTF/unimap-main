@@ -656,3 +656,109 @@
 2025-12-03 19:06:19 [info]: undefined
 2025-12-03 19:06:19 [info]: undefined
 2025-12-03 19:06:29 [info]: undefined
+2025-12-03 20:47:51 [info]: undefined
+2025-12-03 20:47:51 [info]: undefined
+2025-12-03 20:47:51 [info]: undefined
+2025-12-03 20:57:26 [info]: undefined
+2025-12-03 20:57:26 [info]: undefined
+2025-12-03 20:57:36 [info]: undefined
+2025-12-03 21:03:16 [info]: undefined
+2025-12-03 21:03:17 [info]: undefined
+2025-12-03 21:03:17 [info]: undefined
+2025-12-03 21:04:59 [error]: [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "token"
+    ],
+    "message": "Required"
+  }
+]
+2025-12-03 21:05:56 [error]: [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "username"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "password"
+    ],
+    "message": "Required"
+  }
+]
+2025-12-03 21:14:03 [info]: undefined
+2025-12-03 21:14:03 [info]: undefined
+2025-12-03 21:14:03 [info]: undefined
+2025-12-03 21:15:04 [error]: [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "username"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "password"
+    ],
+    "message": "Required"
+  }
+]
+2025-12-03 21:16:12 [info]: undefined
+2025-12-03 21:16:12 [info]: undefined
+2025-12-03 21:16:15 [error]: [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "username"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "password"
+    ],
+    "message": "Required"
+  }
+]
+2025-12-03 21:16:22 [info]: undefined
+2025-12-03 21:16:24 [error]: [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "username"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "password"
+    ],
+    "message": "Required"
+  }
+]
