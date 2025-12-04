@@ -21,6 +21,9 @@ export const useAppStore = defineStore('app', {
     initialMapZoom: null as number | null,
     objetosPorId: {} as Record<string, any>,
     objetoSeleccionado: null as any | null,
+    // routing
+    routeFeature: null as any | null,
+    routeMarkers: [] as { lat:number; lng:number; etiqueta?:string }[],
     pisoSeleccionado: 1 as number | undefined,
     campusId: '' as string,
     // UI
@@ -86,6 +89,8 @@ export const useAppStore = defineStore('app', {
       this.objetosPorId = objetosPorId;
     },
     setObjetoSeleccionado(objeto: any | null) { this.objetoSeleccionado = objeto; },
+    setRouteFeature(f: any | null) { this.routeFeature = f; },
+    setRouteMarkers(m: { lat:number; lng:number; etiqueta?:string }[]) { this.routeMarkers = m; },
     setPisoSeleccionado(piso: number) { this.pisoSeleccionado = piso; },
     setCampusId(campusId: string) { this.campusId = campusId; },
     abrirSwipeable(tipo: string, itemBusqueda: any | null) { this.swipeableVisible = tipo; this.itemBusquedaSelecionado = itemBusqueda; },

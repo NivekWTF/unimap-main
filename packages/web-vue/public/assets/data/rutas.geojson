@@ -1,0 +1,5288 @@
+{
+    "type": "FeatureCollection",
+    "name": "pasillos-tec",
+    "crs": {
+        "type": "name",
+        "properties": {
+            "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+        }
+    },
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.39864469444592,
+                        24.789108053663355
+                    ],
+                    [
+                        -107.398641476102128,
+                        24.789126902422879
+                    ],
+                    [
+                        -107.398389502706479,
+                        24.789090078822529
+                    ],
+                    [
+                        -107.398393856749621,
+                        24.78906821521009
+                    ],
+                    [
+                        -107.398203819584594,
+                        24.789039933117788
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": 1.1
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.398393856749621,
+                        24.78906821521009
+                    ],
+                    [
+                        -107.398463228195055,
+                        24.788718674522894
+                    ],
+                    [
+                        -107.398390071017189,
+                        24.788700777781912
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": 1.1
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.398153887875111,
+                        24.788926316025201
+                    ],
+                    [
+                        -107.398179111877752,
+                        24.788779348292742
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": 1.1
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.398156210365912,
+                        24.788912784035894
+                    ],
+                    [
+                        -107.397815390634378,
+                        24.788859277348411
+                    ],
+                    [
+                        -107.397877237998884,
+                        24.78853737212193
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": 1.1
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.398054510753738,
+                        24.788896817884044
+                    ],
+                    [
+                        -107.398069863254861,
+                        24.788777830457782
+                    ],
+                    [
+                        -107.398175950169659,
+                        24.788797770009332
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": 1.1
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.398210512341876,
+                        24.788674234635337
+                    ],
+                    [
+                        -107.398244204491206,
+                        24.788533124446097
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "escaleras",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": 1.1
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397824263067463,
+                        24.788813097892326
+                    ],
+                    [
+                        -107.397649111748024,
+                        24.788786208824085
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": 1.1
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.398253830186704,
+                        24.788436260098774
+                    ],
+                    [
+                        -107.3982808334693,
+                        24.78828871898606
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": 1.1
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.398258210165423,
+                        24.788412328695664
+                    ],
+                    [
+                        -107.397916830879907,
+                        24.788353941888548
+                    ],
+                    [
+                        -107.397877237998884,
+                        24.78853737212193
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "escaleras",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": 1.1
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397896823647997,
+                        24.788446633637374
+                    ],
+                    [
+                        -107.397557621544763,
+                        24.788389120607391
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": 1.1
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397557621544763,
+                        24.788389120607391
+                    ],
+                    [
+                        -107.397480994776146,
+                        24.788376999881937
+                    ],
+                    [
+                        -107.397441586710613,
+                        24.78853127784101
+                    ],
+                    [
+                        -107.397464939561686,
+                        24.788535262370477
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": null,
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": 1.1
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397649111748024,
+                        24.788786208824078
+                    ],
+                    [
+                        -107.397615275682767,
+                        24.788780212953686
+                    ],
+                    [
+                        -107.397620524823381,
+                        24.788758335010424
+                    ],
+                    [
+                        -107.397139371697918,
+                        24.788698013523312
+                    ],
+                    [
+                        -107.397441586710613,
+                        24.788531277840995
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": 1.1
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.398390071017189,
+                        24.788700777781912
+                    ],
+                    [
+                        -107.398210512341876,
+                        24.788674234635334
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.398210512341876,
+                        24.78867423463533
+                    ],
+                    [
+                        -107.398179111877752,
+                        24.788779348292742
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.398203819584594,
+                        24.789039933117788
+                    ],
+                    [
+                        -107.398134326492453,
+                        24.789029171415169
+                    ],
+                    [
+                        -107.398153887875111,
+                        24.788926316025197
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.398244204491206,
+                        24.788533124446094
+                    ],
+                    [
+                        -107.398253830186704,
+                        24.788436260098774
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.398153135456454,
+                        24.789032084175286
+                    ],
+                    [
+                        -107.398101615076428,
+                        24.789270623776908
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.398101615076428,
+                        24.789270623776908
+                    ],
+                    [
+                        -107.397668725622793,
+                        24.789204777929356
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": false,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397668725622793,
+                        24.789204777929356
+                    ],
+                    [
+                        -107.397657190202921,
+                        24.789262096601657
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": null,
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396825850133453,
+                        24.78891749834396
+                    ],
+                    [
+                        -107.39711957785795,
+                        24.788848073115606
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": null,
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396990427926241,
+                        24.78897818898756
+                    ],
+                    [
+                        -107.396990427926241,
+                        24.78897818898756
+                    ],
+                    [
+                        -107.397307392816572,
+                        24.789179562192906
+                    ],
+                    [
+                        -107.397310511828437,
+                        24.789159856698859
+                    ],
+                    [
+                        -107.397352358911036,
+                        24.789167264823249
+                    ],
+                    [
+                        -107.397356055921918,
+                        24.789149609501667
+                    ],
+                    [
+                        -107.397668725622793,
+                        24.789204777929356
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": null,
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396825850133453,
+                        24.78891749834396
+                    ],
+                    [
+                        -107.396566824768044,
+                        24.788872275356557
+                    ],
+                    [
+                        -107.39656207149801,
+                        24.788893395892178
+                    ],
+                    [
+                        -107.396322603595607,
+                        24.788855043536191
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396317262796359,
+                        24.788885458437495
+                    ],
+                    [
+                        -107.396555004111136,
+                        24.788928423459154
+                    ],
+                    [
+                        -107.396475186098741,
+                        24.789253316512433
+                    ],
+                    [
+                        -107.396397206874425,
+                        24.789239219310758
+                    ],
+                    [
+                        -107.396365969165032,
+                        24.789393802557914
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396180773835155,
+                        24.788867187212258
+                    ],
+                    [
+                        -107.395956388668466,
+                        24.788836179284893
+                    ],
+                    [
+                        -107.39596064358075,
+                        24.78901954370248
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.395956388668466,
+                        24.788836179284893
+                    ],
+                    [
+                        -107.395947677482482,
+                        24.788718739872046
+                    ],
+                    [
+                        -107.395998177753228,
+                        24.788669342176622
+                    ],
+                    [
+                        -107.395931528803445,
+                        24.788483891752726
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396187790867543,
+                        24.788833903809213
+                    ],
+                    [
+                        -107.396043949952826,
+                        24.788805419463102
+                    ],
+                    [
+                        -107.396072354525643,
+                        24.788660658320811
+                    ],
+                    [
+                        -107.39599038935998,
+                        24.788647671029317
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": null,
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396587079152823,
+                        24.788645722418227
+                    ],
+                    [
+                        -107.396587079152823,
+                        24.788645722418227
+                    ],
+                    [
+                        -107.396532482103879,
+                        24.788888656978173
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": null,
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397400347249089,
+                        24.78872999005047
+                    ],
+                    [
+                        -107.397139371697918,
+                        24.788698013523312
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": null,
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397141988368659,
+                        24.788673641653695
+                    ],
+                    [
+                        -107.397213371635971,
+                        24.788607293266271
+                    ],
+                    [
+                        -107.397141988368659,
+                        24.788673641653695
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397490310588125,
+                        24.788378473447487
+                    ],
+                    [
+                        -107.397551702382216,
+                        24.788069732981423
+                    ],
+                    [
+                        -107.39783078728307,
+                        24.78811543748547
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.398294053079425,
+                        24.788183032503838
+                    ],
+                    [
+                        -107.398325738099288,
+                        24.788056966819951
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": null,
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397009220364666,
+                        24.788515687253824
+                    ],
+                    [
+                        -107.397009220364666,
+                        24.788515687253824
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": null,
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397476325167588,
+                        24.788395280878543
+                    ],
+                    [
+                        -107.397046978727658,
+                        24.788333917071473
+                    ],
+                    [
+                        -107.397059152142177,
+                        24.788265559937862
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396072354525643,
+                        24.788660658320811
+                    ],
+                    [
+                        -107.396102418391095,
+                        24.788513610031934
+                    ],
+                    [
+                        -107.395931528803445,
+                        24.788483891752726
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396102418391095,
+                        24.788513610031934
+                    ],
+                    [
+                        -107.396209021494329,
+                        24.788529560942617
+                    ],
+                    [
+                        -107.396249582815415,
+                        24.788317024097879
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": null,
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397046978727658,
+                        24.788333917071473
+                    ],
+                    [
+                        -107.397044621582779,
+                        24.788345182167006
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397044621582779,
+                        24.788345182167006
+                    ],
+                    [
+                        -107.396859664535427,
+                        24.78831020363566
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396406464112687,
+                        24.788236156290637
+                    ],
+                    [
+                        -107.396552935966909,
+                        24.788261794733387
+                    ],
+                    [
+                        -107.39653697271288,
+                        24.788351004668908
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.39751731045007,
+                        24.788242690903115
+                    ],
+                    [
+                        -107.396952667611544,
+                        24.788146345833933
+                    ],
+                    [
+                        -107.396891024189671,
+                        24.788184421441201
+                    ],
+                    [
+                        -107.396868229185259,
+                        24.788311823362339
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397066432788193,
+                        24.788165757778302
+                    ],
+                    [
+                        -107.397093496804914,
+                        24.788025529041786
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397894228876225,
+                        24.788114348099821
+                    ],
+                    [
+                        -107.397926183198521,
+                        24.787978980472143
+                    ],
+                    [
+                        -107.397973107890493,
+                        24.787987092518751
+                    ],
+                    [
+                        -107.397973980049144,
+                        24.787978968550018
+                    ],
+                    [
+                        -107.398010078411787,
+                        24.787986819730243
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "escaleras",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397139400816357,
+                        24.787922285730293
+                    ],
+                    [
+                        -107.397248571424427,
+                        24.787400105109
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.39629165036726,
+                        24.788201631057614
+                    ],
+                    [
+                        -107.396317846804564,
+                        24.78804879501909
+                    ],
+                    [
+                        -107.396213054483255,
+                        24.788027980024218
+                    ],
+                    [
+                        -107.396231115399686,
+                        24.787915501480413
+                    ],
+                    [
+                        -107.396134088036078,
+                        24.787897259128819
+                    ],
+                    [
+                        -107.396151186630263,
+                        24.787787938073635
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396134088036078,
+                        24.787897259128819
+                    ],
+                    [
+                        -107.396128084032867,
+                        24.787924150118322
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "escaleras",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397551702382216,
+                        24.78806973298142
+                    ],
+                    [
+                        -107.397606227680612,
+                        24.7878635606396
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397606227680612,
+                        24.7878635606396
+                    ],
+                    [
+                        -107.397799458611914,
+                        24.787898433206355
+                    ],
+                    [
+                        -107.397809449375501,
+                        24.787854144453402
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397606227680612,
+                        24.7878635606396
+                    ],
+                    [
+                        -107.397616316151499,
+                        24.787815894790377
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397551702382216,
+                        24.78806973298142
+                    ],
+                    [
+                        -107.397440338240813,
+                        24.788050403737603
+                    ],
+                    [
+                        -107.397338094735645,
+                        24.787956495381824
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397676678506073,
+                        24.787422746534428
+                    ],
+                    [
+                        -107.397663789314507,
+                        24.787476905054518
+                    ],
+                    [
+                        -107.39768455300036,
+                        24.787481778809955
+                    ],
+                    [
+                        -107.397668134869448,
+                        24.787552550852194
+                    ],
+                    [
+                        -107.397903912535057,
+                        24.787592026715121
+                    ],
+                    [
+                        -107.397933792686629,
+                        24.787597915265554
+                    ],
+                    [
+                        -107.397861223442888,
+                        24.787908668315985
+                    ],
+                    [
+                        -107.397799458611914,
+                        24.787898433206355
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397248571424427,
+                        24.787400105109
+                    ],
+                    [
+                        -107.397553190050473,
+                        24.787461119700968
+                    ],
+                    [
+                        -107.397663789314507,
+                        24.787476905054518
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397668134869448,
+                        24.787552550852187
+                    ],
+                    [
+                        -107.397536485981988,
+                        24.787526716231994
+                    ],
+                    [
+                        -107.397553190050473,
+                        24.787461119700968
+                    ],
+                    [
+                        -107.39756434993798,
+                        24.787406521939218
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397248571424427,
+                        24.787400105109
+                    ],
+                    [
+                        -107.39720594462122,
+                        24.78739072856812
+                    ],
+                    [
+                        -107.397220313306576,
+                        24.787315533777878
+                    ],
+                    [
+                        -107.396811200081984,
+                        24.7872460363184
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "escaleras",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396805563949044,
+                        24.787260213517147
+                    ],
+                    [
+                        -107.396799238418595,
+                        24.787298229165334
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396799238418595,
+                        24.787298229165334
+                    ],
+                    [
+                        -107.396789109495941,
+                        24.787347285507472
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396765780761527,
+                        24.787461227548292
+                    ],
+                    [
+                        -107.396738602608252,
+                        24.787587799500976
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396709959314904,
+                        24.787704794103306
+                    ],
+                    [
+                        -107.396682916041073,
+                        24.787856814684449
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396700486255142,
+                        24.787758045853579
+                    ],
+                    [
+                        -107.396537636415488,
+                        24.787730061791006
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "escaleras",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396519495504705,
+                        24.787724853510984
+                    ],
+                    [
+                        -107.396417245704598,
+                        24.787706485471535
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396660310916175,
+                        24.787584322120306
+                    ],
+                    [
+                        -107.396562367322048,
+                        24.787567648318579
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "escaleras",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396562367322048,
+                        24.787567648318579
+                    ],
+                    [
+                        -107.396460988055622,
+                        24.787549301302924
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396460988055622,
+                        24.787549301302924
+                    ],
+                    [
+                        -107.396435013414163,
+                        24.787543904188407
+                    ],
+                    [
+                        -107.396406869625764,
+                        24.787703849853067
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396435013414163,
+                        24.787543904188407
+                    ],
+                    [
+                        -107.396450321950084,
+                        24.787466346665209
+                    ],
+                    [
+                        -107.396342002437478,
+                        24.78744703711865
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396209021494329,
+                        24.788529560942617
+                    ],
+                    [
+                        -107.396581132166787,
+                        24.788590289951113
+                    ],
+                    [
+                        -107.39661519100315,
+                        24.788376415368738
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396581132166787,
+                        24.788590289951113
+                    ],
+                    [
+                        -107.396570291950511,
+                        24.78872041874509
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.395931528803445,
+                        24.788483891752726
+                    ],
+                    [
+                        -107.395765278160994,
+                        24.788037859495383
+                    ],
+                    [
+                        -107.395664407562393,
+                        24.787971814087811
+                    ],
+                    [
+                        -107.395666838036391,
+                        24.787948017641508
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.395853665734919,
+                        24.787873005096422
+                    ],
+                    [
+                        -107.395904036568723,
+                        24.787637259301725
+                    ],
+                    [
+                        -107.395954290956212,
+                        24.787646422514356
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.395912276894876,
+                        24.78763876181576
+                    ],
+                    [
+                        -107.395929724538703,
+                        24.787532121198836
+                    ],
+                    [
+                        -107.395788559121755,
+                        24.787504067721564
+                    ],
+                    [
+                        -107.395783287573749,
+                        24.787535747361179
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396716326284903,
+                        24.787349109531817
+                    ],
+                    [
+                        -107.396390796331275,
+                        24.787280830295504
+                    ],
+                    [
+                        -107.396487547736371,
+                        24.786826735588857
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396484345884915,
+                        24.787300452199691
+                    ],
+                    [
+                        -107.396450321950084,
+                        24.787466346665209
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396427036652526,
+                        24.787110739876113
+                    ],
+                    [
+                        -107.396403663200545,
+                        24.787106998515103
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396611538649992,
+                        24.787327130624963
+                    ],
+                    [
+                        -107.396625844355867,
+                        24.786908790680894
+                    ],
+                    [
+                        -107.396616226695542,
+                        24.786879932792889
+                    ],
+                    [
+                        -107.39659094160217,
+                        24.786850697274403
+                    ],
+                    [
+                        -107.396542704050702,
+                        24.786832040888289
+                    ],
+                    [
+                        -107.396126560763705,
+                        24.786764757776645
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.39620609258408,
+                        24.786777616778245
+                    ],
+                    [
+                        -107.39622410464743,
+                        24.78664465317744
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.395788559121755,
+                        24.787504067721564
+                    ],
+                    [
+                        -107.395488956564733,
+                        24.787457881133957
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397220313306576,
+                        24.787315533777878
+                    ],
+                    [
+                        -107.397437155854135,
+                        24.786473506492943
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397335929053156,
+                        24.786811399615001
+                    ],
+                    [
+                        -107.397063883008229,
+                        24.786761109331469
+                    ],
+                    [
+                        -107.39707220198801,
+                        24.78671439484263
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397063883008229,
+                        24.786761109331469
+                    ],
+                    [
+                        -107.396930276013592,
+                        24.786742781174194
+                    ],
+                    [
+                        -107.396913844742272,
+                        24.786829058585585
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.39768455300036,
+                        24.787481778809951
+                    ],
+                    [
+                        -107.397736043141549,
+                        24.787372888551214
+                    ],
+                    [
+                        -107.397782055504663,
+                        24.787167253193502
+                    ],
+                    [
+                        -107.397911101792161,
+                        24.7872228437157
+                    ],
+                    [
+                        -107.397951835218578,
+                        24.787139537186636
+                    ],
+                    [
+                        -107.398038468401353,
+                        24.787095504667068
+                    ],
+                    [
+                        -107.398340086998516,
+                        24.787147300883795
+                    ],
+                    [
+                        -107.398454476714306,
+                        24.787167550384972
+                    ],
+                    [
+                        -107.398556772509693,
+                        24.787184327780157
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.39813871155819,
+                        24.787002499475825
+                    ],
+                    [
+                        -107.398121204699621,
+                        24.787109712830752
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397457823869743,
+                        24.786391306923115
+                    ],
+                    [
+                        -107.397587982349833,
+                        24.786287890573018
+                    ],
+                    [
+                        -107.397712259533265,
+                        24.786387895754938
+                    ],
+                    [
+                        -107.39772592580006,
+                        24.786216468444604
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397712259533265,
+                        24.786387895754938
+                    ],
+                    [
+                        -107.397797876336568,
+                        24.786439259181318
+                    ],
+                    [
+                        -107.397969436786369,
+                        24.786470428518165
+                    ],
+                    [
+                        -107.397929837116351,
+                        24.786695302571196
+                    ],
+                    [
+                        -107.398423813800093,
+                        24.786781949510736
+                    ],
+                    [
+                        -107.398340086998516,
+                        24.787147300883792
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397587982349833,
+                        24.786287890573018
+                    ],
+                    [
+                        -107.397470392950979,
+                        24.786197588488605
+                    ],
+                    [
+                        -107.397535150874205,
+                        24.785885852194038
+                    ],
+                    [
+                        -107.397895632401358,
+                        24.785950199757576
+                    ],
+                    [
+                        -107.397908305521398,
+                        24.785873373648904
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "escaleras",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397908305521398,
+                        24.785873373648894
+                    ],
+                    [
+                        -107.397932712376061,
+                        24.785722084298786
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397938325321789,
+                        24.785708701648868
+                    ],
+                    [
+                        -107.398296539998,
+                        24.785761066051858
+                    ],
+                    [
+                        -107.398359395452488,
+                        24.785726002458581
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396647965738737,
+                        24.786234225544852
+                    ],
+                    [
+                        -107.39649808870351,
+                        24.786055675992202
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "escaleras",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396479399350753,
+                        24.78603932214693
+                    ],
+                    [
+                        -107.396477985972837,
+                        24.785967722892632
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396477985972837,
+                        24.785967722892632
+                    ],
+                    [
+                        -107.396484954928894,
+                        24.785907458039961
+                    ],
+                    [
+                        -107.396594258474607,
+                        24.785922815240585
+                    ],
+                    [
+                        -107.396624415065148,
+                        24.785783592362577
+                    ],
+                    [
+                        -107.396709255253739,
+                        24.785801540529572
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396624415065148,
+                        24.785783592362577
+                    ],
+                    [
+                        -107.396537834096222,
+                        24.785765602192182
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.395819724926227,
+                        24.785538367778216
+                    ],
+                    [
+                        -107.395834059101276,
+                        24.785584833101677
+                    ],
+                    [
+                        -107.39618728765646,
+                        24.785779417453583
+                    ],
+                    [
+                        -107.396259614520289,
+                        24.785868629415738
+                    ],
+                    [
+                        -107.396484954928894,
+                        24.785907458039961
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396564584998728,
+                        24.786768159619726
+                    ],
+                    [
+                        -107.396668712041205,
+                        24.786299929418004
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.395747009073403,
+                        24.787269286530922
+                    ],
+                    [
+                        -107.395758008801934,
+                        24.787220251289593
+                    ],
+                    [
+                        -107.395854303062265,
+                        24.787233705151916
+                    ],
+                    [
+                        -107.395898048885243,
+                        24.787046304877805
+                    ],
+                    [
+                        -107.395920163077236,
+                        24.786944261279224
+                    ],
+                    [
+                        -107.396002125825035,
+                        24.786881033362622
+                    ],
+                    [
+                        -107.396126560763705,
+                        24.786764757776645
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396963733054577,
+                        24.789129973005828
+                    ],
+                    [
+                        -107.396968215401358,
+                        24.789376499750382
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.39698410793639,
+                        24.788811915333554
+                    ],
+                    [
+                        -107.396963733054577,
+                        24.789129973005828
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396555004111136,
+                        24.788928423459151
+                    ],
+                    [
+                        -107.396570291950511,
+                        24.78872041874509
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396559137337448,
+                        24.788872187355146
+                    ],
+                    [
+                        -107.396840797756369,
+                        24.788918194537846
+                    ],
+                    [
+                        -107.396982785304075,
+                        24.788832562100808
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": null,
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396579546415083,
+                        24.788652761252855
+                    ],
+                    [
+                        -107.396901701652936,
+                        24.788709737909709
+                    ],
+                    [
+                        -107.396982785304075,
+                        24.788832562100808
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397148202282864,
+                        24.788860399656016
+                    ],
+                    [
+                        -107.396982785304075,
+                        24.788832562100808
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.39698410793639,
+                        24.788811915333554
+                    ],
+                    [
+                        -107.396882667176854,
+                        24.788705303291895
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "escaleras",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396868053776259,
+                        24.788698589724277
+                    ],
+                    [
+                        -107.39680994204798,
+                        24.788690032562602
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.39680994204798,
+                        24.788690032562602
+                    ],
+                    [
+                        -107.396677364388324,
+                        24.788666162628623
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "escaleras",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396677364388324,
+                        24.788666162628623
+                    ],
+                    [
+                        -107.39657603116585,
+                        24.788651523763829
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.39698410793639,
+                        24.788811915333554
+                    ],
+                    [
+                        -107.397124257881444,
+                        24.788694427439417
+                    ],
+                    [
+                        -107.397649111748024,
+                        24.788786208824085
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397436869490051,
+                        24.78854690328096
+                    ],
+                    [
+                        -107.397400106641072,
+                        24.78874266545288
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397124257881444,
+                        24.788694427439417
+                    ],
+                    [
+                        -107.397210438402965,
+                        24.788605855156941
+                    ],
+                    [
+                        -107.397418600939417,
+                        24.788644183421017
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397210438402965,
+                        24.788605855156941
+                    ],
+                    [
+                        -107.397219010310167,
+                        24.788550399909379
+                    ],
+                    [
+                        -107.39700924057729,
+                        24.788515127908635
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397657190202921,
+                        24.789262096601657
+                    ],
+                    [
+                        -107.397100062509054,
+                        24.789260004579543
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "escaleras",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397100062509054,
+                        24.789260004579532
+                    ],
+                    [
+                        -107.397057365458082,
+                        24.789260565859585
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397057365458082,
+                        24.789260565859585
+                    ],
+                    [
+                        -107.396965530132306,
+                        24.789228811027058
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397350905279623,
+                        24.789260946754933
+                    ],
+                    [
+                        -107.397199374444511,
+                        24.789108930478026
+                    ],
+                    [
+                        -107.397126381663242,
+                        24.789012546198702
+                    ],
+                    [
+                        -107.397148202282864,
+                        24.788860399656013
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396982785304075,
+                        24.788832562100808
+                    ],
+                    [
+                        -107.396973941203342,
+                        24.788651443772903
+                    ],
+                    [
+                        -107.39700924057729,
+                        24.788515127908635
+                    ],
+                    [
+                        -107.397044621582779,
+                        24.788345182167006
+                    ],
+                    [
+                        -107.397066432788193,
+                        24.788165757778298
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397480994776146,
+                        24.788376999881937
+                    ],
+                    [
+                        -107.397044621582779,
+                        24.788345182167006
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.398325738099288,
+                        24.788056966819948
+                    ],
+                    [
+                        -107.398359745556306,
+                        24.787928631153424
+                    ],
+                    [
+                        -107.39827744594561,
+                        24.787913130498104
+                    ],
+                    [
+                        -107.398291262797329,
+                        24.787857006332221
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397869342529873,
+                        24.787873901196306
+                    ],
+                    [
+                        -107.398012036146966,
+                        24.787904350401604
+                    ],
+                    [
+                        -107.397997061435063,
+                        24.787983988615942
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "escaleras",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396859664535427,
+                        24.788310203635653
+                    ],
+                    [
+                        -107.396777349787754,
+                        24.788296036042848
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396777349787754,
+                        24.788296036042848
+                    ],
+                    [
+                        -107.39676270200728,
+                        24.788410982461386
+                    ],
+                    [
+                        -107.396614415139496,
+                        24.788381287464645
+                    ],
+                    [
+                        -107.396530027371043,
+                        24.788369591560887
+                    ],
+                    [
+                        -107.39653697271288,
+                        24.788351004668908
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396317262796359,
+                        24.788885458437495
+                    ],
+                    [
+                        -107.396180773835155,
+                        24.788867187212258
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396317262796359,
+                        24.788885458437495
+                    ],
+                    [
+                        -107.396187790867543,
+                        24.788833903809213
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396249582815415,
+                        24.788317024097879
+                    ],
+                    [
+                        -107.39629165036726,
+                        24.788201631057614
+                    ],
+                    [
+                        -107.396406464112687,
+                        24.788236156290637
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396151186630263,
+                        24.787787938073635
+                    ],
+                    [
+                        -107.396171744617376,
+                        24.787671941474134
+                    ],
+                    [
+                        -107.396219235821007,
+                        24.787595954960679
+                    ],
+                    [
+                        -107.396421165148581,
+                        24.787622606176221
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396171744617376,
+                        24.787671941474137
+                    ],
+                    [
+                        -107.395954290956212,
+                        24.787646422514353
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396090362182136,
+                        24.78766239099393
+                    ],
+                    [
+                        -107.396048688366193,
+                        24.787620072132775
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396042183216366,
+                        24.787619120143852
+                    ],
+                    [
+                        -107.396042795497706,
+                        24.787618681882936
+                    ],
+                    [
+                        -107.396043399327738,
+                        24.787618233956426
+                    ],
+                    [
+                        -107.396043994523396,
+                        24.78761777650011
+                    ],
+                    [
+                        -107.396044580904231,
+                        24.787617309652671
+                    ],
+                    [
+                        -107.396045158292466,
+                        24.787616833555646
+                    ],
+                    [
+                        -107.396045726513094,
+                        24.787616348353374
+                    ],
+                    [
+                        -107.396046285393822,
+                        24.78761585419295
+                    ],
+                    [
+                        -107.396046834765201,
+                        24.787615351224176
+                    ],
+                    [
+                        -107.396047374460693,
+                        24.787614839599545
+                    ],
+                    [
+                        -107.396047904316703,
+                        24.787614319474166
+                    ],
+                    [
+                        -107.396048424172577,
+                        24.787613791005722
+                    ],
+                    [
+                        -107.396048933870716,
+                        24.787613254354437
+                    ],
+                    [
+                        -107.396049433256593,
+                        24.787612709682978
+                    ],
+                    [
+                        -107.396049922178818,
+                        24.787612157156502
+                    ],
+                    [
+                        -107.396050400489145,
+                        24.787611596942497
+                    ],
+                    [
+                        -107.396050868042593,
+                        24.787611029210805
+                    ],
+                    [
+                        -107.396051324697396,
+                        24.787610454133542
+                    ],
+                    [
+                        -107.39605177031514,
+                        24.787609871885063
+                    ],
+                    [
+                        -107.396052204760679,
+                        24.787609282641874
+                    ],
+                    [
+                        -107.396052627902364,
+                        24.787608686582612
+                    ],
+                    [
+                        -107.396053039611871,
+                        24.787608083887996
+                    ],
+                    [
+                        -107.396053439764401,
+                        24.787607474740735
+                    ],
+                    [
+                        -107.396053828238621,
+                        24.787606859325496
+                    ],
+                    [
+                        -107.396054204916794,
+                        24.787606237828861
+                    ],
+                    [
+                        -107.396054569684694,
+                        24.78760561043925
+                    ],
+                    [
+                        -107.396054922431745,
+                        24.787604977346845
+                    ],
+                    [
+                        -107.396055263051011,
+                        24.787604338743609
+                    ],
+                    [
+                        -107.396055591439222,
+                        24.787603694823119
+                    ],
+                    [
+                        -107.39605590749683,
+                        24.78760304578061
+                    ],
+                    [
+                        -107.396056211128013,
+                        24.78760239181284
+                    ],
+                    [
+                        -107.396056502240711,
+                        24.787601733118063
+                    ],
+                    [
+                        -107.396056780746676,
+                        24.787601069895985
+                    ],
+                    [
+                        -107.396057046561481,
+                        24.787600402347671
+                    ],
+                    [
+                        -107.396057299604522,
+                        24.787599730675499
+                    ],
+                    [
+                        -107.396057539799102,
+                        24.787599055083081
+                    ],
+                    [
+                        -107.396057767072406,
+                        24.787598375775261
+                    ],
+                    [
+                        -107.396057981355511,
+                        24.78759769295797
+                    ],
+                    [
+                        -107.396058182583474,
+                        24.787597006838208
+                    ],
+                    [
+                        -107.396058370695272,
+                        24.787596317623994
+                    ],
+                    [
+                        -107.396058545633892,
+                        24.787595625524265
+                    ],
+                    [
+                        -107.396058707346299,
+                        24.78759493074886
+                    ],
+                    [
+                        -107.396058855783465,
+                        24.787594233508383
+                    ],
+                    [
+                        -107.396058990900372,
+                        24.787593534014238
+                    ],
+                    [
+                        -107.396059112656076,
+                        24.787592832478481
+                    ],
+                    [
+                        -107.396059221013658,
+                        24.787592129113794
+                    ],
+                    [
+                        -107.396059315940263,
+                        24.787591424133414
+                    ],
+                    [
+                        -107.396059397407129,
+                        24.787590717751065
+                    ],
+                    [
+                        -107.396059465389541,
+                        24.787590010180892
+                    ],
+                    [
+                        -107.39605951986691,
+                        24.787589301637418
+                    ],
+                    [
+                        -107.396059560822692,
+                        24.787588592335453
+                    ],
+                    [
+                        -107.396059588244484,
+                        24.787587882490019
+                    ],
+                    [
+                        -107.396059602123984,
+                        24.787587172316329
+                    ],
+                    [
+                        -107.396059602456972,
+                        24.787586462029672
+                    ],
+                    [
+                        -107.396059589243364,
+                        24.787585751845391
+                    ],
+                    [
+                        -107.396059562487139,
+                        24.787585041978787
+                    ],
+                    [
+                        -107.396059522196424,
+                        24.787584332645071
+                    ],
+                    [
+                        -107.396059468383427,
+                        24.787583624059288
+                    ],
+                    [
+                        -107.396059401064477,
+                        24.787582916436257
+                    ],
+                    [
+                        -107.39605932025998,
+                        24.787582209990511
+                    ],
+                    [
+                        -107.396059225994406,
+                        24.787581504936206
+                    ],
+                    [
+                        -107.396059118296378,
+                        24.787580801487099
+                    ],
+                    [
+                        -107.396058997198509,
+                        24.787580099856452
+                    ],
+                    [
+                        -107.396058862737533,
+                        24.78757940025698
+                    ],
+                    [
+                        -107.396058714954208,
+                        24.787578702900767
+                    ],
+                    [
+                        -107.39605855389334,
+                        24.787578007999237
+                    ],
+                    [
+                        -107.396058379603744,
+                        24.787577315763063
+                    ],
+                    [
+                        -107.396058192138284,
+                        24.787576626402103
+                    ],
+                    [
+                        -107.396057991553761,
+                        24.78757594012535
+                    ],
+                    [
+                        -107.396057777911025,
+                        24.787575257140851
+                    ],
+                    [
+                        -107.396057551274794,
+                        24.787574577655668
+                    ],
+                    [
+                        -107.396057311713832,
+                        24.787573901875806
+                    ],
+                    [
+                        -107.39605705930073,
+                        24.787573230006139
+                    ],
+                    [
+                        -107.396056794112027,
+                        24.78757256225034
+                    ],
+                    [
+                        -107.396056516228114,
+                        24.787571898810864
+                    ],
+                    [
+                        -107.396056225733233,
+                        24.787571239888823
+                    ],
+                    [
+                        -107.396055922715462,
+                        24.787570585684019
+                    ],
+                    [
+                        -107.396055607266646,
+                        24.78756993639475
+                    ],
+                    [
+                        -107.396055279482454,
+                        24.787569292217874
+                    ],
+                    [
+                        -107.396054939462218,
+                        24.787568653348679
+                    ],
+                    [
+                        -107.396054587309038,
+                        24.787568019980839
+                    ],
+                    [
+                        -107.396054223129696,
+                        24.787567392306386
+                    ],
+                    [
+                        -107.39605384703458,
+                        24.787566770515607
+                    ],
+                    [
+                        -107.396053459137704,
+                        24.787566154796998
+                    ],
+                    [
+                        -107.396053059556664,
+                        24.787565545337241
+                    ],
+                    [
+                        -107.396052648412621,
+                        24.787564942321076
+                    ],
+                    [
+                        -107.396052225830189,
+                        24.787564345931347
+                    ],
+                    [
+                        -107.396051791937509,
+                        24.787563756348842
+                    ],
+                    [
+                        -107.396051346866116,
+                        24.787563173752304
+                    ],
+                    [
+                        -107.396050890750928,
+                        24.78756259831836
+                    ],
+                    [
+                        -107.396050423730244,
+                        24.787562030221459
+                    ],
+                    [
+                        -107.39604994594562,
+                        24.78756146963384
+                    ],
+                    [
+                        -107.396049457541935,
+                        24.787560916725436
+                    ],
+                    [
+                        -107.396048958667251,
+                        24.787560371663879
+                    ],
+                    [
+                        -107.396048449472787,
+                        24.787559834614413
+                    ],
+                    [
+                        -107.396047930112942,
+                        24.787559305739855
+                    ],
+                    [
+                        -107.396047400745147,
+                        24.787558785200542
+                    ],
+                    [
+                        -107.396046861529896,
+                        24.787558273154282
+                    ],
+                    [
+                        -107.396046312630659,
+                        24.787557769756305
+                    ],
+                    [
+                        -107.396045754213858,
+                        24.78755727515923
+                    ],
+                    [
+                        -107.39604518644876,
+                        24.787556789513005
+                    ],
+                    [
+                        -107.396044609507527,
+                        24.787556312964856
+                    ],
+                    [
+                        -107.396044023565025,
+                        24.787555845659259
+                    ],
+                    [
+                        -107.396043428798933,
+                        24.787555387737882
+                    ],
+                    [
+                        -107.396042825389529,
+                        24.787554939339547
+                    ],
+                    [
+                        -107.396042213519777,
+                        24.787554500600208
+                    ],
+                    [
+                        -107.396041593375159,
+                        24.78755407165286
+                    ],
+                    [
+                        -107.396040965143683,
+                        24.787553652627558
+                    ],
+                    [
+                        -107.396040329015818,
+                        24.78755324365132
+                    ],
+                    [
+                        -107.396039685184391,
+                        24.787552844848154
+                    ],
+                    [
+                        -107.396039033844616,
+                        24.787552456338958
+                    ],
+                    [
+                        -107.396038375193953,
+                        24.7875520782415
+                    ],
+                    [
+                        -107.396037709432065,
+                        24.787551710670428
+                    ],
+                    [
+                        -107.396037036760802,
+                        24.787551353737154
+                    ],
+                    [
+                        -107.396036357384105,
+                        24.787551007549901
+                    ],
+                    [
+                        -107.396035671507917,
+                        24.787550672213627
+                    ],
+                    [
+                        -107.396034979340172,
+                        24.787550347829985
+                    ],
+                    [
+                        -107.396034281090749,
+                        24.787550034497318
+                    ],
+                    [
+                        -107.396033576971291,
+                        24.787549732310616
+                    ],
+                    [
+                        -107.396032867195274,
+                        24.787549441361506
+                    ],
+                    [
+                        -107.396032151977892,
+                        24.78754916173817
+                    ],
+                    [
+                        -107.39603143153596,
+                        24.787548893525404
+                    ],
+                    [
+                        -107.396030706087899,
+                        24.787548636804502
+                    ],
+                    [
+                        -107.396029975853637,
+                        24.787548391653306
+                    ],
+                    [
+                        -107.396029241054549,
+                        24.78754815814613
+                    ],
+                    [
+                        -107.39602850191342,
+                        24.787547936353771
+                    ],
+                    [
+                        -107.396027758654327,
+                        24.787547726343462
+                    ],
+                    [
+                        -107.396027011502582,
+                        24.787547528178877
+                    ],
+                    [
+                        -107.396026260684707,
+                        24.787547341920096
+                    ],
+                    [
+                        -107.396025506428344,
+                        24.787547167623565
+                    ],
+                    [
+                        -107.396024748962134,
+                        24.787547005342159
+                    ],
+                    [
+                        -107.396023988515722,
+                        24.787546855125047
+                    ],
+                    [
+                        -107.396023225319638,
+                        24.78754671701779
+                    ],
+                    [
+                        -107.396022459605277,
+                        24.787546591062242
+                    ],
+                    [
+                        -107.396021691604773,
+                        24.787546477296594
+                    ],
+                    [
+                        -107.396020921550942,
+                        24.787546375755326
+                    ],
+                    [
+                        -107.396020149677256,
+                        24.787546286469244
+                    ],
+                    [
+                        -107.396019376217723,
+                        24.787546209465408
+                    ],
+                    [
+                        -107.396018601406809,
+                        24.787546144767155
+                    ],
+                    [
+                        -107.396017825479433,
+                        24.787546092394095
+                    ],
+                    [
+                        -107.396017048670799,
+                        24.787546052362124
+                    ],
+                    [
+                        -107.396016271216453,
+                        24.787546024683369
+                    ],
+                    [
+                        -107.396015493352067,
+                        24.787546009366224
+                    ],
+                    [
+                        -107.396014715313456,
+                        24.787546006415319
+                    ],
+                    [
+                        -107.396013937336491,
+                        24.787546015831566
+                    ],
+                    [
+                        -107.396013159657059,
+                        24.787546037612099
+                    ],
+                    [
+                        -107.396012382510904,
+                        24.787546071750324
+                    ],
+                    [
+                        -107.396011606133641,
+                        24.787546118235884
+                    ],
+                    [
+                        -107.396010830760616,
+                        24.787546177054693
+                    ],
+                    [
+                        -107.39601005662692,
+                        24.787546248188907
+                    ],
+                    [
+                        -107.396009283967246,
+                        24.787546331616976
+                    ],
+                    [
+                        -107.396008513015829,
+                        24.7875464273136
+                    ],
+                    [
+                        -107.396007744006397,
+                        24.78754653524976
+                    ],
+                    [
+                        -107.396006977172078,
+                        24.787546655392745
+                    ],
+                    [
+                        -107.396006212745348,
+                        24.78754678770612
+                    ],
+                    [
+                        -107.396005450957986,
+                        24.787546932149787
+                    ],
+                    [
+                        -107.396004692040918,
+                        24.787547088679947
+                    ],
+                    [
+                        -107.396003936224218,
+                        24.787547257249145
+                    ],
+                    [
+                        -107.396003183737022,
+                        24.787547437806275
+                    ],
+                    [
+                        -107.396002434807471,
+                        24.787547630296601
+                    ],
+                    [
+                        -107.396001689662626,
+                        24.787547834661773
+                    ],
+                    [
+                        -107.396000948528339,
+                        24.78754805083982
+                    ],
+                    [
+                        -107.396000211629357,
+                        24.787548278765218
+                    ],
+                    [
+                        -107.395999479189044,
+                        24.787548518368855
+                    ],
+                    [
+                        -107.395998751429474,
+                        24.787548769578105
+                    ],
+                    [
+                        -107.395998028571285,
+                        24.7875490323168
+                    ],
+                    [
+                        -107.395997310833565,
+                        24.787549306505284
+                    ],
+                    [
+                        -107.395996598433982,
+                        24.787549592060444
+                    ],
+                    [
+                        -107.39599589158847,
+                        24.787549888895697
+                    ],
+                    [
+                        -107.395995190511314,
+                        24.787550196921067
+                    ],
+                    [
+                        -107.395994495415096,
+                        24.787550516043154
+                    ],
+                    [
+                        -107.395993806510504,
+                        24.787550846165225
+                    ],
+                    [
+                        -107.395993124006424,
+                        24.787551187187194
+                    ],
+                    [
+                        -107.395992448109737,
+                        24.787551539005673
+                    ],
+                    [
+                        -107.395991779025366,
+                        24.787551901513996
+                    ],
+                    [
+                        -107.395991116956168,
+                        24.787552274602277
+                    ],
+                    [
+                        -107.39599046210283,
+                        24.787552658157406
+                    ],
+                    [
+                        -107.39598981466392,
+                        24.787553052063089
+                    ],
+                    [
+                        -107.395989174835691,
+                        24.78755345619992
+                    ],
+                    [
+                        -107.395988542812105,
+                        24.787553870445368
+                    ],
+                    [
+                        -107.395987918784812,
+                        24.787554294673864
+                    ],
+                    [
+                        -107.39598730294297,
+                        24.787554728756785
+                    ],
+                    [
+                        -107.395986695473283,
+                        24.787555172562527
+                    ],
+                    [
+                        -107.395986096559909,
+                        24.78755562595655
+                    ],
+                    [
+                        -107.395985506384449,
+                        24.787556088801402
+                    ],
+                    [
+                        -107.395984925125774,
+                        24.787556560956762
+                    ],
+                    [
+                        -107.395984352960141,
+                        24.787557042279492
+                    ],
+                    [
+                        -107.39598379006101,
+                        24.787557532623662
+                    ],
+                    [
+                        -107.395983236599008,
+                        24.787558031840621
+                    ],
+                    [
+                        -107.395982692741953,
+                        24.787558539779035
+                    ],
+                    [
+                        -107.395982158654689,
+                        24.787559056284891
+                    ],
+                    [
+                        -107.395981634499179,
+                        24.787559581201617
+                    ],
+                    [
+                        -107.3959811204343,
+                        24.787560114370084
+                    ],
+                    [
+                        -107.395980616615901,
+                        24.787560655628631
+                    ],
+                    [
+                        -107.395980123196736,
+                        24.787561204813183
+                    ],
+                    [
+                        -107.395979640326374,
+                        24.787561761757249
+                    ],
+                    [
+                        -107.3959791681512,
+                        24.787562326291965
+                    ],
+                    [
+                        -107.395978706814404,
+                        24.787562898246197
+                    ],
+                    [
+                        -107.39597825645582,
+                        24.787563477446547
+                    ],
+                    [
+                        -107.395977817211971,
+                        24.787564063717411
+                    ],
+                    [
+                        -107.395977389216029,
+                        24.78756465688107
+                    ],
+                    [
+                        -107.395976972597765,
+                        24.787565256757677
+                    ],
+                    [
+                        -107.395976567483459,
+                        24.787565863165391
+                    ],
+                    [
+                        -107.395976173995933,
+                        24.78756647592035
+                    ],
+                    [
+                        -107.395975792254504,
+                        24.787567094836788
+                    ],
+                    [
+                        -107.39597542237486,
+                        24.787567719727083
+                    ],
+                    [
+                        -107.395975064469184,
+                        24.787568350401788
+                    ],
+                    [
+                        -107.395974718645945,
+                        24.787568986669697
+                    ],
+                    [
+                        -107.395974385009993,
+                        24.787569628337916
+                    ],
+                    [
+                        -107.395974063662479,
+                        24.78757027521192
+                    ],
+                    [
+                        -107.395973754700847,
+                        24.787570927095594
+                    ],
+                    [
+                        -107.39597345821872,
+                        24.787571583791308
+                    ],
+                    [
+                        -107.395973174306008,
+                        24.787572245099973
+                    ],
+                    [
+                        -107.395972903048801,
+                        24.787572910821101
+                    ],
+                    [
+                        -107.395972644529294,
+                        24.787573580752881
+                    ],
+                    [
+                        -107.395972398825876,
+                        24.787574254692196
+                    ],
+                    [
+                        -107.395972166013038,
+                        24.787574932434737
+                    ],
+                    [
+                        -107.395971946161382,
+                        24.787575613775033
+                    ],
+                    [
+                        -107.39597173933754,
+                        24.787576298506533
+                    ],
+                    [
+                        -107.395971545604212,
+                        24.787576986421641
+                    ],
+                    [
+                        -107.395971365020145,
+                        24.787577677311806
+                    ],
+                    [
+                        -107.395971197640065,
+                        24.787578370967573
+                    ],
+                    [
+                        -107.395971043514734,
+                        24.787579067178658
+                    ],
+                    [
+                        -107.395970902690877,
+                        24.787579765733984
+                    ],
+                    [
+                        -107.395970775211168,
+                        24.787580466421776
+                    ],
+                    [
+                        -107.395970661114291,
+                        24.787581169029604
+                    ],
+                    [
+                        -107.395970560434804,
+                        24.787581873344468
+                    ],
+                    [
+                        -107.395970473203249,
+                        24.78758257915284
+                    ],
+                    [
+                        -107.395970399446043,
+                        24.787583286240743
+                    ],
+                    [
+                        -107.395970339185581,
+                        24.787583994393813
+                    ],
+                    [
+                        -107.395970292440126,
+                        24.787584703397368
+                    ],
+                    [
+                        -107.39597025922383,
+                        24.787585413036446
+                    ],
+                    [
+                        -107.395970239546784,
+                        24.78758612309592
+                    ],
+                    [
+                        -107.395970233414943,
+                        24.787586833360518
+                    ],
+                    [
+                        -107.395970240830181,
+                        24.787587543614922
+                    ],
+                    [
+                        -107.395970261790211,
+                        24.787588253643797
+                    ],
+                    [
+                        -107.395970296288723,
+                        24.787588963231897
+                    ],
+                    [
+                        -107.395970344315245,
+                        24.787589672164085
+                    ],
+                    [
+                        -107.395970405855209,
+                        24.787590380225449
+                    ],
+                    [
+                        -107.395970480889957,
+                        24.787591087201321
+                    ],
+                    [
+                        -107.395970569396752,
+                        24.787591792877365
+                    ],
+                    [
+                        -107.395970671348763,
+                        24.78759249703965
+                    ],
+                    [
+                        -107.395970786715083,
+                        24.787593199474713
+                    ],
+                    [
+                        -107.395970915460708,
+                        24.787593899969576
+                    ],
+                    [
+                        -107.395971057546632,
+                        24.78759459831188
+                    ],
+                    [
+                        -107.39597121292978,
+                        24.787595294289915
+                    ],
+                    [
+                        -107.395971381563058,
+                        24.787595987692683
+                    ],
+                    [
+                        -107.395971563395307,
+                        24.78759667830996
+                    ],
+                    [
+                        -107.395971758371431,
+                        24.787597365932381
+                    ],
+                    [
+                        -107.395971966432313,
+                        24.787598050351484
+                    ],
+                    [
+                        -107.395972187514872,
+                        24.787598731359772
+                    ],
+                    [
+                        -107.395972421552059,
+                        24.787599408750797
+                    ],
+                    [
+                        -107.395972668472979,
+                        24.787600082319177
+                    ],
+                    [
+                        -107.395972928202738,
+                        24.787600751860722
+                    ],
+                    [
+                        -107.395973200662581,
+                        24.787601417172453
+                    ],
+                    [
+                        -107.395973485769943,
+                        24.78760207805265
+                    ],
+                    [
+                        -107.395973783438365,
+                        24.787602734300989
+                    ],
+                    [
+                        -107.395974093577621,
+                        24.787603385718487
+                    ],
+                    [
+                        -107.395974416093665,
+                        24.787604032107666
+                    ],
+                    [
+                        -107.395974750888755,
+                        24.787604673272572
+                    ],
+                    [
+                        -107.395975097861353,
+                        24.787605309018815
+                    ],
+                    [
+                        -107.395975456906299,
+                        24.787605939153664
+                    ],
+                    [
+                        -107.395975827914711,
+                        24.787606563486076
+                    ],
+                    [
+                        -107.395976210774151,
+                        24.787607181826782
+                    ],
+                    [
+                        -107.395976605368531,
+                        24.787607793988311
+                    ],
+                    [
+                        -107.395977011578211,
+                        24.7876083997851
+                    ],
+                    [
+                        -107.395977429280066,
+                        24.787608999033459
+                    ],
+                    [
+                        -107.39597785834745,
+                        24.787609591551739
+                    ],
+                    [
+                        -107.395978298650277,
+                        24.787610177160303
+                    ],
+                    [
+                        -107.395978750055079,
+                        24.787610755681616
+                    ],
+                    [
+                        -107.395979212425004,
+                        24.787611326940286
+                    ],
+                    [
+                        -107.395979685619864,
+                        24.787611890763124
+                    ],
+                    [
+                        -107.395980169496184,
+                        24.78761244697921
+                    ],
+                    [
+                        -107.395980663907324,
+                        24.787612995419909
+                    ],
+                    [
+                        -107.395981168703358,
+                        24.787613535918943
+                    ],
+                    [
+                        -107.39598168373125,
+                        24.787614068312458
+                    ],
+                    [
+                        -107.39598220883488,
+                        24.787614592439066
+                    ],
+                    [
+                        -107.395982743855029,
+                        24.787615108139843
+                    ],
+                    [
+                        -107.395983288629509,
+                        24.787615615258471
+                    ],
+                    [
+                        -107.395983842993161,
+                        24.787616113641185
+                    ],
+                    [
+                        -107.395984406777927,
+                        24.787616603136907
+                    ],
+                    [
+                        -107.395984979812894,
+                        24.787617083597244
+                    ],
+                    [
+                        -107.395985561924306,
+                        24.787617554876519
+                    ],
+                    [
+                        -107.39598615293572,
+                        24.787618016831868
+                    ],
+                    [
+                        -107.395986752667937,
+                        24.787618469323238
+                    ],
+                    [
+                        -107.395987360939159,
+                        24.78761891221345
+                    ],
+                    [
+                        -107.395987977564957,
+                        24.787619345368238
+                    ],
+                    [
+                        -107.3959886023584,
+                        24.787619768656267
+                    ],
+                    [
+                        -107.395989235130088,
+                        24.787620181949233
+                    ],
+                    [
+                        -107.395989875688173,
+                        24.787620585121818
+                    ],
+                    [
+                        -107.395990523838449,
+                        24.787620978051812
+                    ],
+                    [
+                        -107.395991179384424,
+                        24.787621360620086
+                    ],
+                    [
+                        -107.395991842127373,
+                        24.787621732710651
+                    ],
+                    [
+                        -107.395992511866353,
+                        24.787622094210715
+                    ],
+                    [
+                        -107.395993188398336,
+                        24.787622445010669
+                    ],
+                    [
+                        -107.395993871518215,
+                        24.787622785004171
+                    ],
+                    [
+                        -107.395994561018895,
+                        24.787623114088142
+                    ],
+                    [
+                        -107.39599525669135,
+                        24.787623432162821
+                    ],
+                    [
+                        -107.395995958324662,
+                        24.787623739131767
+                    ],
+                    [
+                        -107.395996665706122,
+                        24.787624034901928
+                    ],
+                    [
+                        -107.39599737862126,
+                        24.787624319383635
+                    ],
+                    [
+                        -107.395998096853987,
+                        24.787624592490637
+                    ],
+                    [
+                        -107.39599882018652,
+                        24.787624854140152
+                    ],
+                    [
+                        -107.395999548399573,
+                        24.787625104252822
+                    ],
+                    [
+                        -107.396000281272393,
+                        24.787625342752865
+                    ],
+                    [
+                        -107.396001018582794,
+                        24.787625569567947
+                    ],
+                    [
+                        -107.396001760107239,
+                        24.787625784629316
+                    ],
+                    [
+                        -107.396002505620942,
+                        24.787625987871767
+                    ],
+                    [
+                        -107.396003254897849,
+                        24.78762617923369
+                    ],
+                    [
+                        -107.396004007710843,
+                        24.787626358657064
+                    ],
+                    [
+                        -107.396004763831684,
+                        24.7876265260875
+                    ],
+                    [
+                        -107.396005523031135,
+                        24.787626681474229
+                    ],
+                    [
+                        -107.396006285079039,
+                        24.78762682477015
+                    ],
+                    [
+                        -107.396007049744355,
+                        24.787626955931824
+                    ],
+                    [
+                        -107.39600781679529,
+                        24.787627074919484
+                    ],
+                    [
+                        -107.396008585999269,
+                        24.787627181697054
+                    ],
+                    [
+                        -107.396009357123134,
+                        24.787627276232168
+                    ],
+                    [
+                        -107.39601012993306,
+                        24.787627358496163
+                    ],
+                    [
+                        -107.396010904194782,
+                        24.787627428464091
+                    ],
+                    [
+                        -107.396011679673563,
+                        24.787627486114754
+                    ],
+                    [
+                        -107.396012456134315,
+                        24.787627531430662
+                    ],
+                    [
+                        -107.396013233341634,
+                        24.78762756439809
+                    ],
+                    [
+                        -107.39601401105989,
+                        24.787627585007026
+                    ],
+                    [
+                        -107.396014789053311,
+                        24.787627593251244
+                    ],
+                    [
+                        -107.396015567086039,
+                        24.787627589128231
+                    ],
+                    [
+                        -107.396016344922202,
+                        24.787627572639238
+                    ],
+                    [
+                        -107.396017122325972,
+                        24.787627543789259
+                    ],
+                    [
+                        -107.396017899061675,
+                        24.787627502587053
+                    ],
+                    [
+                        -107.396018674893853,
+                        24.7876274490451
+                    ],
+                    [
+                        -107.396019449587243,
+                        24.787627383179636
+                    ],
+                    [
+                        -107.39602022290704,
+                        24.787627305010631
+                    ],
+                    [
+                        -107.396020994618766,
+                        24.787627214561784
+                    ],
+                    [
+                        -107.396021764488481,
+                        24.787627111860502
+                    ],
+                    [
+                        -107.396022532282771,
+                        24.787626996937941
+                    ],
+                    [
+                        -107.396023297768892,
+                        24.787626869828937
+                    ],
+                    [
+                        -107.396024060714751,
+                        24.787626730572015
+                    ],
+                    [
+                        -107.396024820889053,
+                        24.787626579209402
+                    ],
+                    [
+                        -107.396025578061355,
+                        24.787626415786978
+                    ],
+                    [
+                        -107.39602633200208,
+                        24.787626240354296
+                    ],
+                    [
+                        -107.396027082482675,
+                        24.787626052964537
+                    ],
+                    [
+                        -107.39602782927561,
+                        24.787625853674513
+                    ],
+                    [
+                        -107.396028572154506,
+                        24.787625642544644
+                    ],
+                    [
+                        -107.396029310894107,
+                        24.787625419638928
+                    ],
+                    [
+                        -107.396030045270507,
+                        24.78762518502495
+                    ],
+                    [
+                        -107.396030775061007,
+                        24.787624938773838
+                    ],
+                    [
+                        -107.396031500044401,
+                        24.787624680960246
+                    ],
+                    [
+                        -107.396032220000876,
+                        24.787624411662325
+                    ],
+                    [
+                        -107.396032934712196,
+                        24.787624130961738
+                    ],
+                    [
+                        -107.396033643961644,
+                        24.78762383894356
+                    ],
+                    [
+                        -107.396034347534211,
+                        24.787623535696337
+                    ],
+                    [
+                        -107.396035045216621,
+                        24.787623221312007
+                    ],
+                    [
+                        -107.396035736797344,
+                        24.787622895885864
+                    ],
+                    [
+                        -107.3960364220667,
+                        24.787622559516574
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397437155854135,
+                        24.786473506492939
+                    ],
+                    [
+                        -107.397457823869743,
+                        24.786391306923115
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396668712041205,
+                        24.786299929418004
+                    ],
+                    [
+                        -107.396647965738737,
+                        24.786234225544849
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396487547736371,
+                        24.786826735588857
+                    ],
+                    [
+                        -107.396564584998728,
+                        24.786768159619726
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.395853665734919,
+                        24.787873005096422
+                    ],
+                    [
+                        -107.395682802270954,
+                        24.787847813762646
+                    ],
+                    [
+                        -107.395666838036391,
+                        24.787948017641508
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396128084032867,
+                        24.787924150118322
+                    ],
+                    [
+                        -107.395853665734919,
+                        24.787873005096422
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.398291262797329,
+                        24.787857006332221
+                    ],
+                    [
+                        -107.398369487452158,
+                        24.787561497444479
+                    ],
+                    [
+                        -107.398454476714306,
+                        24.787167550384972
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397093496804914,
+                        24.788025529041786
+                    ],
+                    [
+                        -107.397139400816357,
+                        24.787922285730293
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397338094735645,
+                        24.787956495381824
+                    ],
+                    [
+                        -107.397139400816357,
+                        24.787922285730293
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396738602608252,
+                        24.787587799500976
+                    ],
+                    [
+                        -107.396709959314904,
+                        24.787704794103306
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397141153114902,
+                        24.787913904250971
+                    ],
+                    [
+                        -107.397030979422425,
+                        24.787883890131269
+                    ],
+                    [
+                        -107.397043067464693,
+                        24.787827326881068
+                    ],
+                    [
+                        -107.397062101819628,
+                        24.787831761463913
+                    ],
+                    [
+                        -107.397076334189066,
+                        24.787746226220538
+                    ],
+                    [
+                        -107.397060827482647,
+                        24.787740286320478
+                    ],
+                    [
+                        -107.397078873317241,
+                        24.787658421241609
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396660310916175,
+                        24.787584322120306
+                    ],
+                    [
+                        -107.396738602608252,
+                        24.787587799500976
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397078873317241,
+                        24.787658421241609
+                    ],
+                    [
+                        -107.397123650216543,
+                        24.78745037091667
+                    ],
+                    [
+                        -107.397100263825962,
+                        24.787445831462847
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396789109495941,
+                        24.787347285507472
+                    ],
+                    [
+                        -107.396765780761527,
+                        24.787461227548288
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397078873317241,
+                        24.787658421241609
+                    ],
+                    [
+                        -107.396738602608252,
+                        24.787587799500976
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396716326284903,
+                        24.787349109531817
+                    ],
+                    [
+                        -107.396791456818221,
+                        24.787335916973927
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.397894228876225,
+                        24.788114348099821
+                    ],
+                    [
+                        -107.397836077947886,
+                        24.788115601641106
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.3982808334693,
+                        24.78828871898606
+                    ],
+                    [
+                        -107.398294053079425,
+                        24.788183032503838
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396887811202021,
+                        24.788202378941882
+                    ],
+                    [
+                        -107.396770035757925,
+                        24.788006815903561
+                    ],
+                    [
+                        -107.396682916041073,
+                        24.787856814684449
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "piso": 1,
+                "tipo": "andador",
+                "ancho_m": null,
+                "sentido": "ambos",
+                "accesible": true,
+                "cost_fac": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -107.396872231058154,
+                        24.787876485838158
+                    ],
+                    [
+                        -107.396685839370051,
+                        24.787840381559949
+                    ]
+                ]
+            }
+        }
+    ]
+}

@@ -20,7 +20,8 @@ const GEOJSON_CONTORNO = import.meta.env.VITE_GEOJSON_PATH ?? '/data/Tec_Contorn
 // Soporte para extras separados por coma: 
 // VITE_GEOJSON_EXTRA="/data/Biblioteca.geojson,/data/Otro.geojson"
 const GEOJSON_EXTRA = (import.meta.env.VITE_GEOJSON_EXTRA as string | undefined)?.split(',').map(s => s.trim()).filter(Boolean) ?? [];
-const GEOJSON_PASILLOS = import.meta.env.VITE_GEOJSON_PASILLOS ?? '/data/pasillos-tec.geojson';
+// Prefer rutas.geojson placed under `public/assets/data` for user-provided routes
+const GEOJSON_PASILLOS = import.meta.env.VITE_GEOJSON_PASILLOS ?? '/assets/data/rutas.geojson';
 
 const TILE_MIN_ZOOM = Number(import.meta.env.VITE_TILE_MIN_ZOOM ?? 16);
 const TILE_MAX_ZOOM = Number(import.meta.env.VITE_TILE_MAX_ZOOM ?? 21);
@@ -31,24 +32,26 @@ const app = useAppStore();
 const center = ref<[number, number]>(centroDefault);
 const contorno = ref<any | null>(null);
 const pasillos = ref<any | null>(null);
-const routeFeature = ref<any | null>(null);
+// routeFeature is stored in the global app store (app.routeFeature)
 const extras = ref<any[]>([]);
 
 // objetos composable: filtering and normalization
 const { normalizeFromGeoJson, objetosEnCapa, openObjeto } = useObjetos();
 
-const routeFc = computed(() => routeFeature.value
-  ? { type: 'FeatureCollection', features: [routeFeature.value] }
-  : null
-);
-const routeMarkers = ref<{ lat: number; lng: number; etiqueta?: string }[]>([]);
+const routeFc = computed(() => {
+  const rf = (app as any).routeFeature;
+  return rf ? { type: 'FeatureCollection', features: [rf] } : null;
+});
 const objetosMarkers = computed(() => {
   const objs = objetosEnCapa?.value ?? [];
   return objs
     .map((o: any) => (o?.centroide ? { lat: o.centroide.lat, lng: o.centroide.lng, etiqueta: o.nombre } : null))
     .filter(Boolean) as { lat: number; lng: number; etiqueta?: string }[];
 });
-const markers = computed(() => (routeMarkers.value && routeMarkers.value.length ? routeMarkers.value : objetosMarkers.value));
+const markers = computed(() => {
+  const rm = (app as any).routeMarkers as Array<any> | undefined;
+  return (rm && rm.length ? rm : objetosMarkers.value);
+});
 
 const objetosGeojson = computed(() => {
   const objs = objetosEnCapa?.value ?? [];
@@ -123,10 +126,31 @@ onMounted(async () => {
       console.warn(`No se pudo cargar contorno desde ${GEOJSON_CONTORNO}`);
     }
 
-    // 2) Cargar pasillos (obligatorio para routing)
-    const b = await fetch(GEOJSON_PASILLOS);
-    if (!b.ok) throw new Error(`No se pudo cargar ${GEOJSON_PASILLOS} (${b.status})`);
-    pasillos.value = await b.json();
+    // 2) Cargar pasillos (obligatorio para routing). If the configured path fails,
+    // try the common fallback `/data/rutas.geojson` where routes/pasillos are marked.
+    let b = await fetch(GEOJSON_PASILLOS);
+    if (!b.ok) {
+      console.warn(`No se pudo cargar ${GEOJSON_PASILLOS} (${b.status}), intentando /assets/data/rutas.geojson`);
+      const altPath = '/assets/data/rutas.geojson';
+      const alt = await fetch(altPath);
+      if (!alt.ok) throw new Error(`No se pudo cargar ninguno de: ${GEOJSON_PASILLOS}, ${altPath}`);
+      b = alt;
+    }
+    // Validate response is JSON and not an HTML error page
+    const ct = b.headers.get('content-type') || '';
+    const bodyText = await b.text();
+    if (!ct.includes('application/json') && bodyText.trim().startsWith('<')) {
+      console.error('[HomeView] rutas fetch returned HTML (likely 404):', bodyText.slice(0,300));
+      app.pushAlert({ message: 'Error cargando rutas: el servidor devolvió HTML en lugar de JSON. Revisa la ruta de `rutas.geojson`.', type: 'error' });
+      throw new Error('rutas.geojson no es JSON (respuesta HTML)');
+    }
+    try {
+      pasillos.value = JSON.parse(bodyText);
+    } catch (e) {
+      console.error('[HomeView] error parsing rutas.geojson:', e, bodyText.slice(0,300));
+      app.pushAlert({ message: 'Error parseando rutas.geojson: JSON inválido. Revisa el archivo.', type: 'error' });
+      throw e;
+    }
 
     // Normalizar GeoJSON a objetos y guardarlos en la store (para categorías/objetos interactivos)
     try {
@@ -172,24 +196,24 @@ async function handleMapClick(latlng: [number, number]) {
   if (!routingEnabled.value) return; // routing disabled for now
     if (!start.value) {
     start.value = latlng;
-    routeMarkers.value = [{ lat: latlng[0], lng: latlng[1], etiqueta: 'Inicio' }];
-    routeFeature.value = null;
+    app.setRouteMarkers([{ lat: latlng[0], lng: latlng[1], etiqueta: 'Inicio' }]);
+    app.setRouteFeature(null);
     return;
   }
   if (!end.value) {
     end.value = latlng;
-    routeMarkers.value = [
+    app.setRouteMarkers([
       { lat: start.value[0], lng: start.value[1], etiqueta: 'Inicio' },
       { lat: latlng[0], lng: latlng[1], etiqueta: 'Destino' }
-    ];
+    ]);
     await computeRoute();
     return;
   }
   // Si ya hay ambos, reinicia
   start.value = latlng;
   end.value = null;
-  routeFeature.value = null;
-  routeMarkers.value = [{ lat: latlng[0], lng: latlng[1], etiqueta: 'Inicio' }];
+  app.setRouteFeature(null);
+  app.setRouteMarkers([{ lat: latlng[0], lng: latlng[1], etiqueta: 'Inicio' }]);
 }
 
 async function computeRoute() {
@@ -199,10 +223,10 @@ async function computeRoute() {
   const nodePath = aStar(graph, s, t);
   if (!nodePath) {
     errorMsg.value = 'No se encontró ruta (revisa conexiones/topología)';
-    routeFeature.value = null;
+    app.setRouteFeature(null);
     return;
   }
-  routeFeature.value = pathToGeoJson(graph, nodePath);
+  app.setRouteFeature(pathToGeoJson(graph, nodePath));
 }
 
 // abrir objeto al hacer click en su feature
@@ -228,6 +252,12 @@ function onFeatureClick(payload: { feature: any; latlng: [number, number] }) {
       <div class="top-controls-inner">
         <div style="width:100%; display:flex; justify-content:flex-end;">
           <ProfileButton />
+        </div>
+        <div style="display:flex; gap:8px; align-items:center; width:100%;">
+          <button @click="routingEnabled = !routingEnabled" :style="{ padding:'6px 10px', borderRadius:'8px', border:'1px solid #ccc', background: routingEnabled ? '#ffe0b2' : '#fff' }">
+            {{ routingEnabled ? 'Rutas: ON' : 'Rutas: OFF' }}
+          </button>
+          <div style="font-size:12px; color:#555">Pulsa en el mapa para seleccionar origen y destino cuando Rutas está activado.</div>
         </div>
         <div class="controls-box">
           <div class="search-wrap">

@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { computed, onMounted, onUnmounted, ref } from 'vue';
 import { useAppStore } from '@/stores/app';
+import { buildGraphFromPasillos, nearestNodeId, pathToGeoJson } from '@/lib/routing/buildGraph';
+import { aStar } from '@/lib/routing/graph';
 
 const app = useAppStore();
 const selectedFeature = computed(() => app.selectedFeature as any | null);
@@ -37,6 +39,70 @@ function formatCategoria(cat: any) {
 }
 
 function verMas() { app.pushAlert({ message: 'Ver más (pendiente)', type: 'success' }); }
+
+async function getCurrentPositionPromise(): Promise<GeolocationPosition> {
+  return new Promise((resolve, reject) => {
+    if (!('geolocation' in navigator)) return reject(new Error('Geolocalización no disponible'));
+    navigator.geolocation.getCurrentPosition(resolve, reject, { enableHighAccuracy: true, timeout: 10000 });
+  });
+}
+
+async function gotoHere() {
+  if (!objetoSeleccionado.value) return;
+  try {
+    app.pushAlert({ message: 'Calculando ruta...', type: 'success' });
+    const pos = await getCurrentPositionPromise();
+    const userLat = pos.coords.latitude; const userLng = pos.coords.longitude;
+
+    // load rutas geojson (same path used by HomeView)
+    const resp = await fetch('/assets/data/rutas.geojson');
+    if (!resp.ok) throw new Error('No se pudo cargar rutas.geojson');
+    const text = await resp.text();
+    if (text.trim().startsWith('<')) throw new Error('Respuesta de rutas.geojson fue HTML');
+    const rutas = JSON.parse(text);
+
+    const graph = buildGraphFromPasillos(rutas);
+    const s = nearestNodeId(graph, userLat, userLng);
+    // determine target coordinates from objetoSeleccionado centroide or geometry
+    let targetLat: number | null = null; let targetLng: number | null = null;
+    const o = objetoSeleccionado.value;
+    if (o?.centroide && typeof o.centroide.lat === 'number' && typeof o.centroide.lng === 'number') {
+      targetLat = o.centroide.lat; targetLng = o.centroide.lng;
+    } else if (o?.geometria && o.geometria.coordinates) {
+      // try to extract a point
+      const geom = o.geometria;
+      function findFirstCoord(g: any): number[] | null {
+        if (!g) return null;
+        if (g.type === 'Point' && Array.isArray(g.coordinates)) return g.coordinates as number[];
+        if (g.coordinates && Array.isArray(g.coordinates)) {
+          if (typeof g.coordinates[0] === 'number') return g.coordinates as number[];
+          return findFirstCoord({ coordinates: g.coordinates[0], type: 'Point' });
+        }
+        return null;
+      }
+      const c = findFirstCoord(geom);
+      if (c && c.length >= 2) { targetLng = c[0]; targetLat = c[1]; }
+    }
+    if (targetLat === null || targetLng === null) throw new Error('No se pudo determinar centroide del destino');
+
+    const t = nearestNodeId(graph, targetLat, targetLng);
+    const nodePath = aStar(graph, s, t);
+    if (!nodePath) { app.pushAlert({ message: 'No se encontró ruta entre tu ubicación y el destino', type: 'warning' }); return; }
+    const pathFeature = pathToGeoJson(graph, nodePath);
+    app.setRouteFeature(pathFeature);
+    app.setRouteMarkers([{ lat: userLat, lng: userLng, etiqueta: 'Tu ubicación' }, { lat: targetLat, lng: targetLng, etiqueta: o.nombre }]);
+    // center map to route midpoint
+    try {
+      const midIdx = Math.floor((nodePath.length - 1) / 2);
+      const midNode = graph.nodes[nodePath[midIdx]];
+      (app.map as any)?.flyTo?.([midNode.lat, midNode.lng], 18);
+    } catch (e) { /* ignore */ }
+    app.pushAlert({ message: 'Ruta calculada', type: 'success' });
+  } catch (e: any) {
+    console.debug('[Sidebar] gotoHere error', e);
+    app.pushAlert({ message: `Error calculando ruta: ${e?.message ?? e}`, type: 'error' });
+  }
+}
 
 function share() {
   try {
@@ -135,6 +201,7 @@ function onHandleTouchEnd() {
 
       <div style="margin-top:14px; display:flex; gap:8px;">
         <button @click.prevent="verMas" style="padding:8px 12px; background:#1976D2; color:#fff; border:none; border-radius:6px; cursor:pointer">Ver más</button>
+        <button @click.prevent="gotoHere" style="padding:8px 12px; background:#ff9800; color:#fff; border:none; border-radius:6px; cursor:pointer">¿Cómo llegar?</button>
         <button @click.prevent="share" style="padding:8px 12px; background:#eee; border:none; border-radius:6px; cursor:pointer">Compartir</button>
       </div>
     </div>
@@ -197,6 +264,7 @@ function onHandleTouchEnd() {
 
         <div style="margin-top:14px; display:flex; gap:8px;">
           <button @click.prevent="verMas" style="padding:8px 12px; background:#1976D2; color:#fff; border:none; border-radius:6px; cursor:pointer">Ver más</button>
+          <button @click.prevent="gotoHere" style="padding:8px 12px; background:#ff9800; color:#fff; border:none; border-radius:6px; cursor:pointer">¿Cómo llegar?</button>
           <button @click.prevent="share" style="padding:8px 12px; background:#eee; border:none; border-radius:6px; cursor:pointer">Compartir</button>
         </div>
       </div>
