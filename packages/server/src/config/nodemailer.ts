@@ -5,8 +5,8 @@ const {
   SMTP_PORT,
   SMTP_USER,
   SMTP_PASS,
-  SMTP_FROM_EMAIL,
-  SMTP_FROM_NAME,
+  // SMTP_FROM_EMAIL,
+  // SMTP_FROM_NAME,
 } = process.env;
 
 async function buildTransporter() {

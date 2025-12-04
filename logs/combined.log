@@ -10808,3 +10808,6 @@
   }
 ]
 2025-12-03 22:45:08 [error]: El objeto con qgisId: "EAC01" hace referencia al piso: 1 del objeto con qgisId: "EA", pero este solo cuenta con 0 piso(s)
+2025-12-03 23:27:56 [info]: undefined
+2025-12-03 23:27:56 [info]: undefined
+2025-12-03 23:28:08 [info]: undefined

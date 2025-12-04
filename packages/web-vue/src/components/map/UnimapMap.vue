@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { LMap, LTileLayer, LGeoJson, LMarker, LControlZoom } from '@vue-leaflet/vue-leaflet';
+import LocateControl from './LocateControl.vue';
 import type { StyleFunction } from 'leaflet';
 import { computed, ref, onMounted, watch } from 'vue';
 import { useAppStore } from '@/stores/app';
@@ -41,19 +42,45 @@ const mapRef = ref<any>(null);
 const app = useAppStore();
 
 onMounted(() => {
-  // The underlying Leaflet map instance is available as `mapRef.value.mapObject`.
-  // Set it into the global store so actions like `abrirSwipeableObjeto` can use it.
+  // The underlying Leaflet map instance may be exposed under different props
+  // depending on the wrapper. Try common locations and poll briefly as a
+  // fallback so `app.setMap` is called when the instance becomes available.
   try {
-    const maybeMap = mapRef.value?.mapObject ?? null;
-    if (maybeMap) app.setMap(maybeMap);
+    const findMap = () => mapRef.value?.mapObject ?? mapRef.value?.map ?? mapRef.value ?? null;
+    let maybeMap = findMap();
+    if (maybeMap) {
+      app.setMap(maybeMap);
+      return;
+    }
+    let attempts = 0;
+    const maxAttempts = 20;
+    const interval = setInterval(() => {
+      attempts += 1;
+      maybeMap = findMap();
+      if (maybeMap) {
+        clearInterval(interval);
+        app.setMap(maybeMap);
+        console.debug('[UnimapMap] map detected via polling and set in store');
+      } else if (attempts >= maxAttempts) {
+        clearInterval(interval);
+        console.debug('[UnimapMap] polling gave up; map still not available');
+      }
+    }, 150);
   } catch (e) {
     console.debug('[UnimapMap] unable to set map on mount', e);
   }
 });
 
 // Also watch in case the map object is attached slightly after mount
-watch(() => mapRef.value && mapRef.value.mapObject, (m) => {
-  if (m) app.setMap(m);
+// Also watch in case the map object is attached slightly after mount. The
+// watcher will attempt to detect several possible property names.
+watch(() => mapRef.value, (v) => {
+  try {
+    const maybeMap = v?.mapObject ?? v?.map ?? v ?? null;
+    if (maybeMap) app.setMap(maybeMap);
+  } catch (e) {
+    console.debug('[UnimapMap] watch error detecting map', e);
+  }
 });
 
 function onMapClick(e:any){ emit('map-click', [e.latlng.lat, e.latlng.lng]); }
@@ -89,15 +116,20 @@ const geojsonOptions = computed(() => ({
 </script>
 
 <template>
-  <LMap ref="mapRef"
-    :zoom="zoom" :minZoom="minZoom" :maxZoom="maxZoom"
-    :center="center" :maxBounds="constrainToCenterBounds ? maxBounds : undefined"
-    :zoomControl="true" style="height:100%;width:100%" @click="onMapClick"
-  >
-    <LTileLayer :url="tilesUrl" :maxZoom="maxZoom" :maxNativeZoom="tileMaxNativeZoom" />
-    <LGeoJson v-if="geojson" :geojson="geojson" :options="geojsonOptions" :optionsStyle="styleFunction" />
-    <LMarker v-for="(m,i) in markers" :key="i" :lat-lng="[m.lat, m.lng]" />
-  </LMap>
+  <div class="unimap-map-wrapper" style="position:relative; height:100%; width:100%">
+    <LMap ref="mapRef"
+      :zoom="zoom" :minZoom="minZoom" :maxZoom="maxZoom"
+      :center="center" :maxBounds="constrainToCenterBounds ? maxBounds : undefined"
+      :zoomControl="true" style="height:100%;width:100%" @click="onMapClick"
+    >
+      <LTileLayer :url="tilesUrl" :maxZoom="maxZoom" :maxNativeZoom="tileMaxNativeZoom" />
+      <LGeoJson v-if="geojson" :geojson="geojson" :options="geojsonOptions" :optionsStyle="styleFunction" />
+      <LMarker v-for="(m,i) in markers" :key="i" :lat-lng="[m.lat, m.lng]" />
+    </LMap>
+
+    <!-- LocateControl provides a small button overlay to toggle GPS location -->
+    <LocateControl />
+  </div>
 </template>
 
 <style>

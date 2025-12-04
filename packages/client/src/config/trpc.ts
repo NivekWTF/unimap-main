@@ -1,6 +1,10 @@
 import { createTRPCReact } from '@trpc/react-query';
 import { httpBatchLink, createTRPCProxyClient } from '@trpc/client';
-import SuperJSON from 'superjson';
+// NOTE: Do not set a transformer here to match the server router (server
+// intentionally omits a transformer to preserve CommonJS build). Setting
+// SuperJSON here caused a TypeScript mismatch against the server AppRouter
+// type. If you need a transformer, ensure the server router uses the same
+// transformer.
 
 import store from '../store';
 
@@ -22,7 +26,6 @@ export const trpcVanilla = createTRPCProxyClient<AppRouter>({
       headers,
     }),
   ],
-  transformer: SuperJSON,
 });
 
 export const trpcClient = trpc.createClient({
@@ -32,7 +35,7 @@ export const trpcClient = trpc.createClient({
       headers,
     }),
   ],
-  transformer: SuperJSON,
+  // transformer: SuperJSON, // intentionally omitted to match server router
 });
 
 export default trpc;
