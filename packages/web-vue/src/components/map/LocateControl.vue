@@ -23,24 +23,51 @@ function attachPosition(pos: GeolocationPosition) {
   if (!map) return false;
 
   try {
+    // Ensure a dedicated pane exists so the locate visuals render above polygons
+    try {
+      if (map && map.createPane && !map.getPane('locatePane')) {
+        const p = map.createPane('locatePane');
+        // put it above overlayPane/markerPane
+        (p as HTMLElement).style.zIndex = '650';
+      }
+    } catch (e) {
+      console.debug('[LocateControl] createPane error', e);
+    }
+
     if (!marker) {
-      // Use a divIcon so we can style a native-looking blue dot with halo
+      // Use a divIcon so we can style a native-looking orange dot with halo
       const icon = L.divIcon({
         className: 'locate-divicon',
         html: `<span class="locate-dot"></span>`,
         iconSize: [24, 24],
         iconAnchor: [12, 12],
-      });
-      marker = L.marker([lat, lng], { icon, interactive: false }).addTo(map);
+        // ensure icon is placed in our pane
+        pane: 'locatePane',
+      } as any);
+      marker = L.marker([lat, lng], { icon, interactive: false, pane: 'locatePane' } as any).addTo(map);
     } else {
       marker.setLatLng([lat, lng]);
+      try { (marker as any).options.pane = 'locatePane'; } catch (e) { /* ignore */ }
+      try { marker.addTo(map); } catch (e) { /* ignore */ }
     }
 
     if (!circle) {
-      circle = L.circle([lat, lng], { radius: acc, color: '#1e88e5', fillColor: '#1e88e5', fillOpacity: 0.12, weight: 0 }).addTo(map);
+      // Put the accuracy circle into our custom locatePane so it's above polygons
+      circle = L.circle([lat, lng], {
+        pane: (map.getPane && map.getPane('locatePane')) ? 'locatePane' : undefined,
+        radius: acc,
+        color: '#ff9800',
+        fillColor: '#ff9800',
+        fillOpacity: 0.22,
+        weight: 0,
+        interactive: false,
+      }).addTo(map);
+      try { circle.bringToFront(); } catch (e) { /* ignore */ }
+      console.log('[LocateControl] accuracy circle created', { lat, lng, acc });
     } else {
       circle.setLatLng([lat, lng]);
       circle.setRadius(acc);
+      try { circle.bringToFront(); } catch (e) { /* ignore */ }
     }
 
     try { map.flyTo([lat, lng], 18); } catch (e) { map.setView([lat, lng], 18); }
@@ -184,4 +211,10 @@ onUnmounted(() => {
 .locate-btn { background: white; border-radius: 6px; border: 1px solid #ccc; padding: 6px 8px; cursor: pointer; box-shadow: 0 1px 4px rgba(0,0,0,0.3); }
 .locate-btn:hover { background:#f7f7f7 }
 .locate-btn:disabled { opacity: 0.6; cursor: not-allowed }
+
+/* Styles for the blue location dot (similar to Google Maps) */
+.locate-divicon { display:flex; align-items:center; justify-content:center; }
+.locate-divicon .locate-dot { position: relative; width: 14px; height: 14px; border-radius: 50%; background: #ff9800; border: 2px solid white; box-shadow: 0 0 0 6px rgba(255,152,0,0.12), 0 0 6px rgba(255,152,0,0.35); }
+.locate-divicon .locate-dot::after { content: ''; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%; border-radius: 50%; background: rgba(255,152,0,0.18); animation: locate-pulse 2s infinite; }
+@keyframes locate-pulse { 0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.9 } 70% { transform: translate(-50%, -50%) scale(2.2); opacity: 0 } 100% { opacity: 0 } }
 </style>
