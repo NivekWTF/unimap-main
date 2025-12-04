@@ -2,6 +2,8 @@
 import { ref, onUnmounted, watch, computed } from 'vue';
 import L from 'leaflet';
 import { useAppStore } from '@/stores/app';
+// The provided SVG lives under `public/assets/img`; reference it via absolute path so Vite serves it unchanged
+const locationIcon = '/assets/img/location.svg';
 
 const app = useAppStore();
 const locating = ref(false);
@@ -71,9 +73,9 @@ function attachPosition(pos: GeolocationPosition) {
     }
 
     try { map.flyTo([lat, lng], 18); } catch (e) { map.setView([lat, lng], 18); }
-    // Inform the developer that the marker/circle were placed
+    // Muestra que el marcador se ha colocado
     console.log(`[LocateControl] posición fijada en mapa: lat=${lat} lng=${lng} acc=${acc}m`);
-    // Show location in a toast, but limit frequency to once every 5 seconds
+    // Muestra las coords en un toast, con un limite de frecuencia de 5 segundos
     try {
       const now = Date.now();
       if (!lastLocationToastAt.value || now - lastLocationToastAt.value > 5000) {
@@ -91,7 +93,7 @@ function attachPosition(pos: GeolocationPosition) {
   }
 }
 
-// watch map availability and attach buffered position when ready
+
 watch(mapReady, (ready) => {
   if (ready) {
     console.debug('[LocateControl] map became available');
@@ -110,7 +112,7 @@ function handleSuccess(pos: GeolocationPosition) {
   const lng = pos.coords.longitude;
   const acc = pos.coords.accuracy ?? 5;
   const map = app.map as any;
-  // Always log the raw geolocation result so it's visible in browser console
+  
   console.log(`[LocateControl] geolocation success: lat=${lat} lng=${lng} acc=${acc}m`);
   // Push a location toast immediately (rate-limited) so mobile sees the coordinate
   try {
@@ -193,24 +195,39 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="locate-control">
+  <div class="locate-control" role="region" aria-label="Control de ubicación">
     <button
       class="locate-btn"
+      :class="{ locating: locating }"
       :disabled="!mapReady && !locating"
       @click="locating ? stopLocating() : startLocating()"
       :title="!mapReady && !locating ? 'El mapa se está cargando' : (locating ? 'Detener ubicación' : 'Mostrar mi ubicación')"
+      :aria-pressed="locating"
     >
-      <span v-if="!locating">📍</span>
-      <span v-else>⛔</span>
+      <!-- Idle: use provided SVG asset as the icon -->
+      <img v-if="!locating" :src="locationIcon" class="locate-icon" alt="Mostrar mi ubicación" />
+      <svg v-else width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="5" y="5" width="14" height="14" rx="2" fill="white" />
+      </svg>
     </button>
   </div>
 </template>
 
 <style scoped>
-.locate-control { position: absolute; top: 10px; right: 10px; z-index: 1200; }
-.locate-btn { background: white; border-radius: 6px; border: 1px solid #ccc; padding: 6px 8px; cursor: pointer; box-shadow: 0 1px 4px rgba(0,0,0,0.3); }
-.locate-btn:hover { background:#f7f7f7 }
+.locate-control { position: absolute; bottom: 18px; right: 18px; z-index: 1400; }
+.locate-btn { width:52px; height:52px; border-radius:50%; 
+    background:#ff9800; color:white; border:none; padding:0; 
+    display:flex; align-items:center; justify-content:center; 
+    cursor:pointer; box-shadow: 0 6px 18px rgba(46,125,219,0.22), 
+    0 2px 6px rgba(0,0,0,0.12); 
+    transition: transform .12s ease, box-shadow .12s ease; }
+.locate-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(46,125,219,0.26); }
+.locate-btn.locating { background: #d32f2f; box-shadow: 0 6px 18px rgba(211,47,47,0.22); }
 .locate-btn:disabled { opacity: 0.6; cursor: not-allowed }
+.locate-btn svg { display:block }
+.locate-btn:focus { outline: none; box-shadow: 0 0 0 4px rgba(46,125,219,0.12); }
+
+.locate-icon{ width:22px; height:22px; display:block; }
 
 /* Styles for the blue location dot (similar to Google Maps) */
 .locate-divicon { display:flex; align-items:center; justify-content:center; }

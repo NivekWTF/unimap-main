@@ -68,7 +68,10 @@ const objetosGeojson = computed(() => {
 // Do NOT include `pasillos` in the merged GeoJSON shown to users.
 // `pasillos` is still loaded (used to build the routing graph) but should remain hidden
 // until a specific route is computed and stored in `app.routeFeature`.
-const merged = computed(() => mergeMany([contorno.value, routeFc.value, objetosGeojson.value, ...extras.value]));
+// Always include `contorno` but rely on deduplication to avoid double-drawing.
+const merged = computed(() => {
+  return mergeMany([ contorno.value, routeFc.value, objetosGeojson.value, ...extras.value ]);
+});
 const constrainToCenterBounds = ref(true);
 const loading = ref(false);
 const errorMsg = ref('');
@@ -79,7 +82,31 @@ function mergeMany(items: any[]) {
   const features = items
     .filter(Boolean)
     .flatMap(fc => fc.type === 'FeatureCollection' ? fc.features : [fc]);
-  return features.length ? { type: 'FeatureCollection', features } : null;
+
+  // Deduplicate features by an identifier (prefer _id, qgisId, id).
+  // Fallback to a short geometry signature to avoid drawing the same geometry twice
+  // when data comes from multiple sources (extras vs backend normalization).
+  const seen = new Set<string>();
+  const out: any[] = [];
+  for (const f of features) {
+    const p = f?.properties ?? {};
+    const geom = f?.geometry;
+    let key = p._id ?? p.qgisId ?? p.id ?? null;
+    if (!key && geom) {
+      try {
+        // Use type + first few coordinates as signature
+        const sig = JSON.stringify([geom.type, Array.isArray(geom.coordinates) ? JSON.stringify(geom.coordinates).slice(0,200) : '']);
+        key = sig;
+      } catch (e) {
+        key = JSON.stringify(f).slice(0,200);
+      }
+    }
+    if (!key) continue;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push(f);
+  }
+  return out.length ? { type: 'FeatureCollection', features: out } : null;
 }
 
 const styleFn: StyleFunction = (feature) => {
@@ -124,6 +151,7 @@ onMounted(async () => {
     }
     if (contornoResp.ok) {
       contorno.value = await contornoResp.json();
+      try { console.debug('[HomeView] contorno loaded', { features: Array.isArray(contorno.value?.features) ? contorno.value.features.length : undefined }); } catch (e) { }
     } else {
       console.warn(`No se pudo cargar contorno desde ${GEOJSON_CONTORNO}`);
     }
@@ -158,6 +186,7 @@ onMounted(async () => {
     try {
       normalizeFromGeoJson(contorno.value);
       normalizeFromGeoJson(pasillos.value);
+      try { console.debug('[HomeView] normalizeFromGeoJson executed (contorno + pasillos). objetos in store:', Object.keys((app as any).objetosPorId || {}).length); } catch (e) { }
     } catch (e) {
       console.debug('normalizeFromGeoJson fallo:', e);
     }
@@ -177,7 +206,30 @@ onMounted(async () => {
           }
         })
       );
-      extras.value = loaded.filter(Boolean);
+      // Process extras: if an extra appears to contain objetos (has feature properties
+      // like qgisId/nombre/categoria) normalize it into the objetos store to avoid
+      // duplicating the same data (backend may also provide these objetos). Only
+      // keep in `extras` those files that look like pure basemap overlays.
+      const keepExtras: any[] = [];
+      for (const fc of loaded.filter(Boolean)) {
+        const looksLikeObjetos = Array.isArray(fc?.features) && fc.features.some((f: any) => {
+          const p = f?.properties ?? {};
+          return p && (p.qgisId || p.nombre || p.categoria);
+        });
+        if (looksLikeObjetos) {
+          try {
+            normalizeFromGeoJson(fc);
+            try { console.debug('[HomeView] normalized extra into objetos (looksLikeObjetos)', { features: Array.isArray(fc.features) ? fc.features.length : undefined }); } catch (e) { }
+          } catch (e) {
+            console.debug('normalizeFromGeoJson on extra failed', e);
+            keepExtras.push(fc);
+          }
+        } else {
+          keepExtras.push(fc);
+        }
+      }
+      extras.value = keepExtras;
+      try { console.debug('[HomeView] extras loaded, kept overlays:', extras.value.length, 'objetos in store:', Object.keys((app as any).objetosPorId || {}).length); } catch (e) { }
     }
 
     center.value = computeCenter(pasillos.value || contorno.value);
@@ -214,16 +266,11 @@ function onFeatureClick(payload: { feature: any; latlng: [number, number] }) {
     <!-- controles centrados: SearchField arriba y categorías/selector debajo -->
     <div class="top-controls">
       <div class="top-controls-inner">
-        <div style="width:100%; display:flex; justify-content:flex-end;">
-          <ProfileButton />
-        </div>
-        <div style="display:flex; gap:8px; align-items:center; width:100%;">
-          <div style="font-size:12px; color:#555">Rutas automáticas: usa el botón "¿Cómo llegar?" en la ficha del edificio para obtener la ruta desde tu ubicación.</div>
+        <div class="top-header-row">
+          <div class="search-wrap"><SearchField width="560px" /></div>
+          <div class="profile-wrap"><ProfileButton /></div>
         </div>
         <div class="controls-box">
-          <div class="search-wrap">
-            <SearchField width="560px" />
-          </div>
           <div style="height:8px; width:100%;"></div>
           <div class="controls-row">
             <div class="category-wrap"><CategorySelector :floating="false" /></div>
@@ -233,7 +280,6 @@ function onFeatureClick(payload: { feature: any; latlng: [number, number] }) {
         <div class="status-row">
           <span v-if="loading">Cargando…</span>
           <span v-if="errorMsg" style="color:#b71c1c">{{ errorMsg }}</span>
-          <span style="font-size:12px; color:#555">Las rutas se calculan automáticamente desde tu ubicación usando el botón "¿Cómo llegar?" en la ficha de un edificio.</span>
         </div>
       </div>
     </div>
@@ -252,7 +298,9 @@ function onFeatureClick(payload: { feature: any; latlng: [number, number] }) {
 <style scoped>
 .top-controls{ position:absolute; top:8px; left:8px; right:8px; z-index:1000; display:flex; justify-content:center; pointer-events:auto }
 .top-controls-inner{ background:rgba(255,255,255,0.95); padding:6px; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,.12); display:flex; flex-direction:column; align-items:center; gap:6px; max-width:96vw; overflow:visible; justify-content:center; z-index:2000; max-height:15vh }
-.search-wrap{ width:60%; min-width:220px; display:flex; justify-content:center; position:relative; z-index:2100 }
+.top-header-row{ width:100%; display:flex; align-items:center; justify-content:center; gap:12px }
+.search-wrap{ flex:1 1 60%; min-width:220px; display:flex; justify-content:center; position:relative; z-index:2100 }
+.profile-wrap{ flex:0 0 auto; display:flex; justify-content:flex-end; align-items:center }
 .controls-box{ width:80%; max-width:80vw; display:flex; flex-direction:column; gap:6px; align-items:center }
 .controls-row{ display:flex; gap:10px; align-items:center; width:100%; flex-wrap:wrap; justify-content:center }
 .category-wrap{ flex:0 0 auto }
@@ -263,6 +311,8 @@ function onFeatureClick(payload: { feature: any; latlng: [number, number] }) {
   /* On small screens allow the header to expand and become scrollable so
      the SearchField dropdown and category list are not clipped. */
   .top-controls-inner{ padding:10px; gap:8px; width:calc(100vw - 24px); flex-direction:column; align-items:center; max-height:none; min-height:12vh; overflow:auto }
+  .top-header-row{ flex-direction:column; align-items:stretch }
+  .profile-wrap{ align-self:flex-end }
   .controls-box{ width:100% }
   .controls-row{ flex-direction:column; align-items:stretch }
   .controls-row > *{ width:100% }

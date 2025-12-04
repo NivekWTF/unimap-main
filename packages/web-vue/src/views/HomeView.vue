@@ -40,12 +40,38 @@ const objetosGeojson = computed(() => {
   return features.length ? { type: 'FeatureCollection', features } : null;
 });
 
-const merged = computed(() => mergeMany([contorno.value, pasillos.value, routeFc.value, objetosGeojson.value]));
 const routeFc = computed(() => routeFeature.value ? ({ type:'FeatureCollection', features:[routeFeature.value] }) : null);
+// Do NOT include `pasillos` in the merged GeoJSON shown to users. Pasillos is
+// still loaded for routing (graph building) but should not be drawn by default.
+// Also avoid including `contorno` when the objetos layer already contains the
+// same features (to prevent duplicate drawing when we normalize contorno into objetos).
+const merged = computed(() => {
+  const includeContorno = !(objetosGeojson.value && objetosGeojson.value.features && objetosGeojson.value.features.length > 0);
+  return mergeMany([ includeContorno ? contorno.value : null, routeFc.value, objetosGeojson.value ]);
+});
 
 function mergeMany(items:any[]){
   const features = items.filter(Boolean).flatMap((fc:any)=> fc.type==='FeatureCollection'? fc.features : [fc]);
-  return features.length ? { type:'FeatureCollection', features } : null;
+  const seen = new Set<string>();
+  const out:any[] = [];
+  for (const f of features) {
+    const p = f?.properties ?? {};
+    const geom = f?.geometry;
+    let key = p._id ?? p.qgisId ?? p.id ?? null;
+    if (!key && geom) {
+      try {
+        const sig = JSON.stringify([geom.type, Array.isArray(geom.coordinates) ? JSON.stringify(geom.coordinates).slice(0,200) : '']);
+        key = sig;
+      } catch (e) {
+        key = JSON.stringify(f).slice(0,200);
+      }
+    }
+    if (!key) continue;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push(f);
+  }
+  return out.length ? { type:'FeatureCollection', features: out } : null;
 }
 
 const styleFn: StyleFunction = (feature) => {

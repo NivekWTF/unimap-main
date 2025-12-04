@@ -82,11 +82,15 @@ export const useAppStore = defineStore('app', {
     },
     selectFeature(f: any | null) { this.selectedFeature = f; },
     setObjetosPorId(objetos: any[]) {
-      const objetosPorId = objetos.reduce((acc: Record<string, any>, objeto: any) => {
+      const nuevos = objetos.reduce((acc: Record<string, any>, objeto: any) => {
+        if (!objeto || !objeto._id) return acc;
         acc[objeto._id] = objeto;
         return acc;
-      }, {});
-      this.objetosPorId = objetosPorId;
+      }, {} as Record<string, any>);
+      // Merge with existing store to avoid transiently wiping entries when multiple
+      // async sources update the objetos list (extras vs backend trpc calls).
+      this.objetosPorId = { ...(this.objetosPorId || {}), ...nuevos };
+      try { console.debug('[app] setObjetosPorId merged, total objects:', Object.keys(this.objetosPorId).length); } catch (e) { /* ignore */ }
     },
     setObjetoSeleccionado(objeto: any | null) { this.objetoSeleccionado = objeto; },
     setRouteFeature(f: any | null) { this.routeFeature = f; },

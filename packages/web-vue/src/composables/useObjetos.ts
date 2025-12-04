@@ -75,6 +75,7 @@ export function useObjetos() {
       });
 
       app.setObjetosPorId(mapped as any[]);
+      try { console.debug('[useObjetos] loadObjetos: loaded', mapped.length, 'objects for campus', campus ?? app.campusId); } catch (e) { }
       return mapped;
     } catch (e) {
       console.debug('Error cargando objetos desde backend', e);
@@ -204,6 +205,7 @@ export function useObjetos() {
 
     // save into global store keyed by _id
     app.setObjetosPorId(objetos as any[]);
+    try { console.debug('[useObjetos] normalizeFromGeoJson: registered', objetos.length, 'objects'); } catch (e) { }
     return objetos;
   }
 
