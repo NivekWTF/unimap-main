@@ -65,12 +65,14 @@ const objetosGeojson = computed(() => {
   return features.length ? { type: 'FeatureCollection', features } : null;
 });
 
-const merged = computed(() => mergeMany([contorno.value, pasillos.value, routeFc.value, objetosGeojson.value, ...extras.value]));
+// Do NOT include `pasillos` in the merged GeoJSON shown to users.
+// `pasillos` is still loaded (used to build the routing graph) but should remain hidden
+// until a specific route is computed and stored in `app.routeFeature`.
+const merged = computed(() => mergeMany([contorno.value, routeFc.value, objetosGeojson.value, ...extras.value]));
 const constrainToCenterBounds = ref(true);
 const loading = ref(false);
 const errorMsg = ref('');
-// Flag to temporarily enable/disable route calculation on map clicks
-const routingEnabled = ref(false);
+// Rutas se calculan automáticamente desde la ubicación del usuario (vía botón '¿Cómo llegar?').
 let graph: ReturnType<typeof buildGraphFromPasillos> | null = null;
 
 function mergeMany(items: any[]) {
@@ -188,46 +190,8 @@ onMounted(async () => {
   }
 });
 
-// ===== selección de origen/destino con clicks =====
-const start = ref<[number, number] | null>(null);
-const end = ref<[number, number] | null>(null);
-
-async function handleMapClick(latlng: [number, number]) {
-  if (!routingEnabled.value) return; // routing disabled for now
-    if (!start.value) {
-    start.value = latlng;
-    app.setRouteMarkers([{ lat: latlng[0], lng: latlng[1], etiqueta: 'Inicio' }]);
-    app.setRouteFeature(null);
-    return;
-  }
-  if (!end.value) {
-    end.value = latlng;
-    app.setRouteMarkers([
-      { lat: start.value[0], lng: start.value[1], etiqueta: 'Inicio' },
-      { lat: latlng[0], lng: latlng[1], etiqueta: 'Destino' }
-    ]);
-    await computeRoute();
-    return;
-  }
-  // Si ya hay ambos, reinicia
-  start.value = latlng;
-  end.value = null;
-  app.setRouteFeature(null);
-  app.setRouteMarkers([{ lat: latlng[0], lng: latlng[1], etiqueta: 'Inicio' }]);
-}
-
-async function computeRoute() {
-  if (!graph || !start.value || !end.value) return;
-  const s = nearestNodeId(graph, start.value[0], start.value[1]);
-  const t = nearestNodeId(graph, end.value[0], end.value[1]);
-  const nodePath = aStar(graph, s, t);
-  if (!nodePath) {
-    errorMsg.value = 'No se encontró ruta (revisa conexiones/topología)';
-    app.setRouteFeature(null);
-    return;
-  }
-  app.setRouteFeature(pathToGeoJson(graph, nodePath));
-}
+// Las rutas se calculan por acción explícita desde la ubicación (ej. botón '¿Cómo llegar?').
+// La selección manual por clicks queda deshabilitada para evitar confusión en móviles.
 
 // abrir objeto al hacer click en su feature
 function onFeatureClick(payload: { feature: any; latlng: [number, number] }) {
@@ -254,10 +218,7 @@ function onFeatureClick(payload: { feature: any; latlng: [number, number] }) {
           <ProfileButton />
         </div>
         <div style="display:flex; gap:8px; align-items:center; width:100%;">
-          <button @click="routingEnabled = !routingEnabled" :style="{ padding:'6px 10px', borderRadius:'8px', border:'1px solid #ccc', background: routingEnabled ? '#ffe0b2' : '#fff' }">
-            {{ routingEnabled ? 'Rutas: ON' : 'Rutas: OFF' }}
-          </button>
-          <div style="font-size:12px; color:#555">Pulsa en el mapa para seleccionar origen y destino cuando Rutas está activado.</div>
+          <div style="font-size:12px; color:#555">Rutas automáticas: usa el botón "¿Cómo llegar?" en la ficha del edificio para obtener la ruta desde tu ubicación.</div>
         </div>
         <div class="controls-box">
           <div class="search-wrap">
@@ -272,17 +233,16 @@ function onFeatureClick(payload: { feature: any; latlng: [number, number] }) {
         <div class="status-row">
           <span v-if="loading">Cargando…</span>
           <span v-if="errorMsg" style="color:#b71c1c">{{ errorMsg }}</span>
-          <span v-if="start && !end">Selecciona el destino con un click en el mapa…</span>
-          <span v-if="start && end">Click de nuevo para reiniciar desde un nuevo origen.</span>
+          <span style="font-size:12px; color:#555">Las rutas se calculan automáticamente desde tu ubicación usando el botón "¿Cómo llegar?" en la ficha de un edificio.</span>
         </div>
       </div>
     </div>
 
     <!-- mapa ocupa todo el espacio disponible -->
     <div style="flex:1 1 auto; min-height:0;">
-      <UnimapMap :center="center" :geojson="merged" :markers="markers" :styleFunction="styleFn"
+        <UnimapMap :center="center" :geojson="merged" :markers="markers" :styleFunction="styleFn"
           :constrainToCenterBounds="true" :zoom="18" :minZoom="TILE_MIN_ZOOM" :maxZoom="TILE_MAX_ZOOM"
-          :tileMaxNativeZoom="TILE_MAX_NATIVE" @map-click="handleMapClick" @feature-click="onFeatureClick" />
+          :tileMaxNativeZoom="TILE_MAX_NATIVE" @feature-click="onFeatureClick" />
     </div>
     <Sidebar />
     <Alerts />
@@ -291,16 +251,18 @@ function onFeatureClick(payload: { feature: any; latlng: [number, number] }) {
 
 <style scoped>
 .top-controls{ position:absolute; top:8px; left:8px; right:8px; z-index:1000; display:flex; justify-content:center; pointer-events:auto }
-.top-controls-inner{ background:rgba(255,255,255,0.95); padding:12px; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,.12); display:flex; flex-direction:column; align-items:flex-start; gap:12px; max-width:100% }
-.search-wrap{ width:100%; display:flex; justify-content:center }
-.controls-box{ width:560px; max-width:90vw; display:flex; flex-direction:column; gap:8px }
-.controls-row{ display:flex; gap:12px; align-items:center; width:100% }
-.category-wrap{ flex:1 }
+.top-controls-inner{ background:rgba(255,255,255,0.95); padding:6px; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,.12); display:flex; flex-direction:column; align-items:center; gap:6px; max-width:96vw; overflow:visible; justify-content:center; z-index:2000; max-height:15vh }
+.search-wrap{ width:60%; min-width:220px; display:flex; justify-content:center; position:relative; z-index:2100 }
+.controls-box{ width:80%; max-width:80vw; display:flex; flex-direction:column; gap:6px; align-items:center }
+.controls-row{ display:flex; gap:10px; align-items:center; width:100%; flex-wrap:wrap; justify-content:center }
+.category-wrap{ flex:0 0 auto }
 .floor-wrap{ width:auto }
 .status-row{ margin-top:4px; display:flex; flex-direction:column; gap:4px; align-items:flex-start }
 
 @media (max-width:640px){
-  .top-controls-inner{ padding:10px; gap:10px; width:calc(100vw - 24px) }
+  /* On small screens allow the header to expand and become scrollable so
+     the SearchField dropdown and category list are not clipped. */
+  .top-controls-inner{ padding:10px; gap:8px; width:calc(100vw - 24px); flex-direction:column; align-items:center; max-height:none; min-height:12vh; overflow:auto }
   .controls-box{ width:100% }
   .controls-row{ flex-direction:column; align-items:stretch }
   .controls-row > *{ width:100% }
