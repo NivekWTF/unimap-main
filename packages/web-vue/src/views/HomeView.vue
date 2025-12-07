@@ -102,8 +102,11 @@ onMounted(async ()=>{
     // normalize geojson into objetos store so we render objetos layer
     try {
       const { normalizeFromGeoJson, loadObjetos } = useObjetos();
+      // Normalize contorno into objetos so buildings and POIs are interactive.
       normalizeFromGeoJson(contorno.value);
-      normalizeFromGeoJson(pasillos.value);
+      // IMPORTANT: do NOT normalize `pasillos` here. `pasillos` are used only
+      // to build the routing graph and should not be drawn as objetos by default.
+      // normalizeFromGeoJson(pasillos.value); // intentionally omitted
       // ensure backend objects are loaded for current campus
       loadObjetos();
     } catch (e) {

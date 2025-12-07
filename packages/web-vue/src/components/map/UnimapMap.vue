@@ -111,6 +111,38 @@ const geojsonOptions = computed(() => ({
 
       emit('feature-click', { feature, latlng: [lat, lng] });
     });
+    try {
+      // If this feature is a computed route, animate its appearance with a fade-in.
+      const isRoute = feature?.properties?.capa === 'ruta' || feature?.properties?.type === 'ruta';
+      if (isRoute && layer && layer.setStyle) {
+        // Compute the desired style from the provided styleFunction if any
+        let desiredStyle: any = {};
+        try { desiredStyle = (props.styleFunction ? props.styleFunction(feature) : {}) || {}; } catch (e) { desiredStyle = {}; }
+        // Prepare an initial transparent style
+        const initStyle: any = { ...desiredStyle };
+        if (typeof initStyle.opacity === 'number') initStyle.opacity = 0;
+        if (typeof initStyle.fillOpacity === 'number') initStyle.fillOpacity = 0;
+        try {
+          layer.setStyle(initStyle);
+        } catch (e) {
+          // ignore if layer doesn't support setStyle
+        }
+
+        // Add a brief timeout to allow the element to be inserted, then enable CSS transition
+        setTimeout(() => {
+          try {
+            const el = layer.getElement && layer.getElement();
+            if (el && el.style) {
+              el.style.transition = 'stroke-opacity 280ms ease, fill-opacity 280ms ease, opacity 280ms ease';
+            }
+          } catch (e) { /* ignore */ }
+          // Finally set the desired style so the transition animates
+          try { layer.setStyle(desiredStyle); } catch (e) { /* ignore */ }
+        }, 40);
+      }
+    } catch (e) {
+      console.debug('[UnimapMap] onEachFeature fade-in error', e);
+    }
   },
 }));
 </script>

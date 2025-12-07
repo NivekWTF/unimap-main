@@ -68,9 +68,11 @@ async function gotoHere() {
     const o = objetoSeleccionado.value;
     if (o?.centroide && typeof o.centroide.lat === 'number' && typeof o.centroide.lng === 'number') {
       targetLat = o.centroide.lat; targetLng = o.centroide.lng;
-    } else if (o?.geometria && o.geometria.coordinates) {
-      // try to extract a point
-      const geom = o.geometria;
+    } else if (o?.geometria) {
+      // Try several fallbacks: first try extracting a point coordinate, then
+      // compute a centroid for polygon/multipolygon geometries.
+      const geom = o.geometria as any;
+      // try to find the first coordinate (for Point/LineString/arrays)
       function findFirstCoord(g: any): number[] | null {
         if (!g) return null;
         if (g.type === 'Point' && Array.isArray(g.coordinates)) return g.coordinates as number[];
@@ -82,7 +84,127 @@ async function gotoHere() {
       }
       const c = findFirstCoord(geom);
       if (c && c.length >= 2) { targetLng = c[0]; targetLat = c[1]; }
+      // If we couldn't find a point (e.g. Polygon), compute a simple centroid
+      if ((targetLat === null || targetLng === null) && geom) {
+        function centroidFromGeom(g: any): number[] | null {
+          try {
+            if (!g) return null;
+            if (g.type === 'Point') return [g.coordinates[1], g.coordinates[0]];
+            if (g.type === 'Polygon') {
+              const coords = g.coordinates?.[0] ?? [];
+              if (!coords.length) return null;
+              const sum = coords.reduce((acc: number[], c: number[]) => [acc[0] + c[1], acc[1] + c[0]], [0, 0]);
+              return [sum[0] / coords.length, sum[1] / coords.length];
+            }
+            if (g.type === 'MultiPolygon') {
+              const coords = (g.coordinates && g.coordinates[0] && g.coordinates[0][0]) ? g.coordinates[0][0] : [];
+              if (!coords.length) return null;
+              const sum = coords.reduce((acc: number[], c: number[]) => [acc[0] + c[1], acc[1] + c[0]], [0, 0]);
+              return [sum[0] / coords.length, sum[1] / coords.length];
+            }
+            return null;
+          } catch (e) { return null; }
+        }
+        const cent = centroidFromGeom(geom);
+        if (cent && cent.length >= 2) { targetLat = cent[0]; targetLng = cent[1]; }
+      }
     }
+    if (targetLat === null || targetLng === null) throw new Error('No se pudo determinar centroide del destino');
+
+    // If we still don't have a target coordinate, try to find the object in the
+    // global objetos store (sometimes the selectedFeature lacks centroide but
+    // the normalized store contains it), or fallback to searching the contorno
+    // GeoJSON for a matching feature.
+    if (targetLat === null || targetLng === null) {
+      try {
+        // Try lookup by id/qgisId/nombre in app.objetosPorId
+        const idCandidates = [o?._id, o?.qgisId, selectedFeature.value?.properties?._id, selectedFeature.value?.properties?._id, o?.nombre];
+        let found: any = null;
+        for (const c of idCandidates.filter(Boolean)) {
+          if (!c) continue;
+          if (app.objetosPorId && (app.objetosPorId as any)[c]) { found = (app.objetosPorId as any)[c]; break; }
+        }
+        if (!found) {
+          // Search by qgisId or nombre among all objetos
+          const all = Object.values(app.objetosPorId || {});
+          found = all.find((x:any) => String(x.qgisId) === String(o?._id) || String(x._id) === String(o?._id) || String(x.nombre) === String(o?.nombre));
+        }
+        if (found) {
+          console.debug('[Sidebar] found objeto in store as fallback', { id: o?._id, foundId: found._id });
+          if (found.centroide && typeof found.centroide.lat === 'number' && typeof found.centroide.lng === 'number') {
+            targetLat = found.centroide.lat; targetLng = found.centroide.lng;
+          } else if (found.geometria) {
+            // try centroidFromGeom same logic as in useObjetos
+            function centroidFromGeom(g: any): number[] | null {
+              try {
+                if (!g) return null;
+                if (g.type === 'Point') return [g.coordinates[1], g.coordinates[0]];
+                if (g.type === 'Polygon') {
+                  const coords = g.coordinates?.[0] ?? [];
+                  if (!coords.length) return null;
+                  const sum = coords.reduce((acc: number[], c: number[]) => [acc[0] + c[1], acc[1] + c[0]], [0, 0]);
+                  return [sum[0] / coords.length, sum[1] / coords.length];
+                }
+                if (g.type === 'MultiPolygon') {
+                  const coords = (g.coordinates && g.coordinates[0] && g.coordinates[0][0]) ? g.coordinates[0][0] : [];
+                  if (!coords.length) return null;
+                  const sum = coords.reduce((acc: number[], c: number[]) => [acc[0] + c[1], acc[1] + c[0]], [0, 0]);
+                  return [sum[0] / coords.length, sum[1] / coords.length];
+                }
+                return null;
+              } catch (e) { return null; }
+            }
+            const cent = centroidFromGeom(found.geometria);
+            if (cent && cent.length >= 2) { targetLat = cent[0]; targetLng = cent[1]; }
+          }
+        }
+      } catch (e) {
+        console.debug('[Sidebar] fallback store lookup failed', e);
+      }
+    }
+
+    // Final fallback: try searching contorno GeoJSON file for a matching feature
+    if (targetLat === null || targetLng === null) {
+      try {
+        const respC = await fetch('/data/Tec_Contorno.geojson');
+        if (respC.ok) {
+          const cont = await respC.json();
+          if (cont && Array.isArray(cont.features)) {
+            const match = cont.features.find((f:any) => {
+              const p = f.properties || {};
+              return String(p._id) === String(o?._id) || String(p.qgisId) === String(o?._id) || String(p.nombre) === String(o?.nombre) || String(p.name) === String(o?.nombre);
+            });
+            if (match && match.geometry) {
+              // compute centroid roughly
+              function centroidFromGeom(g: any): number[] | null {
+                try {
+                  if (!g) return null;
+                  if (g.type === 'Point') return [g.coordinates[1], g.coordinates[0]];
+                  if (g.type === 'Polygon') {
+                    const coords = g.coordinates?.[0] ?? [];
+                    if (!coords.length) return null;
+                    const sum = coords.reduce((acc: number[], c: number[]) => [acc[0] + c[1], acc[1] + c[0]], [0, 0]);
+                    return [sum[0] / coords.length, sum[1] / coords.length];
+                  }
+                  if (g.type === 'MultiPolygon') {
+                    const coords = (g.coordinates && g.coordinates[0] && g.coordinates[0][0]) ? g.coordinates[0][0] : [];
+                    if (!coords.length) return null;
+                    const sum = coords.reduce((acc: number[], c: number[]) => [acc[0] + c[1], acc[1] + c[0]], [0, 0]);
+                    return [sum[0] / coords.length, sum[1] / coords.length];
+                  }
+                  return null;
+                } catch (e) { return null; }
+              }
+              const cent = centroidFromGeom(match.geometry);
+              if (cent && cent.length >= 2) { targetLat = cent[0]; targetLng = cent[1]; }
+            }
+          }
+        }
+      } catch (e) {
+        console.debug('[Sidebar] contorno fallback failed', e);
+      }
+    }
+
     if (targetLat === null || targetLng === null) throw new Error('No se pudo determinar centroide del destino');
 
     const t = nearestNodeId(graph, targetLat, targetLng);

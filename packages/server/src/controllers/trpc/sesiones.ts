@@ -41,7 +41,7 @@ export const loginCliente = publicProc
       username,
       activo: true,
       campus,
-      tipoUsuario: [TipoUsuario.Alumno, TipoUsuario.Profesor],
+      tipoUsuario: [TipoUsuario.Alumno, TipoUsuario.Profesor, TipoUsuario.Administrador],
     })
       .populate('cargaAcademica.clase')
       .populate('cargaAcademica.lugar')

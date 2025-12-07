@@ -185,8 +185,10 @@ onMounted(async () => {
     // Normalizar GeoJSON a objetos y guardarlos en la store (para categorías/objetos interactivos)
     try {
       normalizeFromGeoJson(contorno.value);
-      normalizeFromGeoJson(pasillos.value);
-      try { console.debug('[HomeView] normalizeFromGeoJson executed (contorno + pasillos). objetos in store:', Object.keys((app as any).objetosPorId || {}).length); } catch (e) { }
+      // IMPORTANT: pasillos are used only for routing graph construction and
+      // should NOT be normalized into objetos (they would appear as map features).
+      // normalizeFromGeoJson(pasillos.value); // intentionally omitted
+      try { console.debug('[HomeView] normalizeFromGeoJson executed (contorno). objetos in store:', Object.keys((app as any).objetosPorId || {}).length); } catch (e) { }
     } catch (e) {
       console.debug('normalizeFromGeoJson fallo:', e);
     }

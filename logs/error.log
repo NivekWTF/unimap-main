@@ -10635,3 +10635,67 @@
 2025-12-04 01:36:38 [error]: El nombre de usuario o la contraseña son incorrectos
 2025-12-04 01:37:33 [error]: El nombre de usuario o la contraseña son incorrectos
 2025-12-04 01:40:35 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-12-04 20:07:34 [error]: El token de refresco no es válido
+2025-12-04 20:07:37 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-12-04 20:07:43 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-12-04 20:07:44 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-12-04 20:12:30 [error]: [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "username"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "password"
+    ],
+    "message": "Required"
+  }
+]
+2025-12-04 20:13:43 [error]: No "mutation"-procedure on path ""
+2025-12-04 20:15:59 [error]: No "mutation"-procedure on path ""
+2025-12-04 20:17:21 [error]: No "mutation"-procedure on path ""
+2025-12-04 20:17:56 [error]: El token de refresco no es válido
+2025-12-04 20:17:58 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-12-04 20:18:10 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-12-04 20:18:20 [error]: El nombre de usuario o la contraseña son incorrectos
+2025-12-05 03:02:53 [error]: No autorizado
+2025-12-05 03:02:53 [error]: El token de refresco no es válido
+2025-12-06 19:17:09 [error]: El token de refresco no es válido
+2025-12-06 20:18:34 [error]: [
+  {
+    "received": "VISITANTE",
+    "code": "invalid_enum_value",
+    "options": [
+      "ADMIN",
+      "ALUMNO",
+      "PROFESOR"
+    ],
+    "path": [
+      "tipoUsuario"
+    ],
+    "message": "Invalid enum value. Expected 'ADMIN' | 'ALUMNO' | 'PROFESOR', received 'VISITANTE'"
+  }
+]
+2025-12-06 21:20:05 [error]: [
+  {
+    "received": "VISITANTE",
+    "code": "invalid_enum_value",
+    "options": [
+      "ADMIN",
+      "ALUMNO",
+      "PROFESOR"
+    ],
+    "path": [
+      "tipoUsuario"
+    ],
+    "message": "Invalid enum value. Expected 'ADMIN' | 'ALUMNO' | 'PROFESOR', received 'VISITANTE'"
+  }
+]
